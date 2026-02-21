@@ -1,0 +1,196 @@
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { services } from "@/data/services";
+import { industries } from "@/data/industries";
+import { motion, AnimatePresence } from "framer-motion";
+
+const navLinks = [
+  { label: "Our Work", to: "/our-work" },
+  { label: "Why Us", to: "/why-us" },
+  { label: "Pricing", to: "/pricing" },
+];
+
+export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [megaMenu, setMegaMenu] = useState<"services" | "industries" | null>(null);
+  const megaRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setMegaMenu(null);
+  }, [location]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMegaMenu(null);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (megaRef.current && !megaRef.current.contains(e.target as Node)) {
+        setMegaMenu(null);
+      }
+    };
+    if (megaMenu) document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [megaMenu]);
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
+      <div className="container-wide flex h-16 items-center justify-between px-6 lg:px-10">
+        {/* Logo */}
+        <Link to="/" className="font-heading text-xl font-bold tracking-tight text-foreground">
+          Studioflow
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden items-center gap-1 lg:flex" ref={megaRef}>
+          {(["services", "industries"] as const).map((key) => (
+            <button
+              key={key}
+              onClick={() => setMegaMenu(megaMenu === key ? null : key)}
+              className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+            >
+              {key === "services" ? "Services" : "Industries"}
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform ${megaMenu === key ? "rotate-180" : ""}`} />
+            </button>
+          ))}
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          {/* Mega Menu */}
+          <AnimatePresence>
+            {megaMenu && (
+              <motion.div
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-0 top-full w-full border-b border-border bg-card shadow-xl"
+              >
+                <div className="container-wide grid gap-4 px-6 py-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {(megaMenu === "services" ? services : industries).map((item) => (
+                    <div
+                      key={item.title}
+                      className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary"
+                    >
+                      <item.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                      <div>
+                        <p className="text-sm font-semibold text-foreground">
+                          {item.title}
+                          {"isNew" in item && item.isNew && (
+                            <span className="ml-2 inline-block rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">
+                              New
+                            </span>
+                          )}
+                        </p>
+                        <p className="text-xs text-muted-foreground">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </nav>
+
+        {/* Desktop CTA */}
+        <div className="hidden lg:block">
+          <Button variant="hero" size="sm">
+            Talk to a strategist
+          </Button>
+        </div>
+
+        {/* Mobile toggle */}
+        <button
+          className="lg:hidden text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden border-b border-border bg-card lg:hidden"
+          >
+            <MobileSection title="Services" items={services} />
+            <MobileSection title="Industries" items={industries} />
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="block px-6 py-3 text-sm font-medium text-foreground/80 hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="p-6">
+              <Button variant="hero" className="w-full">
+                Talk to a strategist
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
+
+function MobileSection({
+  title,
+  items,
+}: {
+  title: string;
+  items: { title: string; description: string }[];
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div>
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center justify-between px-6 py-3 text-sm font-medium text-foreground/80"
+      >
+        {title}
+        <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
+            className="overflow-hidden"
+          >
+            {items.map((item) => (
+              <div key={item.title} className="px-10 py-2">
+                <p className="text-sm font-medium text-foreground">{item.title}</p>
+                <p className="text-xs text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
