@@ -30,8 +30,8 @@ export default function WhyUs() {
 
       <StatsStrip />
       <TeamSection />
-      <TestimonialCarousel />
       <HowWeWork />
+      <TestimonialCarousel />
       <CTABand headline="Work With Us" subtext="Join 500+ brands that trust Studioflow to drive their growth." />
     </Layout>
   );
