@@ -5,6 +5,7 @@ import TeamSection from "@/components/sections/TeamSection";
 import StatsStrip from "@/components/sections/StatsStrip";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 import CTABand from "@/components/sections/CTABand";
+import HowWeWork from "@/components/sections/HowWeWork";
 
 export default function WhyUs() {
   return (
@@ -30,6 +31,7 @@ export default function WhyUs() {
       <StatsStrip />
       <TeamSection />
       <TestimonialCarousel />
+      <HowWeWork />
       <CTABand headline="Work With Us" subtext="Join 500+ brands that trust Studioflow to drive their growth." />
     </Layout>
   );
