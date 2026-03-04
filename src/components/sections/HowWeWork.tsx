@@ -97,28 +97,29 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
       initial={{ opacity: 0, x: step.reverse ? 40 : -40 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: 0.1 }}
-      className="flex flex-col justify-center col-span-1 lg:col-span-1 w-full"
+      className="flex flex-col justify-center w-full"
     >
-      {/* Badge row */}
-      <div className="mb-5 flex items-center gap-3">
-        <span
-          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white"
-          style={{ background: step.color }}
-        >
-          {step.number}
-        </span>
-        <span
-          className="rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-widest"
-          style={{ color: step.color, borderColor: step.color + "55" }}
+      {/* Badge + title inline, label below */}
+      <div className="mb-6">
+        <div className="flex items-center gap-3 mb-1.5">
+          <span
+            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
+            style={{ background: step.color }}
+          >
+            {step.number}
+          </span>
+          <h3 className="font-heading text-xl font-bold text-white md:text-2xl">
+            {step.badge}
+          </h3>
+        </div>
+        <p
+          className="ml-11 text-xs font-semibold uppercase tracking-widest"
+          style={{ color: step.color }}
         >
           {step.label}
-        </span>
+        </p>
       </div>
-      {/* Step title — matches `text-3xl font-bold md:text-4xl` from ServiceGrid */}
-      <h3 className="font-heading text-3xl font-bold text-white md:text-4xl">
-        {step.badge}
-      </h3>
-      <ul className="mt-7 space-y-3.5">
+      <ul className="space-y-3">
         {step.points.map((pt) => (
           <li key={pt} className="flex items-start gap-3">
             <span
@@ -154,7 +155,7 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
 
   return (
     <div ref={ref} className="relative">
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
+      <div className="grid items-center gap-10 md:gap-16 lg:grid-cols-2 lg:gap-24">
         {step.reverse ? (
           <>
             {illuSide}
@@ -276,46 +277,6 @@ function DeliverIllustration() {
 }
 
 // ---- Dotted Connector between steps ----
-function DottedConnector({ reverse }: { reverse: boolean }) {
-  return (
-    <div className="relative hidden h-28 lg:block">
-      <svg
-        viewBox="0 0 1200 112"
-        preserveAspectRatio="none"
-        className="h-full w-full"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Curved path */}
-        <path
-          d={
-            reverse
-              ? "M 1100 12 C 900 12, 800 100, 600 100 C 400 100, 300 12, 100 12"
-              : "M 100 12 C 300 12, 400 100, 600 100 C 800 100, 900 12, 1100 12"
-          }
-          stroke="rgba(20,184,166,0.4)"
-          strokeWidth="2"
-          strokeDasharray="8 6"
-          strokeLinecap="round"
-        />
-        {/* Arrow pointing at the next step badge (right end for forward, left end for reverse) */}
-        {!reverse && (
-          <>
-            <circle cx="1100" cy="12" r="5" fill="rgba(20,184,166,0.6)"/>
-            <polygon points="1090,6 1107,12 1090,18" fill="rgba(20,184,166,0.7)"/>
-          </>
-        )}
-        {reverse && (
-          <>
-            <circle cx="100" cy="12" r="5" fill="rgba(20,184,166,0.6)"/>
-            <polygon points="110,6 93,12 110,18" fill="rgba(20,184,166,0.7)"/>
-          </>
-        )}
-      </svg>
-    </div>
-  );
-}
-
 export default function HowWeWork() {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true, margin: "-60px" });
@@ -329,7 +290,7 @@ export default function HowWeWork() {
       <div className="absolute bottom-0 right-1/4 h-96 w-96 translate-x-1/2 rounded-full bg-blue-500/5 blur-3xl" />
 
       <div className="container-wide relative px-6 md:px-12 lg:px-20">
-        {/* Section header — matches ServiceGrid heading scale */}
+        {/* Section header */}
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 28 }}
@@ -340,23 +301,20 @@ export default function HowWeWork() {
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-teal-400">
             Our Process
           </p>
-          {/* Exact same scale as ServiceGrid: text-3xl font-bold md:text-4xl */}
           <h2 className="font-heading text-3xl font-bold text-white md:text-4xl">
             How We Work
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-400">
+          {/* Subtitle scaled proportionally — one step down from the h2 */}
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-400 md:text-lg">
             From insight to scalable growth for travel brands, destinations, and operators.
           </p>
         </motion.div>
 
-        {/* Steps */}
-        <div className="space-y-0">
+        {/* Steps — generous spacing on all breakpoints */}
+        <div className="space-y-20 md:space-y-28 lg:space-y-0">
           {steps.map((step, i) => (
-            <div key={step.number}>
+            <div key={step.number} className={i > 0 ? "lg:mt-24" : ""}>
               <StepCard step={step} index={i} />
-              {i < steps.length - 1 && (
-                <DottedConnector reverse={step.reverse} />
-              )}
             </div>
           ))}
         </div>
