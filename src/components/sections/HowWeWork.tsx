@@ -101,27 +101,43 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
     >
       {/* Badge + title inline, label below */}
       <div className="mb-6">
-        <div className="flex items-center gap-3 mb-1.5">
-          <span
+        <div className="flex items-center gap-3 mb-2">
+          <motion.span
+            initial={{ scale: 0.6, opacity: 0 }}
+            animate={inView ? { scale: 1, opacity: 1 } : {}}
+            transition={{ duration: 0.4, delay: 0.05 }}
             className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"
             style={{ background: step.color }}
           >
             {step.number}
-          </span>
-          <h3 className="font-heading text-xl font-bold text-white md:text-2xl">
+          </motion.span>
+          <h3 className="font-heading text-lg font-bold text-white md:text-xl">
             {step.badge}
           </h3>
         </div>
-        <p
-          className="ml-11 text-xs font-semibold uppercase tracking-widest"
-          style={{ color: step.color }}
-        >
-          {step.label}
-        </p>
+        <div className="ml-11">
+          <span
+            className="inline-block rounded-full border px-3 py-0.5 text-[10px] font-semibold uppercase tracking-widest"
+            style={{ color: step.color, borderColor: step.color + "55", background: step.color + "18" }}
+          >
+            {step.label}
+          </span>
+        </div>
       </div>
-      <ul className="space-y-3">
-        {step.points.map((pt) => (
-          <li key={pt} className="flex items-start gap-3">
+      <motion.ul
+        initial={{ opacity: 0, y: 12 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.25 }}
+        className="space-y-3"
+      >
+        {step.points.map((pt, ptIdx) => (
+          <motion.li
+            key={pt}
+            initial={{ opacity: 0, x: -10 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.4, delay: 0.3 + ptIdx * 0.06 }}
+            className="flex items-start gap-3"
+          >
             <span
               className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full"
               style={{ background: step.color + "25", color: step.color }}
@@ -129,9 +145,9 @@ function StepCard({ step, index }: { step: typeof steps[0]; index: number }) {
               <Check className="h-3 w-3" strokeWidth={3} />
             </span>
             <span className="text-sm leading-relaxed text-slate-300">{pt}</span>
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </motion.div>
   );
 
@@ -305,17 +321,15 @@ export default function HowWeWork() {
             How We Work
           </h2>
           {/* Subtitle scaled proportionally — one step down from the h2 */}
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-400 md:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-sm text-slate-400 md:text-base">
             From insight to scalable growth for travel brands, destinations, and operators.
           </p>
         </motion.div>
 
-        {/* Steps — generous spacing on all breakpoints */}
-        <div className="space-y-20 md:space-y-28 lg:space-y-0">
+        {/* Steps — uniform spacing across all breakpoints */}
+        <div className="space-y-24 md:space-y-28">
           {steps.map((step, i) => (
-            <div key={step.number} className={i > 0 ? "lg:mt-24" : ""}>
-              <StepCard step={step} index={i} />
-            </div>
+            <StepCard key={step.number} step={step} index={i} />
           ))}
         </div>
       </div>
