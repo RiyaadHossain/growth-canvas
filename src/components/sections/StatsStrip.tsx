@@ -1,12 +1,12 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const stats = [
-  { value: "5", label: "Time zones coverage" },
-  { value: "8+", label: "Years avg. experience" },
-  { value: "500+", label: "Brands served" },
-  { value: "98%", label: "Client NPS" },
-  { value: "100%", label: "Remote team" },
-  { value: "22 hrs", label: "Avg. turnaround" },
+  { value: "500+", label: "Travel brands served" },
+  { value: "8+", label: "Years in travel" },
+  { value: "5", label: "Time zones covered" },
+  { value: "98%", label: "Client retention" },
+  { value: "40+", label: "Travel specialists" },
+  { value: "12+", label: "Travel categories" },
 ];
 
 export default function StatsStrip() {

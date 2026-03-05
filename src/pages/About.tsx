@@ -6,11 +6,11 @@ import StatsStrip from "@/components/sections/StatsStrip";
 import CTABand from "@/components/sections/CTABand";
 
 const milestones = [
-  { year: "2016", label: "Founded", detail: "Started as a two-person design shop with a bold vision." },
-  { year: "2018", label: "100 Brands", detail: "Crossed 100 active clients spanning 12 industries." },
-  { year: "2020", label: "Remote-First", detail: "Went fully distributed, unlocking top talent across 5 time zones." },
-  { year: "2022", label: "AI Practice", detail: "Launched our dedicated AI-Enabled Marketing practice." },
-  { year: "2024", label: "500+ Brands", detail: "Serving over 500 brands globally with a team of 40+ specialists." },
+  { year: "2016", label: "Founded", detail: "Started as a two-person travel strategy consultancy with a bold vision for the industry." },
+  { year: "2018", label: "100 Travel Brands", detail: "Crossed 100 active travel clients spanning destinations, operators, and hospitality groups." },
+  { year: "2020", label: "Remote-First", detail: "Went fully distributed, unlocking deep travel expertise across 5 time zones globally." },
+  { year: "2022", label: "Digital Products", detail: "Launched our dedicated digital product and AI-enabled travel technology practice." },
+  { year: "2024", label: "500+ Travel Brands", detail: "Serving over 500 travel businesses globally with a team of 40+ travel specialists." },
 ];
 
 export default function About() {
@@ -20,12 +20,12 @@ export default function About() {
       <section className="section-padding">
         <div className="container-wide max-w-3xl text-center">
           <ScrollReveal>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">About Us</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">About TripUp Studio</p>
             <h1 className="font-heading text-4xl font-extrabold md:text-5xl">
-              Built by Marketers, Designers & Engineers Who Actually Care
+              Built by Travel Industry Specialists Who Actually Care
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Studioflow is a full-service growth partner — not an agency of order-takers. We embed into your team, challenge assumptions, and ship work that moves the needle.
+              TripUp Studio is a full-stack consultancy and growth partner exclusively for travel businesses. We embed into your team, challenge assumptions, and build the systems that take you from insight to scalable growth.
             </p>
             <Button variant="hero" size="lg" className="mt-8">
               Free Consultation
@@ -71,16 +71,16 @@ export default function About() {
           <ScrollReveal>
             <h2 className="font-heading text-3xl font-extrabold md:text-4xl">Our Mission</h2>
             <p className="mt-4 text-muted-foreground">
-              We believe great marketing should be accessible to every ambitious brand — not just enterprise giants with bloated retainers. Our mission is to give growing companies the same caliber of talent, tools, and strategy that Fortune 500s rely on, without the overhead.
+              We believe every ambitious travel brand deserves the same calibre of research, strategy, and execution that the world's biggest tourism organisations rely on — without the bloated retainers or the guesswork. Our mission is to give growing travel businesses the tools, expertise, and systems to compete and win in a rapidly evolving industry.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Transparency", desc: "No black-box retainers. You always know what we're doing and why." },
-                { label: "Speed", desc: "We move fast. Most deliverables ship within 48–72 hours." },
-                { label: "Ownership", desc: "We treat your brand like our own — with real accountability." },
-                { label: "Results", desc: "Every decision is tied back to metrics that matter to your business." },
+                { label: "Transparency", desc: "No black-box retainers. You always know what we're doing, why, and what it's delivering." },
+                { label: "Travel-First", desc: "Everything we do is built around the nuances of the travel industry — not repurposed from another sector." },
+                { label: "Ownership", desc: "We treat your brand like our own — with real accountability at every stage." },
+                { label: "Results", desc: "Every decision is tied back to the metrics that matter: bookings, revenue, and long-term growth." },
               ].map((v) => (
                 <div key={v.label} className="rounded-xl border border-border bg-card p-5 shadow-sm">
                   <p className="font-heading font-bold text-foreground">{v.label}</p>
@@ -94,7 +94,7 @@ export default function About() {
 
       <StatsStrip />
       <TeamSection />
-      <CTABand headline="Let's Build Something Great" subtext="Join 500+ brands that trust Studioflow to drive their growth." />
+      <CTABand headline="Let's Build Something Great" subtext="Join 500+ travel brands that trust TripUp Studio to drive their growth." />
     </Layout>
   );
 }

@@ -1,12 +1,12 @@
-import { Cpu, ShoppingBag, Building2, GraduationCap, Briefcase, Landmark, UtensilsCrossed, Stethoscope } from "lucide-react";
+import { MapPin, Hotel, Compass, Globe, Ship, Plane, Mountain, Users } from "lucide-react";
 
 export const industries = [
-  { title: "Technology", description: "SaaS, apps, and tech companies at every stage.", icon: Cpu },
-  { title: "CPG & Retail", description: "Consumer brands that need to move fast and look great.", icon: ShoppingBag },
-  { title: "Construction & Real Estate", description: "Lead gen and brand building for builders.", icon: Building2 },
-  { title: "Education", description: "Enrollment marketing and brand positioning for schools.", icon: GraduationCap },
-  { title: "Professional Services", description: "Thought leadership and lead gen for services firms.", icon: Briefcase },
-  { title: "Financial Services", description: "Compliant, high-trust marketing for finance.", icon: Landmark },
-  { title: "Hospitality & Tourism", description: "Bookings, brand awareness, and guest loyalty.", icon: UtensilsCrossed },
-  { title: "Healthcare & Wellness", description: "Patient acquisition and brand trust at scale.", icon: Stethoscope },
+  { title: "Tour Operators", description: "Positioning, digital products, and marketing systems for tour and experience brands.", icon: Compass },
+  { title: "Hospitality & Accommodation", description: "Direct booking growth, brand building, and guest experience strategy.", icon: Hotel },
+  { title: "Destination Marketing", description: "Research, brand strategy, and integrated campaigns for destinations and tourism boards.", icon: MapPin },
+  { title: "Travel Startups", description: "Go-to-market strategy, product development, and growth execution for new travel ventures.", icon: Globe },
+  { title: "Cruise & Marine", description: "Brand and marketing systems for cruise lines, yacht charters, and marine experiences.", icon: Ship },
+  { title: "Airlines & Mobility", description: "Digital experience, ancillary revenue strategy, and brand growth for mobility brands.", icon: Plane },
+  { title: "Adventure & Outdoors", description: "Community-led growth, content strategy, and brand identity for adventure brands.", icon: Mountain },
+  { title: "DMCs & Travel Agencies", description: "Technology, brand, and marketing support for destination management companies.", icon: Users },
 ];
