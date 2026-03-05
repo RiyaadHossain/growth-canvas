@@ -1,21 +1,21 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Users, Zap, TrendingUp } from "lucide-react";
+import { Compass, Layers, TrendingUp } from "lucide-react";
 
 const props = [
   {
-    icon: Users,
-    title: "One team, every channel",
-    description: "No more juggling five agencies. Get strategy, creative, media, and lifecycle from a single, accountable team.",
+    icon: Compass,
+    title: "Travel expertise, not generic advice",
+    description: "Every strategy, campaign, and product we build is rooted in deep knowledge of how travel businesses actually grow — not repurposed playbooks from other industries.",
   },
   {
-    icon: Zap,
-    title: "Faster launches, fewer bottlenecks",
-    description: "22-hour average turnaround. Weekly sprints. Same-day communication. Your campaigns launch on time, every time.",
+    icon: Layers,
+    title: "End-to-end, under one roof",
+    description: "From initial research through to live campaigns and products, one accountable team handles it all. No handoffs, no communication gaps, no vendor sprawl.",
   },
   {
     icon: TrendingUp,
-    title: "Scalable support without overhead",
-    description: "Scale up or down without the cost and complexity of hiring. Get senior talent across every discipline.",
+    title: "Systems built to scale",
+    description: "We don't just deliver projects — we build the strategies, workflows, and technology foundations that let your travel business grow without breaking.",
   },
 ];
 

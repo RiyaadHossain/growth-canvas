@@ -11,7 +11,7 @@ export default function RoleTabs() {
     <section className="section-padding bg-secondary">
       <div className="container-wide">
         <ScrollReveal>
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">See How Studioflow Works in Your Role</h2>
+          <h2 className="font-heading text-3xl font-bold md:text-4xl">See How TripUp Studio Works for Your Business</h2>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <div className="mt-8 flex flex-wrap gap-2">

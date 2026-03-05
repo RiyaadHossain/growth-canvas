@@ -1,18 +1,18 @@
-import { Palette, Fingerprint, Layout, Globe, Smartphone, Bot, BarChart3, Search } from "lucide-react";
+import { Search, Map, Fingerprint, Globe, Smartphone, Bot, BarChart3, Megaphone } from "lucide-react";
 
 export const services = [
-  // Design
-  { title: "Creatives", description: "Scroll-stopping ads, visuals, and brand assets designed to convert.", icon: Palette, category: "Design" },
-  { title: "Branding", description: "Visual identity, messaging, and brand systems built for scale.", icon: Fingerprint, category: "Design" },
-  { title: "UI/UX", description: "User-centric interfaces and experiences that delight and retain.", icon: Layout, category: "Design" },
-  // Development
-  { title: "Website", description: "High-converting websites and landing pages, launched in weeks.", icon: Globe, category: "Development" },
-  { title: "Apps", description: "Web and mobile apps engineered for speed and scalability.", icon: Smartphone, category: "Development" },
-  { title: "AI Agent", description: "Custom AI agents and automations that work while you sleep.", icon: Bot, category: "Development", isNew: true },
-  // Marketing
-  { title: "Paid Ads", description: "Data-driven paid media across every major platform, optimized daily.", icon: BarChart3, category: "Marketing" },
-  { title: "SEO & Content", description: "Organic growth through search, content strategy, and authority building.", icon: Search, category: "Marketing" },
+  // Research & Strategy
+  { title: "Market Research", description: "Deep-dive insights into travel audiences, competitors, and growth opportunities tailored to your segment.", icon: Search, category: "Research & Strategy" },
+  { title: "Growth Strategy", description: "A clear, actionable roadmap from where you are to scalable, sustainable growth.", icon: Map, category: "Research & Strategy" },
+  // Brand & Product
+  { title: "Branding & Identity", description: "Visual identity, positioning, and messaging systems built specifically for travel brands.", icon: Fingerprint, category: "Brand & Product" },
+  { title: "Website & Booking UX", description: "High-converting travel websites and booking experiences that turn browsers into buyers.", icon: Globe, category: "Brand & Product" },
+  { title: "Digital Products", description: "Web and mobile apps engineered for travel operators, platforms, and experiences.", icon: Smartphone, category: "Brand & Product" },
+  { title: "AI & Automation", description: "Custom AI agents and smart automations that streamline operations and personalise at scale.", icon: Bot, category: "Brand & Product", isNew: true },
+  // Marketing & Growth
+  { title: "Paid Media", description: "Data-driven campaigns across search, social, and travel platforms — optimised for bookings and ROI.", icon: BarChart3, category: "Marketing & Growth" },
+  { title: "Content & SEO", description: "Organic reach through destination content, SEO strategy, and authority-building that drives long-term growth.", icon: Megaphone, category: "Marketing & Growth" },
 ];
 
-export const serviceCategories = ["Design", "Development", "Marketing"] as const;
+export const serviceCategories = ["Research & Strategy", "Brand & Product", "Marketing & Growth"] as const;
 export type ServiceCategory = typeof serviceCategories[number];

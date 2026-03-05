@@ -6,9 +6,9 @@ export default function ServiceGrid() {
     <section className="section-padding">
       <div className="container-wide">
         <ScrollReveal>
-          <h2 className="font-heading text-3xl font-bold md:text-4xl">Full-Stack Marketing Services</h2>
+          <h2 className="font-heading text-3xl font-bold md:text-4xl">Full-Stack Travel Business Services</h2>
           <p className="mt-3 max-w-xl text-muted-foreground">
-            Everything you need to grow — strategy, creative, media, and technology — under one roof.
+            Research, strategy, brand, digital products, and marketing — everything a travel business needs to grow, under one roof.
           </p>
         </ScrollReveal>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

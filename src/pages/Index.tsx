@@ -19,21 +19,21 @@ export default function Index() {
             <div>
               <ScrollReveal>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
-                  Your Growth Partner
+                  Travel Business Growth Partner
                 </p>
                 <h1 className="font-heading text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-                  A marketing & design partner that{" "}
-                  <span className="text-primary">grows with your company</span>
+                  The full-stack growth partner for{" "}
+                  <span className="text-primary">travel businesses</span>
                 </h1>
                 <p className="mt-6 max-w-lg text-lg text-muted-foreground">
-                  Proactive team. World-class design. Proven systems. One subscription for every channel you need.
+                  From market research and strategy to branding, digital products, and marketing execution — one team to take your travel brand from insight to scalable growth.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <Button variant="hero" size="lg">
-                    Book an intro call
+                    Book a strategy call
                   </Button>
                   <Button variant="hero-outline" size="lg" asChild>
-                    <Link to="/our-work">Our work</Link>
+                    <Link to="/our-work">See our work</Link>
                   </Button>
                 </div>
               </ScrollReveal>

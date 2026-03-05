@@ -49,7 +49,7 @@ export default function Header() {
       <div className="container-wide flex h-16 items-center justify-between px-6 lg:px-10">
         {/* Logo */}
         <Link to="/" className="font-heading text-xl font-bold tracking-tight text-foreground">
-          Studioflow
+          TripUp Studio
         </Link>
 
         {/* Desktop Nav */}

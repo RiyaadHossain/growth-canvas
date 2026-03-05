@@ -17,9 +17,9 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <p className="font-heading text-xl font-bold">Studioflow</p>
+          <p className="font-heading text-xl font-bold">TripUp Studio</p>
             <p className="mt-3 text-sm text-background/60">
-              A marketing and design partner that grows with your company.
+              The full-stack growth partner for travel businesses — from research and strategy to products and marketing.
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-background/10 pt-8 sm:flex-row">
-          <p className="text-xs text-background/40">© {new Date().getFullYear()} Studioflow. All rights reserved.</p>
+          <p className="text-xs text-background/40">© {new Date().getFullYear()} TripUp Studio. All rights reserved.</p>
           <div className="flex gap-6">
             <span className="text-xs text-background/40 hover:text-background/60 cursor-pointer">Privacy</span>
             <span className="text-xs text-background/40 hover:text-background/60 cursor-pointer">Terms</span>

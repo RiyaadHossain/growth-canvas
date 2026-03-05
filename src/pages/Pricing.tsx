@@ -8,7 +8,7 @@ import CTABand from "@/components/sections/CTABand";
 import { Check } from "lucide-react";
 
 const included = [
-  "Dedicated strategist",
+  "Dedicated travel strategist",
   "Weekly strategy calls",
   "Same-day communication",
   "Rush support",
@@ -25,10 +25,10 @@ export default function Pricing() {
           <ScrollReveal>
             <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">Pricing</p>
             <h1 className="font-heading text-4xl font-extrabold md:text-5xl">
-              Transparent Pricing Across All of Our Services
+              Transparent Pricing Across All Our Travel Services
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Engagements start at <span className="font-bold text-foreground">$1,500/month</span>. No hidden fees. No surprise invoices.
+              Engagements start at <span className="font-bold text-foreground">$1,800/month</span>. No hidden fees. No surprise invoices.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
@@ -52,7 +52,7 @@ export default function Pricing() {
 
       <RoleTabs />
       <FAQSection />
-      <CTABand headline="Welcome to Your New Marketing Team" />
+      <CTABand headline="Ready to Grow Your Travel Business?" subtext="Book a free strategy call and find out exactly how TripUp Studio can help." cta="Book a strategy call" />
     </Layout>
   );
 }
