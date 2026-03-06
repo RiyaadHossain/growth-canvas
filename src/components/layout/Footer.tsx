@@ -12,7 +12,7 @@ const footerNav = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-foreground text-background">
+    <footer className="border-t border-border bg-background text-foreground">
       <div className="container-wide px-6 py-16 lg:px-10">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
