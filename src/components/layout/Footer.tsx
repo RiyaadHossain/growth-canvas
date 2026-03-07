@@ -85,11 +85,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-foreground/10 pt-8 sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-foreground/10 pt-8 sm:flex-row">
           <p className="text-xs text-foreground/40">© {new Date().getFullYear()} TripUp Studio. All rights reserved.</p>
           <div className="flex gap-6">
-            <span className="text-xs text-foreground/40 hover:text-foreground/60 cursor-pointer">Privacy</span>
-            <span className="text-xs text-foreground/40 hover:text-foreground/60 cursor-pointer">Terms</span>
+            <Link to="/privacy" className="text-xs text-foreground/40 hover:text-foreground/60 transition-colors">Privacy</Link>
+            <Link to="/terms" className="text-xs text-foreground/40 hover:text-foreground/60 transition-colors">Terms</Link>
           </div>
         </div>
       </div>
