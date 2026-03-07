@@ -6,14 +6,7 @@ export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      const scrolled = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      const totalHeight = document.documentElement.scrollHeight;
-      // Show only when user is near the very bottom (within 300px of bottom)
-      const nearBottom = scrolled + viewportHeight >= totalHeight - 300;
-      setVisible(nearBottom && scrolled > 300);
-    };
+    const onScroll = () => setVisible(window.scrollY > 300);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
