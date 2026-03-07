@@ -20,7 +20,7 @@ export default function ScrollToTop() {
           exit={{ opacity: 0, y: 16 }}
           transition={{ duration: 0.25 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-20 left-8 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-opacity hover:opacity-80"
+          className="fixed bottom-8 left-8 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-opacity hover:opacity-80"
           aria-label="Back to top"
         >
           <ArrowUp size={20} strokeWidth={2.5} />
