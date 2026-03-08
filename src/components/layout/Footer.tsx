@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
-import { industries } from "@/data/industries";
+import { resources } from "@/data/resources";
 import { Facebook, Linkedin, Instagram, Twitter } from "lucide-react";
 
 const footerNav = [
@@ -12,10 +12,9 @@ const footerNav = [
 ];
 
 const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com", icon: Facebook },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { label: "Instagram", href: "https://instagram.com", icon: Instagram },
-  { label: "X (Twitter)", href: "https://x.com", icon: Twitter },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61588565085740", icon: Facebook },
+  { label: "X (Twitter)", href: "https://x.com/tripupstudio", icon: Twitter },
+  { label: "Instagram", href: "https://www.instagram.com/tripupstudio/", icon: Instagram },
 ];
 
 export default function Footer() {
