@@ -71,17 +71,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Industries */}
-          <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-foreground/40">Industries</p>
-            <ul className="space-y-2">
-              {industries.slice(0, 6).map((i) => (
-                <li key={i.title}>
-                  <span className="text-sm text-foreground/70">{i.title}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+           {/* Resources */}
+           <div>
+             <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-foreground/40">Resources</p>
+             <ul className="space-y-2">
+               {resources.slice(0, 6).map((r) => (
+                 <li key={r.title}>
+                   <span className="text-sm text-foreground/70">{r.title}</span>
+                 </li>
+               ))}
+             </ul>
+           </div>
         </div>
 
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-foreground/10 pt-8 sm:flex-row">
