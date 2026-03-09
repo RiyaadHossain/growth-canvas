@@ -6,6 +6,7 @@ import StatsStrip from "@/components/sections/StatsStrip";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 import CTABand from "@/components/sections/CTABand";
 import HowWeWork from "@/components/sections/HowWeWork";
+import ComparisonTable from "@/components/sections/ComparisonTable";
 
 export default function WhyUs() {
   return (
