@@ -59,6 +59,7 @@ export default function Index() {
       <ServiceGrid />
       <TestimonialCarousel />
       <HowWeWork />
+      <FirstThirtyDays />
       <ValueProps />
       <CTABand />
     </Layout>
