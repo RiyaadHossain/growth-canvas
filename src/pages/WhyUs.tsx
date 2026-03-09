@@ -6,6 +6,7 @@ import StatsStrip from "@/components/sections/StatsStrip";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 import CTABand from "@/components/sections/CTABand";
 import HowWeWork from "@/components/sections/HowWeWork";
+import ComparisonTable from "@/components/sections/ComparisonTable";
 
 export default function WhyUs() {
   return (
@@ -30,6 +31,7 @@ export default function WhyUs() {
 
       <StatsStrip />
       <TeamSection />
+      <ComparisonTable />
       <HowWeWork />
       <TestimonialCarousel />
       <CTABand headline="Work With Us" subtext="Join 500+ travel brands that trust TripUp Studio to drive their growth." />
