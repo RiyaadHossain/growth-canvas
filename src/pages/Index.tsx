@@ -8,6 +8,7 @@ import ValueProps from "@/components/sections/ValueProps";
 import CTABand from "@/components/sections/CTABand";
 import HowWeWork from "@/components/sections/HowWeWork";
 import FirstThirtyDays from "@/components/sections/FirstThirtyDays";
+import ComparisonTable from "@/components/sections/ComparisonTable";
 import { Link } from "react-router-dom";
 
 export default function Index() {
@@ -60,6 +61,7 @@ export default function Index() {
       <TestimonialCarousel />
       <HowWeWork />
       <FirstThirtyDays />
+      <ComparisonTable />
       <ValueProps />
       <CTABand />
     </Layout>
