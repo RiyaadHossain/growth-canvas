@@ -31,6 +31,7 @@ export default function WhyUs() {
 
       <StatsStrip />
       <TeamSection />
+      <ComparisonTable />
       <HowWeWork />
       <TestimonialCarousel />
       <CTABand headline="Work With Us" subtext="Join 500+ travel brands that trust TripUp Studio to drive their growth." />
