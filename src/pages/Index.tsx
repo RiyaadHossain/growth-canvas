@@ -61,6 +61,7 @@ export default function Index() {
       <TestimonialCarousel />
       <HowWeWork />
       <FirstThirtyDays />
+      <ComparisonTable />
       <ValueProps />
       <CTABand />
     </Layout>
