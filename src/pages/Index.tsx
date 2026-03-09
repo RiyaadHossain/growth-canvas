@@ -7,6 +7,7 @@ import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 import ValueProps from "@/components/sections/ValueProps";
 import CTABand from "@/components/sections/CTABand";
 import HowWeWork from "@/components/sections/HowWeWork";
+import FirstThirtyDays from "@/components/sections/FirstThirtyDays";
 import { Link } from "react-router-dom";
 
 export default function Index() {
@@ -58,6 +59,7 @@ export default function Index() {
       <ServiceGrid />
       <TestimonialCarousel />
       <HowWeWork />
+      <FirstThirtyDays />
       <ValueProps />
       <CTABand />
     </Layout>
