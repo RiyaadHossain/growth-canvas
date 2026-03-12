@@ -47,12 +47,20 @@ export default function Index() {
             <ScrollReveal delay={0.2}>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10" />
-                  <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent/15 to-primary/10" />
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
+                    <img src={heroTravel1} alt="Luxury travel destination" className="h-full w-full object-cover" />
+                  </div>
+                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
+                    <img src={heroTravel2} alt="Travel brand strategy" className="h-full w-full object-cover" />
+                  </div>
                 </div>
                 <div className="mt-8 space-y-4">
-                  <div className="aspect-square rounded-2xl bg-gradient-to-br from-muted to-primary/15" />
-                  <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-primary/10 to-accent/20" />
+                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
+                    <img src={heroTravel3} alt="Adventure travel" className="h-full w-full object-cover" />
+                  </div>
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
+                    <img src={heroTravel4} alt="Luxury hotel" className="h-full w-full object-cover" />
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
