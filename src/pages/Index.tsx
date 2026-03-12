@@ -1,6 +1,10 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import heroTravel1 from "@/assets/hero-travel-1.jpg";
+import heroTravel2 from "@/assets/hero-travel-2.jpg";
+import heroTravel3 from "@/assets/hero-travel-3.jpg";
+import heroTravel4 from "@/assets/hero-travel-4.jpg";
 import LogoStrip from "@/components/sections/LogoStrip";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
