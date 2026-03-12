@@ -19,6 +19,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaMenu, setMegaMenu] = useState<MegaMenuKey | null>(null);
   const megaRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -34,15 +35,22 @@ export default function Header() {
     return () => window.removeEventListener("keydown", handler);
   }, []);
 
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (megaRef.current && !megaRef.current.contains(e.target as Node)) {
-        setMegaMenu(null);
-      }
-    };
-    if (megaMenu) document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, [megaMenu]);
+  const handleMouseEnter = (key: MegaMenuKey) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setMegaMenu(key);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimer.current = setTimeout(() => setMegaMenu(null), 120);
+  };
+
+  const handleMegaMouseEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+  };
+
+  const handleMegaMouseLeave = () => {
+    closeTimer.current = setTimeout(() => setMegaMenu(null), 120);
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
@@ -57,11 +65,12 @@ export default function Header() {
           {(["services", "resources"] as const).map((key) => (
             <button
               key={key}
-              onClick={() => setMegaMenu(megaMenu === key ? null : key)}
+              onMouseEnter={() => handleMouseEnter(key)}
+              onMouseLeave={handleMouseLeave}
               className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
             >
               {key === "services" ? "Services" : "Resources"}
-              <ChevronDown className={`h-3.5 w-3.5 transition-transform ${megaMenu === key ? "rotate-180" : ""}`} />
+              <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${megaMenu === key ? "rotate-180" : ""}`} />
             </button>
           ))}
           {navLinks.map((link) => (
@@ -78,10 +87,13 @@ export default function Header() {
           <AnimatePresence>
             {megaMenu && (
               <motion.div
-                initial={{ opacity: 0, y: -8 }}
+                key={megaMenu}
+                initial={{ opacity: 0, y: -6 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.2 }}
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.18 }}
+                onMouseEnter={handleMegaMouseEnter}
+                onMouseLeave={handleMegaMouseLeave}
                 className="absolute left-0 top-full w-full border-b border-border bg-card shadow-xl"
               >
                 {megaMenu === "services" ? (
