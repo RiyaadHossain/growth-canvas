@@ -18,6 +18,10 @@ import PerformanceMarketing from "./pages/PerformanceMarketing";
 import ContentCreative from "./pages/ContentCreative";
 import SEOOrganicGrowth from "./pages/SEOOrganicGrowth";
 import CRMFunnelsAutomation from "./pages/CRMFunnelsAutomation";
+import TravelInsights from "./pages/TravelInsights";
+import GuidesPlaybooks from "./pages/GuidesPlaybooks";
+import VideoSessions from "./pages/VideoSessions";
+import CaseStudies from "./pages/CaseStudies";
 
 const queryClient = new QueryClient();
 
