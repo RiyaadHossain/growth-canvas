@@ -72,7 +72,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {services.slice(0, 6).map((s) => (
                 <li key={s.title}>
-                  <span className="text-sm text-foreground/70">{s.title}</span>
+                  <Link to={s.slug} className="text-sm text-foreground/70 transition-colors hover:text-foreground">{s.title}</Link>
                 </li>
               ))}
             </ul>
