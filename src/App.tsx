@@ -12,6 +12,12 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import BrandingIdentity from "./pages/BrandingIdentity";
+import MarketResearch from "./pages/MarketResearch";
+import WebDesignDevelopment from "./pages/WebDesignDevelopment";
+import PerformanceMarketing from "./pages/PerformanceMarketing";
+import ContentCreative from "./pages/ContentCreative";
+import SEOOrganicGrowth from "./pages/SEOOrganicGrowth";
+import CRMFunnelsAutomation from "./pages/CRMFunnelsAutomation";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +36,12 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/services/branding-identity" element={<BrandingIdentity />} />
+          <Route path="/services/market-research" element={<MarketResearch />} />
+          <Route path="/services/web-design-development" element={<WebDesignDevelopment />} />
+          <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
+          <Route path="/services/content-creative" element={<ContentCreative />} />
+          <Route path="/services/seo-organic-growth" element={<SEOOrganicGrowth />} />
+          <Route path="/services/crm-funnels-automation" element={<CRMFunnelsAutomation />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
