@@ -7,10 +7,10 @@ export const services = [
   // Brand & Product
   { title: "Branding & Identity", description: "Visual identity, positioning, and messaging systems built specifically for travel brands.", icon: Fingerprint, category: "Brand & Product", slug: "/services/branding-identity" },
   { title: "Website & Booking UX", description: "High-converting travel websites and booking experiences that turn browsers into buyers.", icon: Globe, category: "Brand & Product", slug: "/services/web-design-development" },
-  { title: "Digital Products", description: "Web and mobile apps engineered for travel operators, platforms, and experiences.", icon: Smartphone, category: "Brand & Product", slug: "/services/web-design-development" },
+  { title: "Product Design & Development", description: "Web and mobile apps engineered for travel operators, platforms, and experiences.", icon: Smartphone, category: "Brand & Product", slug: "/services/web-design-development" },
   { title: "AI & Automation", description: "Custom AI agents and smart automations that streamline operations and personalise at scale.", icon: Bot, category: "Brand & Product", isNew: true, slug: "/services/crm-funnels-automation" },
   // Marketing & Growth
-  { title: "Paid Media", description: "Data-driven campaigns across search, social, and travel platforms — optimised for bookings and ROI.", icon: BarChart3, category: "Marketing & Growth", slug: "/services/performance-marketing" },
+  { title: "Performance Marketing", description: "Data-driven campaigns across search, social, and travel platforms — optimised for bookings and ROI.", icon: BarChart3, category: "Marketing & Growth", slug: "/services/performance-marketing" },
   { title: "Content & SEO", description: "Organic reach through destination content, SEO strategy, and authority-building that drives long-term growth.", icon: Megaphone, category: "Marketing & Growth", slug: "/services/seo-organic-growth" },
 ];
 
