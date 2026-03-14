@@ -104,9 +104,10 @@ export default function Header() {
                           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-primary">{cat}</p>
                           <div className="space-y-1">
                             {services.filter((s) => s.category === cat).map((item) => (
-                              <div
+                              <Link
                                 key={item.title}
-                                className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary cursor-pointer"
+                                to={item.slug}
+                                className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary"
                               >
                                 <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                                 <div>
@@ -120,7 +121,7 @@ export default function Header() {
                                   </p>
                                   <p className="text-xs text-muted-foreground">{item.description}</p>
                                 </div>
-                              </div>
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -223,10 +224,10 @@ function MobileServicesSection() {
               <div key={cat} className="px-8 pb-2">
                 <p className="py-2 text-[11px] font-bold uppercase tracking-widest text-primary">{cat}</p>
                 {services.filter((s) => s.category === cat).map((item) => (
-                  <div key={item.title} className="px-2 py-1.5">
+                  <Link key={item.title} to={item.slug} className="block px-2 py-1.5">
                     <p className="text-sm font-medium text-foreground">{item.title}</p>
                     <p className="text-xs text-muted-foreground">{item.description}</p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             ))}
