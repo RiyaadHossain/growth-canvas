@@ -351,7 +351,7 @@ function ProcessSection({
                     initial={{ scaleX: 0 }}
                     animate={inView ? { scaleX: 1 } : {}}
                     transition={{ duration: 0.5, delay: base - 0.5, ease: "easeInOut" }}
-                    className="absolute top-5 right-1/2 h-[2px] w-full origin-right bg-primary/30"
+                    className="absolute top-5 right-1/2 h-[2px] w-full origin-left bg-primary/30"
                     style={{ zIndex: 0 }}
                   />
                 )}
