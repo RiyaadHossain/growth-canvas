@@ -1,4 +1,4 @@
-import { Search, Map, Fingerprint, Globe, Smartphone, Bot, BarChart3, Megaphone } from "lucide-react";
+import { Search, Map, Fingerprint, Smartphone, Bot, BarChart3, Megaphone } from "lucide-react";
 
 export const services = [
   // Research & Strategy
@@ -6,7 +6,6 @@ export const services = [
   { title: "Growth Strategy", description: "A clear, actionable roadmap from where you are to scalable, sustainable growth.", icon: Map, category: "Research & Strategy", slug: "/services/market-research" },
   // Brand & Product
   { title: "Branding & Identity", description: "Visual identity, positioning, and messaging systems built specifically for travel brands.", icon: Fingerprint, category: "Brand & Product", slug: "/services/branding-identity" },
-  { title: "Website & Booking UX", description: "High-converting travel websites and booking experiences that turn browsers into buyers.", icon: Globe, category: "Brand & Product", slug: "/services/web-design-development" },
   { title: "Product Design & Development", description: "Web and mobile apps engineered for travel operators, platforms, and experiences.", icon: Smartphone, category: "Brand & Product", slug: "/services/web-design-development" },
   { title: "AI & Automation", description: "Custom AI agents and smart automations that streamline operations and personalise at scale.", icon: Bot, category: "Brand & Product", isNew: true, slug: "/services/crm-funnels-automation" },
   // Marketing & Growth
