@@ -131,8 +131,9 @@ export default function Header() {
                 ) : (
                   <div className="container-wide grid gap-4 px-6 py-8 sm:grid-cols-2 lg:grid-cols-4">
                     {resources.map((item) => (
-                      <div
+                      <Link
                         key={item.title}
+                        to={item.slug}
                         className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary cursor-pointer"
                       >
                         <item.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -140,7 +141,7 @@ export default function Header() {
                           <p className="text-sm font-semibold text-foreground">{item.title}</p>
                           <p className="text-xs text-muted-foreground">{item.description}</p>
                         </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -243,7 +244,7 @@ function MobileSimpleSection({
   items,
 }: {
   title: string;
-  items: { title: string; description: string }[];
+  items: { title: string; description: string; slug?: string }[];
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -263,12 +264,23 @@ function MobileSimpleSection({
             exit={{ height: 0 }}
             className="overflow-hidden"
           >
-            {items.map((item) => (
-              <div key={item.title} className="px-10 py-2">
-                <p className="text-sm font-medium text-foreground">{item.title}</p>
-                <p className="text-xs text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
+            {items.map((item) => {
+              const content = (
+                <>
+                  <p className="text-sm font-medium text-foreground">{item.title}</p>
+                  <p className="text-xs text-muted-foreground">{item.description}</p>
+                </>
+              );
+              return item.slug ? (
+                <Link key={item.title} to={item.slug} className="block px-10 py-2">
+                  {content}
+                </Link>
+              ) : (
+                <div key={item.title} className="px-10 py-2">
+                  {content}
+                </div>
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>

@@ -82,11 +82,11 @@ export default function Footer() {
            <div>
              <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-foreground/40">Resources</p>
              <ul className="space-y-2">
-               {resources.slice(0, 6).map((r) => (
-                 <li key={r.title}>
-                   <span className="text-sm text-foreground/70">{r.title}</span>
-                 </li>
-               ))}
+              {resources.map((r) => (
+                  <li key={r.title}>
+                    <Link to={r.slug} className="text-sm text-foreground/70 transition-colors hover:text-foreground">{r.title}</Link>
+                  </li>
+                ))}
              </ul>
            </div>
         </div>

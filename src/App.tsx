@@ -18,6 +18,10 @@ import PerformanceMarketing from "./pages/PerformanceMarketing";
 import ContentCreative from "./pages/ContentCreative";
 import SEOOrganicGrowth from "./pages/SEOOrganicGrowth";
 import CRMFunnelsAutomation from "./pages/CRMFunnelsAutomation";
+import TravelInsights from "./pages/TravelInsights";
+import GuidesPlaybooks from "./pages/GuidesPlaybooks";
+import VideoSessions from "./pages/VideoSessions";
+import CaseStudies from "./pages/CaseStudies";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +46,10 @@ const App = () => (
           <Route path="/services/content-creative" element={<ContentCreative />} />
           <Route path="/services/seo-organic-growth" element={<SEOOrganicGrowth />} />
           <Route path="/services/crm-funnels-automation" element={<CRMFunnelsAutomation />} />
+          <Route path="/resources/travel-insights" element={<TravelInsights />} />
+          <Route path="/resources/guides-playbooks" element={<GuidesPlaybooks />} />
+          <Route path="/resources/video-sessions" element={<VideoSessions />} />
+          <Route path="/resources/case-studies" element={<CaseStudies />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
