@@ -23,6 +23,7 @@ import TravelInsights from "./pages/TravelInsights";
 import GuidesPlaybooks from "./pages/GuidesPlaybooks";
 import VideoSessions from "./pages/VideoSessions";
 import CaseStudies from "./pages/CaseStudies";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
