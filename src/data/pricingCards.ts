@@ -24,7 +24,7 @@ export const pricingCards = [
     includes: ["UX strategy & wireframes", "Custom design", "Development & CMS", "Booking flow optimisation"],
   },
   {
-    title: "Digital Products",
+    title: "Product Design & Development",
     startingAt: "$6,000",
     description: "Custom web and mobile apps built for travel operators, platforms, and experiences.",
     includes: ["Product discovery", "UX/UI design", "Full-stack development", "Ongoing maintenance"],
@@ -36,7 +36,7 @@ export const pricingCards = [
     includes: ["AI agent buildout", "Workflow automation", "CRM integration", "Ongoing optimisation"],
   },
   {
-    title: "Paid Media",
+    title: "Performance Marketing",
     startingAt: "$2,000",
     description: "Full-service travel paid media management across all major platforms.",
     includes: ["Campaign strategy", "Daily optimisation", "Audience targeting", "Monthly reporting"],
