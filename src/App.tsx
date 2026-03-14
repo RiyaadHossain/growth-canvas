@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import BrandingIdentity from "./pages/BrandingIdentity";
 
 const queryClient = new QueryClient();
 
