@@ -1,4 +1,4 @@
-import { Search, Map, Fingerprint, Globe, Smartphone, Bot, BarChart3, Megaphone } from "lucide-react";
+import { Search, Map, Fingerprint, Smartphone, Bot, BarChart3, Megaphone } from "lucide-react";
 
 export const services = [
   // Research & Strategy
