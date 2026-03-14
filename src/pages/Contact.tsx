@@ -111,23 +111,23 @@ export default function Contact() {
                         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                           {item.label}
                         </p>
-                        <div className="mt-1 space-y-0.5">
-                          {item.lines.map((line) =>
-                            line.href ? (
-                              <a
-                                key={line.value}
-                                href={line.href}
-                                className="block text-sm font-medium text-foreground transition-colors hover:text-primary"
-                              >
-                                {line.value}
-                              </a>
-                            ) : (
-                              <p key={line.value} className="text-sm font-medium text-foreground">
-                                {line.value}
-                              </p>
-                            )
-                          )}
-                        </div>
+                        <p className="mt-1 text-sm font-medium text-foreground">
+                          {item.lines.map((line, idx) => (
+                            <span key={line.value}>
+                              {line.href ? (
+                                <a
+                                  href={line.href}
+                                  className="transition-colors hover:text-primary"
+                                >
+                                  {line.value}
+                                </a>
+                              ) : (
+                                line.value
+                              )}
+                              {idx < item.lines.length - 1 && ", "}
+                            </span>
+                          ))}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -252,6 +252,26 @@ export default function Contact() {
               </ScrollReveal>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Map */}
+      <section className="section-padding !pb-0">
+        <div className="container-wide">
+          <ScrollReveal>
+            <div className="overflow-hidden rounded-2xl border border-border">
+              <iframe
+                title="TripUp Studio Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.18237290063!2d-0.2664037!3d51.5286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1710000000000"
+                width="100%"
+                height="400"
+                style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9)" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
