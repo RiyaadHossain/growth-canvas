@@ -29,6 +29,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/services/branding-identity" element={<BrandingIdentity />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
