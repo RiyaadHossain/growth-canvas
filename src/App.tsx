@@ -23,6 +23,7 @@ import TravelInsights from "./pages/TravelInsights";
 import GuidesPlaybooks from "./pages/GuidesPlaybooks";
 import VideoSessions from "./pages/VideoSessions";
 import CaseStudies from "./pages/CaseStudies";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/resources/guides-playbooks" element={<GuidesPlaybooks />} />
           <Route path="/resources/video-sessions" element={<VideoSessions />} />
           <Route path="/resources/case-studies" element={<CaseStudies />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

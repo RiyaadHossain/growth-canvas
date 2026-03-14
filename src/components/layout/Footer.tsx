@@ -13,7 +13,7 @@ const footerNav = [
   { label: "Our Work", to: "/our-work" },
   { label: "Why Us", to: "/why-us" },
   { label: "Pricing", to: "/pricing" },
-  { label: "Blog", to: "/blog" },
+  { label: "About Us", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -70,7 +70,7 @@ export default function Footer() {
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-foreground/40">Services</p>
             <ul className="space-y-2">
-              {services.slice(0, 6).map((s) => (
+              {services.map((s) => (
                 <li key={s.title}>
                   <Link to={s.slug} className="text-sm text-foreground/70 transition-colors hover:text-foreground">{s.title}</Link>
                 </li>
