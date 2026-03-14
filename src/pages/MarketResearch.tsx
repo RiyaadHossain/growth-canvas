@@ -14,8 +14,8 @@ const data: ServicePageData = {
     trustLine: "Built for travel brands that want to grow with confidence, not guesswork.",
   },
   problem: {
-    headline: "Most travel brands don't struggle because they lack effort — they struggle because they're making decisions",
-    highlightedText: "without enough insight.",
+    headline: "Effort without insight leads to",
+    highlightedText: "wasted momentum.",
     paragraph: "We help you identify what's working, what's missing, where competitors are winning, and where your next best opportunity actually is.",
     painPoints: [
       { icon: Shuffle, text: "Unclear positioning in a crowded travel market" },

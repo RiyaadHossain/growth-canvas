@@ -14,8 +14,8 @@ const data: ServicePageData = {
     trustLine: "Built for travel brands that need content with strategic intent, not just volume.",
   },
   problem: {
-    headline: "Good content doesn't just fill a feed. It shapes perception, reduces hesitation, and supports",
-    highlightedText: "every stage of the buyer journey.",
+    headline: "Good content doesn't just fill a feed — it drives",
+    highlightedText: "every decision.",
     paragraph: "From discovery to decision, the right content builds confidence and moves travelers closer to action.",
     painPoints: [
       { icon: Shuffle, text: "Inconsistent brand communication across channels" },
