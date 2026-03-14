@@ -320,7 +320,12 @@ function ProcessSection({
   steps: { number: string; title: string; desc: string }[];
 }) {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Each step has 3 elements (number, title, desc) + 1 connecting line after it (except last)
+  // Timing: per step = badge(0.4s) + title(0.3s) + desc(0.3s) + line(0.5s) = 1.5s
+  // We stagger so each element waits for the previous one
+  const getStepDelay = (stepIndex: number) => stepIndex * 1.5;
 
   return (
     <section className="section-padding" ref={ref}>
@@ -334,30 +339,108 @@ function ProcessSection({
           </h2>
         </ScrollReveal>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, i) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative text-center"
-            >
-              {i < steps.length - 1 && (
-                <div className="absolute right-0 top-5 hidden h-px w-full translate-x-1/2 bg-border lg:block" />
-              )}
-              <motion.span
-                initial={{ scale: 0.6, opacity: 0 }}
-                animate={inView ? { scale: 1, opacity: 1 } : {}}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="relative z-10 mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground"
-              >
-                {step.number}
-              </motion.span>
-              <h3 className="mt-4 font-heading text-lg font-bold text-foreground">{step.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{step.desc}</p>
-            </motion.div>
-          ))}
+        {/* Desktop: horizontal timeline */}
+        <div className="mt-16 hidden lg:grid lg:grid-cols-4 lg:gap-0">
+          {steps.map((step, i) => {
+            const base = getStepDelay(i);
+            return (
+              <div key={step.number} className="relative flex flex-col items-center text-center px-4">
+                {/* Connecting line drawn from previous step */}
+                {i > 0 && (
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={inView ? { scaleX: 1 } : {}}
+                    transition={{ duration: 0.5, delay: base - 0.5, ease: "easeInOut" }}
+                    className="absolute top-5 right-1/2 h-[2px] w-full origin-right bg-primary/30"
+                    style={{ zIndex: 0 }}
+                  />
+                )}
+
+                {/* Step number badge */}
+                <motion.span
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={inView ? { scale: 1, opacity: 1 } : {}}
+                  transition={{ duration: 0.4, delay: base, type: "spring", stiffness: 200, damping: 15 }}
+                  className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground shadow-lg"
+                >
+                  {step.number}
+                </motion.span>
+
+                {/* Step title */}
+                <motion.h3
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.3, delay: base + 0.4 }}
+                  className="mt-4 font-heading text-lg font-bold text-foreground"
+                >
+                  {step.title}
+                </motion.h3>
+
+                {/* Step description */}
+                <motion.p
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.3, delay: base + 0.7 }}
+                  className="mt-2 text-sm text-muted-foreground"
+                >
+                  {step.desc}
+                </motion.p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Mobile / Tablet: vertical timeline */}
+        <div className="mt-12 lg:hidden">
+          <div className="relative ml-5 border-l-2 border-primary/20 pl-8">
+            {steps.map((step, i) => {
+              const base = getStepDelay(i);
+              return (
+                <div key={step.number} className="relative pb-10 last:pb-0">
+                  {/* Animated line segment */}
+                  {i > 0 && (
+                    <motion.div
+                      initial={{ scaleY: 0 }}
+                      animate={inView ? { scaleY: 1 } : {}}
+                      transition={{ duration: 0.5, delay: base - 0.5, ease: "easeInOut" }}
+                      className="absolute -left-8 bottom-full h-full w-[2px] origin-top bg-primary/40"
+                      style={{ top: 0 }}
+                    />
+                  )}
+
+                  {/* Badge */}
+                  <motion.span
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={inView ? { scale: 1, opacity: 1 } : {}}
+                    transition={{ duration: 0.4, delay: base, type: "spring", stiffness: 200, damping: 15 }}
+                    className="absolute -left-[2.55rem] top-0 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground shadow-lg"
+                  >
+                    {step.number}
+                  </motion.span>
+
+                  {/* Title */}
+                  <motion.h3
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.3, delay: base + 0.4 }}
+                    className="font-heading text-lg font-bold text-foreground"
+                  >
+                    {step.title}
+                  </motion.h3>
+
+                  {/* Description */}
+                  <motion.p
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.3, delay: base + 0.7 }}
+                    className="mt-2 text-sm text-muted-foreground"
+                  >
+                    {step.desc}
+                  </motion.p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
