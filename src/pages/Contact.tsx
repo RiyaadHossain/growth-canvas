@@ -3,26 +3,32 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Clock, Send, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Phone, Send, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
+    icon: Phone,
+    label: "Call us",
+    lines: [
+      { value: "+44 20 1234 5678", href: "tel:+442012345678" },
+      { value: "+1 212 555 0199", href: "tel:+12125550199" },
+    ],
+  },
+  {
     icon: Mail,
     label: "Email us",
-    value: "hello@tripupstudio.com",
-    href: "mailto:hello@tripupstudio.com",
+    lines: [
+      { value: "hello@tripupstudio.com", href: "mailto:hello@tripupstudio.com" },
+    ],
   },
   {
     icon: MapPin,
     label: "Based in",
-    value: "London, UK — working globally",
-  },
-  {
-    icon: Clock,
-    label: "Response time",
-    value: "Within 24 hours, usually sooner",
+    lines: [
+      { value: "London, UK — working globally" },
+    ],
   },
 ];
 
@@ -105,18 +111,23 @@ export default function Contact() {
                         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                           {item.label}
                         </p>
-                        {item.href ? (
-                          <a
-                            href={item.href}
-                            className="mt-1 text-sm font-medium text-foreground transition-colors hover:text-primary"
-                          >
-                            {item.value}
-                          </a>
-                        ) : (
-                          <p className="mt-1 text-sm font-medium text-foreground">
-                            {item.value}
-                          </p>
-                        )}
+                        <div className="mt-1 space-y-0.5">
+                          {item.lines.map((line) =>
+                            line.href ? (
+                              <a
+                                key={line.value}
+                                href={line.href}
+                                className="block text-sm font-medium text-foreground transition-colors hover:text-primary"
+                              >
+                                {line.value}
+                              </a>
+                            ) : (
+                              <p key={line.value} className="text-sm font-medium text-foreground">
+                                {line.value}
+                              </p>
+                            )
+                          )}
+                        </div>
                       </div>
                     </div>
                   ))}
