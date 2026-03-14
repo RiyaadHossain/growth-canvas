@@ -256,7 +256,7 @@ export default function Contact() {
       </section>
 
       {/* Map */}
-      <section className="section-padding !pb-0">
+      <section className="section-padding">
         <div className="container-wide">
           <ScrollReveal>
             <div className="overflow-hidden rounded-2xl border border-border">
