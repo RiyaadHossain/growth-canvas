@@ -46,6 +46,10 @@ const App = () => (
           <Route path="/services/content-creative" element={<ContentCreative />} />
           <Route path="/services/seo-organic-growth" element={<SEOOrganicGrowth />} />
           <Route path="/services/crm-funnels-automation" element={<CRMFunnelsAutomation />} />
+          <Route path="/resources/travel-insights" element={<TravelInsights />} />
+          <Route path="/resources/guides-playbooks" element={<GuidesPlaybooks />} />
+          <Route path="/resources/video-sessions" element={<VideoSessions />} />
+          <Route path="/resources/case-studies" element={<CaseStudies />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

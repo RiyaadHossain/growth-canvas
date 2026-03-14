@@ -131,8 +131,9 @@ export default function Header() {
                 ) : (
                   <div className="container-wide grid gap-4 px-6 py-8 sm:grid-cols-2 lg:grid-cols-4">
                     {resources.map((item) => (
-                      <div
+                      <Link
                         key={item.title}
+                        to={item.slug}
                         className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary cursor-pointer"
                       >
                         <item.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
@@ -140,7 +141,7 @@ export default function Header() {
                           <p className="text-sm font-semibold text-foreground">{item.title}</p>
                           <p className="text-xs text-muted-foreground">{item.description}</p>
                         </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 )}
