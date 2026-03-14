@@ -150,7 +150,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <Button variant="hero" size="lg">
+          <Button variant="hero" size="default" className="text-sm">
             Free Consultation
           </Button>
         </div>
