@@ -24,7 +24,7 @@ export const pricingCards = [
     includes: ["UX strategy & wireframes", "Custom design", "Development & CMS", "Booking flow optimisation"],
   },
   {
-    title: "Digital Products",
+    title: "Product Design & Development",
     startingAt: "$6,000",
     description: "Custom web and mobile apps built for travel operators, platforms, and experiences.",
     includes: ["Product discovery", "UX/UI design", "Full-stack development", "Ongoing maintenance"],
