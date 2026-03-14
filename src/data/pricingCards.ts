@@ -18,12 +18,6 @@ export const pricingCards = [
     includes: ["Brand positioning", "Logo & identity system", "Messaging framework", "Brand guidelines"],
   },
   {
-    title: "Website & Booking UX",
-    startingAt: "$4,500",
-    description: "Conversion-focused travel websites and booking flows designed end-to-end.",
-    includes: ["UX strategy & wireframes", "Custom design", "Development & CMS", "Booking flow optimisation"],
-  },
-  {
     title: "Product Design & Development",
     startingAt: "$6,000",
     description: "Custom web and mobile apps built for travel operators, platforms, and experiences.",
