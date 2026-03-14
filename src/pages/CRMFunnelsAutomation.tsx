@@ -14,8 +14,8 @@ const data: ServicePageData = {
     trustLine: "Built for travel brands ready to operate smarter and scale without adding overhead.",
   },
   problem: {
-    headline: "Growth becomes harder when your team is buried in work that should be systemized. The right automation removes friction —",
-    highlightedText: "the right AI creates faster decisions and more scalable experiences.",
+    headline: "Systemize the work that slows you down —",
+    highlightedText: "let AI handle the rest.",
     paragraph: "Most travel businesses know they need smarter systems. The challenge is identifying where AI and automation create real leverage — not just adding tools, but designing workflows that genuinely reduce effort and improve outcomes.",
     painPoints: [
       { icon: Shuffle, text: "Repetitive manual tasks slowing down the team" },

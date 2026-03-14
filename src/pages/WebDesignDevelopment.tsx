@@ -14,8 +14,8 @@ const data: ServicePageData = {
     trustLine: "Built for travel brands that need a website that performs as well as it looks.",
   },
   problem: {
-    headline: "For many travel businesses, the website is the first real impression. If it feels unclear, outdated, or disconnected from the brand,",
-    highlightedText: "trust drops immediately.",
+    headline: "If your website doesn't build trust instantly,",
+    highlightedText: "visitors leave.",
     paragraph: "We create sites that feel premium, intuitive, and conversion-aware from the first scroll.",
     painPoints: [
       { icon: Shuffle, text: "Outdated or low-trust website design" },

@@ -14,8 +14,8 @@ const data: ServicePageData = {
     trustLine: "Built for travel brands that want organic visibility without depending entirely on paid spend.",
   },
   problem: {
-    headline: "Organic growth is not just about rankings. It's about showing up with the right content at the right stage of the traveler journey — so your brand becomes easier to discover, easier to trust, and",
-    highlightedText: "more likely to convert.",
+    headline: "Content without strategy is noise. SEO without content is",
+    highlightedText: "invisible.",
     paragraph: "When content and SEO work together, your brand stays top-of-mind before a booking decision is made. Most travel businesses either lack a clear content direction or run SEO in isolation from their content strategy.",
     painPoints: [
       { icon: Eye, text: "Low search visibility in competitive travel categories" },
