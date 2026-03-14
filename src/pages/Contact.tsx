@@ -111,23 +111,23 @@ export default function Contact() {
                         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                           {item.label}
                         </p>
-                        <div className="mt-1 space-y-0.5">
-                          {item.lines.map((line) =>
-                            line.href ? (
-                              <a
-                                key={line.value}
-                                href={line.href}
-                                className="block text-sm font-medium text-foreground transition-colors hover:text-primary"
-                              >
-                                {line.value}
-                              </a>
-                            ) : (
-                              <p key={line.value} className="text-sm font-medium text-foreground">
-                                {line.value}
-                              </p>
-                            )
-                          )}
-                        </div>
+                        <p className="mt-1 text-sm font-medium text-foreground">
+                          {item.lines.map((line, idx) => (
+                            <span key={line.value}>
+                              {line.href ? (
+                                <a
+                                  href={line.href}
+                                  className="transition-colors hover:text-primary"
+                                >
+                                  {line.value}
+                                </a>
+                              ) : (
+                                line.value
+                              )}
+                              {idx < item.lines.length - 1 && ", "}
+                            </span>
+                          ))}
+                        </p>
                       </div>
                     </div>
                   ))}
