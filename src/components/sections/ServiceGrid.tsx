@@ -11,7 +11,7 @@ export default function ServiceGrid() {
             Research, strategy, brand, digital products, and marketing — everything a travel business needs to grow, under one roof.
           </p>
         </ScrollReveal>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 0.05} className="flex">
               <div className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
