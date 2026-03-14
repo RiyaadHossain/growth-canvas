@@ -132,22 +132,11 @@ export default function ResourcePageShell({
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="container-wide max-w-3xl text-center">
-          <ScrollReveal>
-            <h2 className="font-heading text-3xl font-bold md:text-4xl">{cta.headline}</h2>
-            <p className="mt-4 text-muted-foreground">{cta.subtext}</p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Button variant="hero" size="lg">{cta.ctaLabel}</Button>
-              {ctaSecondary && (
-                <Button variant="hero-outline" size="lg" asChild>
-                  <Link to={ctaSecondary.to}>{ctaSecondary.label}</Link>
-                </Button>
-              )}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <CTABand
+        headline={cta.headline}
+        subtext={cta.subtext}
+        cta={cta.ctaLabel}
+      />
     </Layout>
   );
 }
