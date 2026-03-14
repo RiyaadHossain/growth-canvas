@@ -18,6 +18,7 @@ import PerformanceMarketing from "./pages/PerformanceMarketing";
 import ContentCreative from "./pages/ContentCreative";
 import SEOOrganicGrowth from "./pages/SEOOrganicGrowth";
 import CRMFunnelsAutomation from "./pages/CRMFunnelsAutomation";
+import GrowthStrategy from "./pages/GrowthStrategy";
 import TravelInsights from "./pages/TravelInsights";
 import GuidesPlaybooks from "./pages/GuidesPlaybooks";
 import VideoSessions from "./pages/VideoSessions";
