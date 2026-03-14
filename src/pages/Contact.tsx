@@ -9,20 +9,26 @@ import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   {
+    icon: Phone,
+    label: "Call us",
+    lines: [
+      { value: "+44 20 1234 5678", href: "tel:+442012345678" },
+      { value: "+1 212 555 0199", href: "tel:+12125550199" },
+    ],
+  },
+  {
     icon: Mail,
     label: "Email us",
-    value: "hello@tripupstudio.com",
-    href: "mailto:hello@tripupstudio.com",
+    lines: [
+      { value: "hello@tripupstudio.com", href: "mailto:hello@tripupstudio.com" },
+    ],
   },
   {
     icon: MapPin,
     label: "Based in",
-    value: "London, UK — working globally",
-  },
-  {
-    icon: Clock,
-    label: "Response time",
-    value: "Within 24 hours, usually sooner",
+    lines: [
+      { value: "London, UK — working globally" },
+    ],
   },
 ];
 
