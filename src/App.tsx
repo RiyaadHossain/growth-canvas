@@ -18,6 +18,7 @@ import PerformanceMarketing from "./pages/PerformanceMarketing";
 import ContentCreative from "./pages/ContentCreative";
 import SEOOrganicGrowth from "./pages/SEOOrganicGrowth";
 import CRMFunnelsAutomation from "./pages/CRMFunnelsAutomation";
+import GrowthStrategy from "./pages/GrowthStrategy";
 import TravelInsights from "./pages/TravelInsights";
 import GuidesPlaybooks from "./pages/GuidesPlaybooks";
 import VideoSessions from "./pages/VideoSessions";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/services/branding-identity" element={<BrandingIdentity />} />
           <Route path="/services/market-research" element={<MarketResearch />} />
+          <Route path="/services/growth-strategy" element={<GrowthStrategy />} />
           <Route path="/services/web-design-development" element={<WebDesignDevelopment />} />
           <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
           <Route path="/services/content-creative" element={<ContentCreative />} />
