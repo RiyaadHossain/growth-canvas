@@ -1,4 +1,4 @@
-import { Search, Map, Fingerprint, Smartphone, Bot, BarChart3, Megaphone } from "lucide-react";
+import { Search, Map, Fingerprint, Smartphone, Bot, BarChart3, Megaphone, Share2 } from "lucide-react";
 
 export const services = [
   // Research & Strategy
@@ -11,6 +11,7 @@ export const services = [
   // Marketing & Growth
   { title: "Performance Marketing", description: "Data-driven campaigns across search, social, and travel platforms — optimised for bookings and ROI.", icon: BarChart3, category: "Marketing & Growth", slug: "/services/performance-marketing" },
   { title: "Content & SEO", description: "Organic reach through destination content, SEO strategy, and authority-building that drives long-term growth.", icon: Megaphone, category: "Marketing & Growth", slug: "/services/content-seo" },
+  { title: "Social Media Management", description: "Strategy, content calendars, and community management that grow your travel brand across social platforms.", icon: Share2, category: "Marketing & Growth", slug: "/services/social-media" },
 ];
 
 export const serviceCategories = ["Research & Strategy", "Brand & Product", "Marketing & Growth"] as const;
