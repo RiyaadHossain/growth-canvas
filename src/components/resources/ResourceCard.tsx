@@ -35,9 +35,11 @@ export function ResourceCard({ item, index }: { item: ResourceItem; index: numbe
           </>
         )}
       </div>
-      <p className="mt-4 text-sm font-semibold text-primary transition-colors group-hover:text-primary/80">
-        {item.ctaLabel} →
-      </p>
+      {item.ctaLabel && (
+        <p className="mt-4 text-sm font-semibold text-primary transition-colors group-hover:text-primary/80">
+          {item.ctaLabel} →
+        </p>
+      )}
     </div>
   );
 
