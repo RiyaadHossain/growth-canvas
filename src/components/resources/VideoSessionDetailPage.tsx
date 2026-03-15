@@ -189,10 +189,11 @@ export default function VideoSessionDetailPage({
                       />
                     )}
                     <div className="absolute inset-0 bg-black/40" />
-                    <div className="relative z-10 flex flex-col items-center gap-4 text-center px-8">
+                    <div className="relative z-10 flex items-center justify-center">
                       <div className="flex h-20 w-20 items-center justify-center rounded-full bg-background/75 shadow-lg backdrop-blur-sm border border-primary/20">
                         <Play className="h-8 w-8 text-primary ml-1" />
                       </div>
+                    </div>
                   </>
                 )}
               </div>
