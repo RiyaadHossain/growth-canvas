@@ -377,6 +377,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Dec 2025",
     duration: "12 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbBrand,
     slug: "/resources/video-sessions/brand-awareness-vs-booking-intent",
     relatedServiceTo: "/services/branding-identity",
     relatedServiceLabel: "Explore Branding & Identity",
