@@ -309,6 +309,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Jan 2026",
     duration: "20 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbContentSeo,
     slug: "/resources/video-sessions/content-system-for-discoverability",
     relatedServiceTo: "/services/content-seo",
     relatedServiceLabel: "Explore Content & SEO",
