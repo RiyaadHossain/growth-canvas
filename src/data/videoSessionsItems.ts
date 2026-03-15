@@ -172,6 +172,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Feb 2026",
     duration: "22 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbConversion,
     slug: "/resources/video-sessions/trustworthy-booking-journey",
     relatedServiceTo: "/services/web-design-development",
     relatedServiceLabel: "Explore Web Design & CRO",
