@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import ResourceDetailPage from "@/components/resources/ResourceDetailPage";
+import VideoSessionDetailPage from "@/components/resources/VideoSessionDetailPage";
 import { videoSessionsItems } from "@/data/videoSessionsItems";
 
 export default function VideoSessionDetail() {
@@ -13,17 +13,16 @@ export default function VideoSessionDetail() {
     .filter((i) => i.slug !== fullSlug && i.category === item.category)
     .slice(0, 3);
 
+  const relatedItems =
+    related.length > 0
+      ? related
+      : videoSessionsItems.filter((i) => i.slug !== fullSlug).slice(0, 3);
+
   return (
-    <ResourceDetailPage
+    <VideoSessionDetailPage
       item={item}
-      backLabel="Back to Video Sessions"
+      relatedItems={relatedItems}
       backTo="/resources/video-sessions"
-      relatedItems={related}
-      cta={{
-        headline: "Want this applied to your business, not just explained?",
-        subtext: "Our video sessions help you think more clearly. If you want help turning those ideas into execution, we can work directly on the strategy, systems, and implementation.",
-        ctaLabel: "Book a Strategy Call",
-      }}
     />
   );
 }
