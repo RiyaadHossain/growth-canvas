@@ -222,17 +222,24 @@ export default function VideoSessionDetailPage({
                   />
                 </div>
               ) : (
-                <div className="relative flex aspect-video w-full items-center justify-center bg-gradient-to-br from-secondary to-card overflow-hidden">
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08)_0%,transparent_70%)]" />
+                <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-gradient-to-br from-secondary to-card">
+                  {item.thumbnail && (
+                    <img
+                      src={item.thumbnail}
+                      alt={item.title}
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/50" />
                   <div className="relative z-10 flex flex-col items-center gap-5 text-center px-8">
-                    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 border border-primary/20 shadow-lg">
+                    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-background/75 shadow-xl backdrop-blur-sm border border-primary/20">
                       <Play className="h-10 w-10 text-primary ml-1.5" />
                     </div>
                     <div>
-                      <p className="font-heading text-xl font-bold text-foreground">{item.title}</p>
-                      <p className="mt-1 text-sm text-muted-foreground">{item.duration} · {item.format ?? item.type} · {item.date}</p>
+                      <p className="font-heading text-xl font-bold text-white drop-shadow">{item.title}</p>
+                      <p className="mt-1 text-sm text-white/70">{item.duration} · {item.format ?? item.type} · {item.date}</p>
                     </div>
-                    <p className="max-w-md text-sm text-muted-foreground">{item.excerpt}</p>
+                    <p className="max-w-md text-sm text-white/60">{item.excerpt}</p>
                   </div>
                 </div>
               )}
