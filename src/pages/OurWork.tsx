@@ -174,10 +174,16 @@ function CaseStudiesGrid() {
               <Link to={cs.slug ?? "/resources/case-studies"} className="group block h-full">
                 <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl">
                   {/* visual */}
-                  <div className="relative h-44 overflow-hidden bg-gradient-to-br from-primary/15 via-accent/10 to-background">
-                    <div className="absolute inset-0 flex items-center justify-center opacity-20 transition-opacity duration-300 group-hover:opacity-30">
-                      <BarChart2 className="h-16 w-16 text-primary" />
-                    </div>
+                  <div className="relative h-44 overflow-hidden">
+                    {cs.coverImage ? (
+                      <img
+                        src={cs.coverImage}
+                        alt={cs.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="h-44 bg-gradient-to-br from-primary/15 via-accent/10 to-background" />
+                    )}
                     {/* category pill overlay */}
                     <div className="absolute left-4 top-4">
                       <Pill className="bg-card/80 text-muted-foreground backdrop-blur">{cs.category}</Pill>
