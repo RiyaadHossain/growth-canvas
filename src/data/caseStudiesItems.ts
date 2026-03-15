@@ -399,6 +399,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Dec 2025",
     readingTime: "6 min read",
     ctaLabel: "View case study",
+    coverImage: imgAutomation,
     slug: "/resources/case-studies/lead-followup-automation-long-sales-cycle",
     industryTag: "Luxury Retreat Business",
     metrics: [
