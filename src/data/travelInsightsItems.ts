@@ -148,6 +148,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Feb 2026",
     readingTime: "8 min read",
     ctaLabel: "Read insight",
+    coverImage: imgDtcLessons,
     slug: "/resources/travel-insights/dtc-lessons-for-travel",
     keyTakeaways: [
       "DTC brands obsess over offer clarity — the what, who for, and why now are never left ambiguous.",
