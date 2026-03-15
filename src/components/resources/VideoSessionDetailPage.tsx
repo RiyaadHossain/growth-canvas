@@ -193,9 +193,6 @@ export default function VideoSessionDetailPage({
                       <div className="flex h-20 w-20 items-center justify-center rounded-full bg-background/75 shadow-lg backdrop-blur-sm border border-primary/20">
                         <Play className="h-8 w-8 text-primary ml-1" />
                       </div>
-                      <p className="text-sm font-semibold text-white drop-shadow">{item.thumbnailLabel ?? item.title}</p>
-                      <p className="text-xs text-white/70">{item.duration} · {item.format ?? item.type}</p>
-                    </div>
                   </>
                 )}
               </div>
