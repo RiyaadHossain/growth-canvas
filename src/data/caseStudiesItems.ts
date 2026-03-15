@@ -99,6 +99,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Feb 2026",
     readingTime: "7 min read",
     ctaLabel: "View case study",
+    coverImage: imgUxBooking,
     slug: "/resources/case-studies/booking-confidence-premium-travel",
     industryTag: "Premium Tour Operator",
     metrics: [
