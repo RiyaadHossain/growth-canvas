@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import ResourceDetailPage from "@/components/resources/ResourceDetailPage";
+import TravelInsightDetailPage from "@/components/resources/TravelInsightDetailPage";
 import { travelInsightsItems } from "@/data/travelInsightsItems";
 
 export default function TravelInsightDetail() {
@@ -10,20 +10,15 @@ export default function TravelInsightDetail() {
   if (!item) return <Navigate to="/resources/travel-insights" replace />;
 
   const related = travelInsightsItems
-    .filter((i) => i.slug !== fullSlug && i.category === item.category)
+    .filter((i) => i.slug !== fullSlug)
+    .filter((i) => i.category === item.category || true) // show up to 3 regardless of category
     .slice(0, 3);
 
   return (
-    <ResourceDetailPage
+    <TravelInsightDetailPage
       item={item}
-      backLabel="Back to Travel Insights"
-      backTo="/resources/travel-insights"
       relatedItems={related}
-      cta={{
-        headline: "Want insights applied to your business?",
-        subtext: "Reading the market is one thing. Acting on the right opportunity is another. If you need help translating industry signals into a real growth direction, we can help.",
-        ctaLabel: "Book a Strategy Call",
-      }}
+      backTo="/resources/travel-insights"
     />
   );
 }
