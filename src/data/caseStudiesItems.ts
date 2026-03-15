@@ -324,6 +324,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Dec 2025",
     readingTime: "7 min read",
     ctaLabel: "View case study",
+    coverImage: imgContentSeo,
     slug: "/resources/case-studies/content-strategy-destination-brand-discoverability",
     industryTag: "Destination Brand",
     metrics: [
