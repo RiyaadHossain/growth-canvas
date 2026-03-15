@@ -465,9 +465,19 @@ export default function VideoSessionDetailPage({
                     className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg h-full"
                   >
                     {/* Thumbnail */}
-                    <div className="relative flex aspect-video w-full items-center justify-center bg-gradient-to-br from-secondary to-card overflow-hidden">
-                      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.06)_0%,transparent_70%)]" />
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+                    <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden">
+                      {r.thumbnail ? (
+                        <img
+                          src={r.thumbnail}
+                          alt={r.title}
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-gradient-to-br from-secondary to-card">
+                          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.06)_0%,transparent_70%)]" />
+                        </div>
+                      )}
+                      <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-background/75 shadow backdrop-blur-sm border border-primary/20 transition-transform duration-300 group-hover:scale-110">
                         <Play className="h-5 w-5 text-primary ml-0.5" />
                       </div>
                     </div>
@@ -477,9 +487,11 @@ export default function VideoSessionDetailPage({
                       <h3 className="mt-2 font-heading text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug flex-1">
                         {r.title}
                       </h3>
-                      <div className="mt-3 flex items-center justify-between">
-                        <span className="text-xs text-muted-foreground">{r.duration}</span>
-                        <span className="text-xs font-semibold text-primary">Watch Session →</span>
+                      <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
+                        <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                          {r.duration && <><Clock className="h-3 w-3 text-primary" />{r.duration}</>}
+                        </span>
+                        <span className="text-xs font-semibold text-primary">Watch →</span>
                       </div>
                     </div>
                   </Link>
