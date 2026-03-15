@@ -104,13 +104,19 @@ function FeaturedCaseStudy() {
         <ScrollReveal>
           <Link to={featured.slug ?? "/resources/case-studies"} className="group block">
             <div className="relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:border-primary/30 hover:shadow-2xl">
-              {/* gradient cover */}
-              <div className="h-64 w-full bg-gradient-to-br from-primary/20 via-accent/20 to-background md:h-80">
-                <div className="flex h-full items-center justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 backdrop-blur">
-                    <BarChart2 className="h-7 w-7 text-primary" />
-                  </div>
-                </div>
+              {/* cover image */}
+              <div className="relative h-64 w-full overflow-hidden md:h-80">
+                {featured.coverImage ? (
+                  <img
+                    src={featured.coverImage}
+                    alt={featured.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-gradient-to-br from-primary/20 via-accent/20 to-background" />
+                )}
+                {/* dark gradient overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
               {/* content */}
               <div className="p-8 md:p-10">
