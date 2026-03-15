@@ -174,6 +174,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Jan 2026",
     readingTime: "9 min read",
     ctaLabel: "View case study",
+    coverImage: imgGrowthStrategy,
     slug: "/resources/case-studies/fragmented-marketing-to-acquisition-system",
     industryTag: "Travel Agency",
     metrics: [
