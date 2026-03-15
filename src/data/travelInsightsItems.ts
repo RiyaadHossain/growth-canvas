@@ -16,6 +16,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     readingTime: "6 min read",
     ctaLabel: "Read insight",
     featured: true,
+    coverImage: imgPreBooking,
     slug: "/resources/travel-insights/pre-booking-expectations",
     keyTakeaways: [
       "Over 70% of travel booking decisions are shaped during the research phase, not at checkout.",
