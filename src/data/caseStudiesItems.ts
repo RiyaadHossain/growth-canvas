@@ -17,6 +17,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     readingTime: "8 min read",
     ctaLabel: "View case study",
     featured: true,
+    coverImage: imgPositioning,
     slug: "/resources/case-studies/boutique-travel-brand-positioning-relaunch",
     industryTag: "Boutique Travel Brand",
     metrics: [
