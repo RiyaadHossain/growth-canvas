@@ -20,6 +20,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     duration: "18 min",
     ctaLabel: "Watch session",
     featured: true,
+    thumbnail: thumbWebsiteUx,
     slug: "/resources/video-sessions/improve-travel-website-without-redesign",
     relatedServiceTo: "/services/web-design-development",
     relatedServiceLabel: "Explore Web Design & CRO",
