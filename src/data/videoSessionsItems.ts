@@ -241,6 +241,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Jan 2026",
     duration: "16 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbPaidMedia,
     slug: "/resources/video-sessions/why-travel-brands-scale-with-ads",
     relatedServiceTo: "/services/performance-marketing",
     relatedServiceLabel: "Explore Performance Marketing",
