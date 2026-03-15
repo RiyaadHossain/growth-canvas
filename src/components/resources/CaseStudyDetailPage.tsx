@@ -341,22 +341,22 @@ export default function CaseStudyDetailPage({
           7. RESULTS (high-contrast highlight)
       ══════════════════════════════════════════════ */}
       {item.results && item.results.length > 0 && (
-        <section className="section-padding bg-foreground text-background">
+      <section className="section-padding">
           <div className="container-wide">
             <ScrollReveal>
               <p className="mb-3 text-center text-sm font-bold uppercase tracking-widest text-primary">
                 The Results
               </p>
-              <h2 className="text-center font-heading text-3xl font-bold text-background md:text-4xl mb-12">
+              <h2 className="text-center font-heading text-3xl font-bold text-foreground md:text-4xl mb-12">
                 Measurable Impact
               </h2>
             </ScrollReveal>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {item.results.map((r, i) => (
                 <ScrollReveal key={i} delay={i * 0.07}>
-                  <div className="rounded-2xl border border-background/10 bg-background/5 p-8 text-center h-full">
+                  <div className="rounded-2xl border border-primary/20 bg-primary/5 p-8 text-center h-full">
                     <p className="font-heading text-4xl font-extrabold text-primary">{r.value}</p>
-                    <p className="mt-2 text-sm font-medium text-background/70">{r.label}</p>
+                    <p className="mt-2 text-sm font-medium text-muted-foreground">{r.label}</p>
                   </div>
                 </ScrollReveal>
               ))}
