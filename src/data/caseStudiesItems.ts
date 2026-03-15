@@ -249,6 +249,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Jan 2026",
     readingTime: "8 min read",
     ctaLabel: "View case study",
+    coverImage: imgWebsiteRedesign,
     slug: "/resources/case-studies/travel-website-trust-clarity-conversion",
     industryTag: "Destination Travel Brand",
     metrics: [
