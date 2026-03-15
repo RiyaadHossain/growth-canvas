@@ -445,6 +445,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Dec 2025",
     duration: "15 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbCrm,
     slug: "/resources/video-sessions/automation-leverage-travel-operations",
     relatedServiceTo: "/services/ai-automation",
     relatedServiceLabel: "Explore AI & Automation",
