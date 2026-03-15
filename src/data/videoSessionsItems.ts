@@ -104,6 +104,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Feb 2026",
     duration: "14 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbWebsiteUx,
     slug: "/resources/video-sessions/diagnose-low-converting-homepage",
     relatedServiceTo: "/services/web-design-development",
     relatedServiceLabel: "Explore Web Design & CRO",
