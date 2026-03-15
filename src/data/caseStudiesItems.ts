@@ -1,4 +1,10 @@
 import type { CaseStudyItem } from "@/components/resources/CaseStudyDetailPage";
+import imgPositioning from "@/assets/case-study-positioning.jpg";
+import imgUxBooking from "@/assets/case-study-ux-booking.jpg";
+import imgGrowthStrategy from "@/assets/case-study-growth-strategy.jpg";
+import imgWebsiteRedesign from "@/assets/case-study-website-redesign.jpg";
+import imgContentSeo from "@/assets/case-study-content-seo.jpg";
+import imgAutomation from "@/assets/case-study-automation.jpg";
 
 export const caseStudiesItems: CaseStudyItem[] = [
   {
@@ -11,6 +17,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     readingTime: "8 min read",
     ctaLabel: "View case study",
     featured: true,
+    coverImage: imgPositioning,
     slug: "/resources/case-studies/boutique-travel-brand-positioning-relaunch",
     industryTag: "Boutique Travel Brand",
     metrics: [
@@ -92,6 +99,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Feb 2026",
     readingTime: "7 min read",
     ctaLabel: "View case study",
+    coverImage: imgUxBooking,
     slug: "/resources/case-studies/booking-confidence-premium-travel",
     industryTag: "Premium Tour Operator",
     metrics: [
@@ -166,6 +174,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Jan 2026",
     readingTime: "9 min read",
     ctaLabel: "View case study",
+    coverImage: imgGrowthStrategy,
     slug: "/resources/case-studies/fragmented-marketing-to-acquisition-system",
     industryTag: "Travel Agency",
     metrics: [
@@ -240,6 +249,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Jan 2026",
     readingTime: "8 min read",
     ctaLabel: "View case study",
+    coverImage: imgWebsiteRedesign,
     slug: "/resources/case-studies/travel-website-trust-clarity-conversion",
     industryTag: "Destination Travel Brand",
     metrics: [
@@ -314,6 +324,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Dec 2025",
     readingTime: "7 min read",
     ctaLabel: "View case study",
+    coverImage: imgContentSeo,
     slug: "/resources/case-studies/content-strategy-destination-brand-discoverability",
     industryTag: "Destination Brand",
     metrics: [
@@ -388,6 +399,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     date: "Dec 2025",
     readingTime: "6 min read",
     ctaLabel: "View case study",
+    coverImage: imgAutomation,
     slug: "/resources/case-studies/lead-followup-automation-long-sales-cycle",
     industryTag: "Luxury Retreat Business",
     metrics: [

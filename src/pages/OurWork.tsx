@@ -5,7 +5,7 @@ import { caseStudiesItems } from "@/data/caseStudiesItems";
 import { travelInsightsItems } from "@/data/travelInsightsItems";
 import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
 import { videoSessionsItems } from "@/data/videoSessionsItems";
-import { ArrowRight, Play, Clock, BookOpen, BarChart2, FileText } from "lucide-react";
+import { ArrowRight, Play, Clock, BookOpen } from "lucide-react";
 
 // ─── Pill badge ────────────────────────────────────────────────────────────
 function Pill({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -104,13 +104,19 @@ function FeaturedCaseStudy() {
         <ScrollReveal>
           <Link to={featured.slug ?? "/resources/case-studies"} className="group block">
             <div className="relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:border-primary/30 hover:shadow-2xl">
-              {/* gradient cover */}
-              <div className="h-64 w-full bg-gradient-to-br from-primary/20 via-accent/20 to-background md:h-80">
-                <div className="flex h-full items-center justify-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 backdrop-blur">
-                    <BarChart2 className="h-7 w-7 text-primary" />
-                  </div>
-                </div>
+              {/* cover image */}
+              <div className="relative h-64 w-full overflow-hidden md:h-80">
+                {featured.coverImage ? (
+                  <img
+                    src={featured.coverImage}
+                    alt={featured.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-gradient-to-br from-primary/20 via-accent/20 to-background" />
+                )}
+                {/* dark gradient overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
               </div>
               {/* content */}
               <div className="p-8 md:p-10">
@@ -168,10 +174,16 @@ function CaseStudiesGrid() {
               <Link to={cs.slug ?? "/resources/case-studies"} className="group block h-full">
                 <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl">
                   {/* visual */}
-                  <div className="relative h-44 overflow-hidden bg-gradient-to-br from-primary/15 via-accent/10 to-background">
-                    <div className="absolute inset-0 flex items-center justify-center opacity-20 transition-opacity duration-300 group-hover:opacity-30">
-                      <BarChart2 className="h-16 w-16 text-primary" />
-                    </div>
+                  <div className="relative h-44 overflow-hidden">
+                    {cs.coverImage ? (
+                      <img
+                        src={cs.coverImage}
+                        alt={cs.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="h-44 bg-gradient-to-br from-primary/15 via-accent/10 to-background" />
+                    )}
                     {/* category pill overlay */}
                     <div className="absolute left-4 top-4">
                       <Pill className="bg-card/80 text-muted-foreground backdrop-blur">{cs.category}</Pill>
