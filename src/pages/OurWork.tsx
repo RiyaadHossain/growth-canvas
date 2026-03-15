@@ -5,7 +5,7 @@ import { caseStudiesItems } from "@/data/caseStudiesItems";
 import { travelInsightsItems } from "@/data/travelInsightsItems";
 import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
 import { videoSessionsItems } from "@/data/videoSessionsItems";
-import { ArrowRight, Play, Clock, BookOpen, BarChart2, FileText } from "lucide-react";
+import { ArrowRight, Play, Clock, BookOpen } from "lucide-react";
 
 // ─── Pill badge ────────────────────────────────────────────────────────────
 function Pill({ children, className = "" }: { children: React.ReactNode; className?: string }) {
