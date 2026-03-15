@@ -17,7 +17,7 @@ export default function TravelInsights() {
       headline="Travel Insights"
       description="A curated stream of strategic thinking for travel operators, agencies, destinations, and hospitality-led brands. Explore market shifts, traveler behavior, channel trends, and practical perspectives that help you make smarter growth decisions."
       tags={["Market Trends", "Consumer Behavior", "Growth Signals", "Travel Strategy"]}
-      items={travelInsightsItems}
+      items={travelInsightsItems as unknown as ResourceItem[]}
       browseTopics={topics}
       cta={{
         headline: "Want insights applied to your business?",
