@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import ResourceDetailPage from "@/components/resources/ResourceDetailPage";
+import GuideDetailPage from "@/components/resources/GuideDetailPage";
 import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
 
 export default function GuideDetail() {
@@ -10,20 +10,20 @@ export default function GuideDetail() {
   if (!item) return <Navigate to="/resources/guides-playbooks" replace />;
 
   const related = guidesPlaybooksItems
-    .filter((i) => i.slug !== fullSlug && i.category === item.category)
+    .filter((i) => i.slug !== fullSlug)
+    .sort((a, b) => {
+      // prefer same category first
+      const aMatch = a.category === item.category ? 0 : 1;
+      const bMatch = b.category === item.category ? 0 : 1;
+      return aMatch - bMatch;
+    })
     .slice(0, 3);
 
   return (
-    <ResourceDetailPage
+    <GuideDetailPage
       item={item}
-      backLabel="Back to Guides & Playbooks"
       backTo="/resources/guides-playbooks"
       relatedItems={related}
-      cta={{
-        headline: "Need a framework built around your business?",
-        subtext: "Our guides are designed to help you think better. If you want the same strategic structure tailored to your audience, offer, and growth stage, we can build it with you.",
-        ctaLabel: "Request a Tailored Roadmap",
-      }}
     />
   );
 }
