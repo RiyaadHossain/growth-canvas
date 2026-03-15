@@ -1,4 +1,10 @@
 import type { VideoSessionItem } from "@/components/resources/VideoSessionDetailPage";
+import thumbWebsiteUx from "@/assets/video-thumb-website-ux.jpg";
+import thumbConversion from "@/assets/video-thumb-conversion.jpg";
+import thumbPaidMedia from "@/assets/video-thumb-paid-media.jpg";
+import thumbContentSeo from "@/assets/video-thumb-content-seo.jpg";
+import thumbBrand from "@/assets/video-thumb-brand.jpg";
+import thumbCrm from "@/assets/video-thumb-crm.jpg";
 
 export const videoSessionsItems: VideoSessionItem[] = [
   {
@@ -14,6 +20,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     duration: "18 min",
     ctaLabel: "Watch session",
     featured: true,
+    thumbnail: thumbWebsiteUx,
     slug: "/resources/video-sessions/improve-travel-website-without-redesign",
     relatedServiceTo: "/services/web-design-development",
     relatedServiceLabel: "Explore Web Design & CRO",
@@ -97,6 +104,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Feb 2026",
     duration: "14 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbWebsiteUx,
     slug: "/resources/video-sessions/diagnose-low-converting-homepage",
     relatedServiceTo: "/services/web-design-development",
     relatedServiceLabel: "Explore Web Design & CRO",
@@ -164,6 +172,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Feb 2026",
     duration: "22 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbConversion,
     slug: "/resources/video-sessions/trustworthy-booking-journey",
     relatedServiceTo: "/services/web-design-development",
     relatedServiceLabel: "Explore Web Design & CRO",
@@ -232,6 +241,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Jan 2026",
     duration: "16 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbPaidMedia,
     slug: "/resources/video-sessions/why-travel-brands-scale-with-ads",
     relatedServiceTo: "/services/performance-marketing",
     relatedServiceLabel: "Explore Performance Marketing",
@@ -299,6 +309,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Jan 2026",
     duration: "20 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbContentSeo,
     slug: "/resources/video-sessions/content-system-for-discoverability",
     relatedServiceTo: "/services/content-seo",
     relatedServiceLabel: "Explore Content & SEO",
@@ -366,6 +377,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Dec 2025",
     duration: "12 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbBrand,
     slug: "/resources/video-sessions/brand-awareness-vs-booking-intent",
     relatedServiceTo: "/services/branding-identity",
     relatedServiceLabel: "Explore Branding & Identity",
@@ -433,6 +445,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Dec 2025",
     duration: "15 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbCrm,
     slug: "/resources/video-sessions/automation-leverage-travel-operations",
     relatedServiceTo: "/services/ai-automation",
     relatedServiceLabel: "Explore AI & Automation",
@@ -500,6 +513,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     date: "Nov 2025",
     duration: "19 min",
     ctaLabel: "Watch session",
+    thumbnail: thumbBrand,
     slug: "/resources/video-sessions/travel-offer-easier-to-say-yes",
     relatedServiceTo: "/services/branding-identity",
     relatedServiceLabel: "Explore Branding & Identity",
