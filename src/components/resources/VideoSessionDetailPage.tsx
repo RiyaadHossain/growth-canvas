@@ -170,8 +170,7 @@ export default function VideoSessionDetailPage({
 
             {/* Right: video thumbnail / preview card */}
             <ScrollReveal delay={0.15}>
-              <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-secondary to-card aspect-video flex items-center justify-center">
-                <div className="pointer-events-none absolute -top-16 -right-16 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
+              <div className="relative overflow-hidden rounded-2xl border border-border aspect-video flex items-center justify-center bg-gradient-to-br from-secondary to-card">
                 {item.videoUrl ? (
                   <iframe
                     src={item.videoUrl}
@@ -181,13 +180,23 @@ export default function VideoSessionDetailPage({
                     title={item.title}
                   />
                 ) : (
-                  <div className="relative z-10 flex flex-col items-center gap-4 text-center px-8">
-                    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
-                      <Play className="h-8 w-8 text-primary ml-1" />
+                  <>
+                    {item.thumbnail && (
+                      <img
+                        src={item.thumbnail}
+                        alt={item.title}
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-black/40" />
+                    <div className="relative z-10 flex flex-col items-center gap-4 text-center px-8">
+                      <div className="flex h-20 w-20 items-center justify-center rounded-full bg-background/75 shadow-lg backdrop-blur-sm border border-primary/20">
+                        <Play className="h-8 w-8 text-primary ml-1" />
+                      </div>
+                      <p className="text-sm font-semibold text-white drop-shadow">{item.thumbnailLabel ?? item.title}</p>
+                      <p className="text-xs text-white/70">{item.duration} · {item.format ?? item.type}</p>
                     </div>
-                    <p className="text-sm font-semibold text-foreground">{item.thumbnailLabel ?? item.title}</p>
-                    <p className="text-xs text-muted-foreground">{item.duration} · {item.format ?? item.type}</p>
-                  </div>
+                  </>
                 )}
               </div>
             </ScrollReveal>
@@ -213,17 +222,24 @@ export default function VideoSessionDetailPage({
                   />
                 </div>
               ) : (
-                <div className="relative flex aspect-video w-full items-center justify-center bg-gradient-to-br from-secondary to-card overflow-hidden">
-                  <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08)_0%,transparent_70%)]" />
+                <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden bg-gradient-to-br from-secondary to-card">
+                  {item.thumbnail && (
+                    <img
+                      src={item.thumbnail}
+                      alt={item.title}
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/50" />
                   <div className="relative z-10 flex flex-col items-center gap-5 text-center px-8">
-                    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 border border-primary/20 shadow-lg">
+                    <div className="flex h-24 w-24 items-center justify-center rounded-full bg-background/75 shadow-xl backdrop-blur-sm border border-primary/20">
                       <Play className="h-10 w-10 text-primary ml-1.5" />
                     </div>
                     <div>
-                      <p className="font-heading text-xl font-bold text-foreground">{item.title}</p>
-                      <p className="mt-1 text-sm text-muted-foreground">{item.duration} · {item.format ?? item.type} · {item.date}</p>
+                      <p className="font-heading text-xl font-bold text-white drop-shadow">{item.title}</p>
+                      <p className="mt-1 text-sm text-white/70">{item.duration} · {item.format ?? item.type} · {item.date}</p>
                     </div>
-                    <p className="max-w-md text-sm text-muted-foreground">{item.excerpt}</p>
+                    <p className="max-w-md text-sm text-white/60">{item.excerpt}</p>
                   </div>
                 </div>
               )}
