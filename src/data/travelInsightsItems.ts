@@ -51,6 +51,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Mar 2026",
     readingTime: "5 min read",
     ctaLabel: "Read insight",
+    coverImage: imgTrust10s,
     slug: "/resources/travel-insights/trust-first-10-seconds",
     keyTakeaways: [
       "Weak or stock imagery signals inauthenticity faster than any other element on the page.",
