@@ -1,5 +1,6 @@
 import ResourcePageShell from "@/components/resources/ResourcePageShell";
 import { videoSessionsItems } from "@/data/videoSessionsItems";
+import type { ResourceItem } from "@/components/resources/ResourceCard";
 
 const topics = [
   "Website & UX",
@@ -15,7 +16,7 @@ export default function VideoSessions() {
     <ResourcePageShell
       headline="Video Sessions"
       description="A curated library of video-led insights covering positioning, travel marketing, website conversion, product thinking, and growth systems — designed for teams that prefer to learn by watching."
-      items={videoSessionsItems}
+      items={videoSessionsItems as unknown as ResourceItem[]}
       browseTopics={topics}
       cta={{
         headline: "Want this applied to your business, not just explained?",
