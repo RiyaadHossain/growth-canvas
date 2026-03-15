@@ -1,4 +1,8 @@
 import type { TravelInsightItem } from "@/components/resources/TravelInsightDetailPage";
+import imgPreBooking from "@/assets/insight-pre-booking-expectations.jpg";
+import imgTrust10s from "@/assets/insight-trust-10-seconds.jpg";
+import imgTrafficIntent from "@/assets/insight-traffic-vs-intent.jpg";
+import imgDtcLessons from "@/assets/insight-dtc-lessons.jpg";
 
 export type { TravelInsightItem };
 
