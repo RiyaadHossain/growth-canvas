@@ -307,30 +307,50 @@ function TravelInsightsSection() {
           {/* featured — spans 2 columns */}
           <ScrollReveal className="lg:col-span-2">
             <Link to={featured.slug ?? "/resources/travel-insights"} className="group block h-full">
-              <div className="flex h-full flex-col rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-8 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
-                <div className="flex items-center gap-3">
-                  <Pill className="bg-primary/10 text-primary">Featured Insight</Pill>
-                  <Pill className="bg-secondary text-muted-foreground">{featured.category}</Pill>
-                </div>
-                <h3 className="mt-5 font-heading text-xl font-bold text-foreground leading-snug md:text-2xl">
-                  {featured.title}
-                </h3>
-                <p className="mt-3 flex-1 text-sm text-muted-foreground leading-relaxed">
-                  {featured.excerpt}
-                </p>
-                <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
-                  <Clock className="h-3.5 w-3.5" />
-                  <span>{featured.readingTime}</span>
-                  {featured.date && (
-                    <>
-                      <span className="h-1 w-1 rounded-full bg-border" />
-                      <span>{featured.date}</span>
-                    </>
+              <div className="flex h-full flex-col overflow-hidden rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+                {/* cover image */}
+                {featured.coverImage && (
+                  <div className="relative h-52 overflow-hidden">
+                    <img
+                      src={featured.coverImage}
+                      alt={featured.title}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/70 via-transparent to-transparent" />
+                    {/* pills over image */}
+                    <div className="absolute bottom-4 left-5 flex items-center gap-2">
+                      <Pill className="bg-primary/90 text-primary-foreground">Featured Insight</Pill>
+                      <Pill className="bg-card/80 text-muted-foreground backdrop-blur">{featured.category}</Pill>
+                    </div>
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col bg-gradient-to-br from-primary/5 to-transparent p-7">
+                  {!featured.coverImage && (
+                    <div className="mb-4 flex items-center gap-3">
+                      <Pill className="bg-primary/10 text-primary">Featured Insight</Pill>
+                      <Pill className="bg-secondary text-muted-foreground">{featured.category}</Pill>
+                    </div>
                   )}
+                  <h3 className="font-heading text-xl font-bold text-foreground leading-snug md:text-2xl">
+                    {featured.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm text-muted-foreground leading-relaxed">
+                    {featured.excerpt}
+                  </p>
+                  <div className="mt-4 flex items-center gap-3 text-xs text-muted-foreground">
+                    <Clock className="h-3.5 w-3.5" />
+                    <span>{featured.readingTime}</span>
+                    {featured.date && (
+                      <>
+                        <span className="h-1 w-1 rounded-full bg-border" />
+                        <span>{featured.date}</span>
+                      </>
+                    )}
+                  </div>
+                  <p className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:text-primary/80">
+                    Read Insight <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </p>
                 </div>
-                <p className="mt-5 flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:text-primary/80">
-                  Read Insight <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </p>
               </div>
             </Link>
           </ScrollReveal>
@@ -340,21 +360,35 @@ function TravelInsightsSection() {
             {rest.map((item, i) => (
               <ScrollReveal key={item.slug} delay={i * 0.08}>
                 <Link to={item.slug ?? "/resources/travel-insights"} className="group block">
-                  <div className="flex flex-col rounded-xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-lg">
-                    <Pill className="mb-3 self-start bg-secondary text-muted-foreground">{item.category}</Pill>
-                    <h4 className="font-heading text-sm font-bold text-foreground leading-snug">
-                      {item.title}
-                    </h4>
-                    <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed line-clamp-2">
-                      {item.excerpt}
-                    </p>
-                    <div className="mt-3 flex items-center gap-2 text-[11px] text-muted-foreground">
-                      <Clock className="h-3 w-3" />
-                      <span>{item.readingTime}</span>
+                  <div className="flex overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-lg">
+                    {/* thumbnail strip */}
+                    {item.coverImage && (
+                      <div className="w-24 shrink-0 overflow-hidden">
+                        <img
+                          src={item.coverImage}
+                          alt={item.title}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                    )}
+                    <div className="flex flex-1 flex-col p-4">
+                      <Pill className="mb-2 self-start bg-secondary text-muted-foreground">{item.category}</Pill>
+                      <h4 className="font-heading text-sm font-bold text-foreground leading-snug">
+                        {item.title}
+                      </h4>
+                      <p className="mt-1 text-xs text-muted-foreground leading-relaxed line-clamp-2">
+                        {item.excerpt}
+                      </p>
+                      <div className="mt-2 flex items-center justify-between">
+                        <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
+                          <Clock className="h-3 w-3" />
+                          <span>{item.readingTime}</span>
+                        </div>
+                        <p className="flex items-center gap-1 text-xs font-semibold text-primary group-hover:text-primary/80">
+                          Read <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                        </p>
+                      </div>
                     </div>
-                    <p className="mt-3 flex items-center gap-1 text-xs font-semibold text-primary group-hover:text-primary/80">
-                      Read Insight <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                    </p>
                   </div>
                 </Link>
               </ScrollReveal>

@@ -1,4 +1,8 @@
 import type { TravelInsightItem } from "@/components/resources/TravelInsightDetailPage";
+import imgPreBooking from "@/assets/insight-pre-booking-expectations.jpg";
+import imgTrust10s from "@/assets/insight-trust-10-seconds.jpg";
+import imgTrafficIntent from "@/assets/insight-traffic-vs-intent.jpg";
+import imgDtcLessons from "@/assets/insight-dtc-lessons.jpg";
 
 export type { TravelInsightItem };
 
@@ -12,6 +16,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     readingTime: "6 min read",
     ctaLabel: "Read insight",
     featured: true,
+    coverImage: imgPreBooking,
     slug: "/resources/travel-insights/pre-booking-expectations",
     keyTakeaways: [
       "Over 70% of travel booking decisions are shaped during the research phase, not at checkout.",
@@ -46,6 +51,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Mar 2026",
     readingTime: "5 min read",
     ctaLabel: "Read insight",
+    coverImage: imgTrust10s,
     slug: "/resources/travel-insights/trust-first-10-seconds",
     keyTakeaways: [
       "Weak or stock imagery signals inauthenticity faster than any other element on the page.",
@@ -107,6 +113,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Feb 2026",
     readingTime: "7 min read",
     ctaLabel: "Read insight",
+    coverImage: imgTrafficIntent,
     slug: "/resources/travel-insights/traffic-vs-booking-intent",
     keyTakeaways: [
       "Ranking for broad travel keywords drives volume but rarely drives bookings — intent alignment is what converts.",
@@ -141,6 +148,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Feb 2026",
     readingTime: "8 min read",
     ctaLabel: "Read insight",
+    coverImage: imgDtcLessons,
     slug: "/resources/travel-insights/dtc-lessons-for-travel",
     keyTakeaways: [
       "DTC brands obsess over offer clarity — the what, who for, and why now are never left ambiguous.",
