@@ -21,9 +21,13 @@ import SEOOrganicGrowth from "./pages/SEOOrganicGrowth";
 import CRMFunnelsAutomation from "./pages/CRMFunnelsAutomation";
 import GrowthStrategy from "./pages/GrowthStrategy";
 import TravelInsights from "./pages/TravelInsights";
+import TravelInsightDetail from "./pages/TravelInsightDetail";
 import GuidesPlaybooks from "./pages/GuidesPlaybooks";
+import GuideDetail from "./pages/GuideDetail";
 import VideoSessions from "./pages/VideoSessions";
+import VideoSessionDetail from "./pages/VideoSessionDetail";
 import CaseStudies from "./pages/CaseStudies";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
@@ -52,9 +56,13 @@ const App = () => (
           <Route path="/services/content-seo" element={<SEOOrganicGrowth />} />
           <Route path="/services/ai-automation" element={<CRMFunnelsAutomation />} />
           <Route path="/resources/travel-insights" element={<TravelInsights />} />
+          <Route path="/resources/travel-insights/:slug" element={<TravelInsightDetail />} />
           <Route path="/resources/guides-playbooks" element={<GuidesPlaybooks />} />
+          <Route path="/resources/guides-playbooks/:slug" element={<GuideDetail />} />
           <Route path="/resources/video-sessions" element={<VideoSessions />} />
+          <Route path="/resources/video-sessions/:slug" element={<VideoSessionDetail />} />
           <Route path="/resources/case-studies" element={<CaseStudies />} />
+          <Route path="/resources/case-studies/:slug" element={<CaseStudyDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
