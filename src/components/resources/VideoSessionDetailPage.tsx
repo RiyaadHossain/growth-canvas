@@ -351,7 +351,7 @@ export default function VideoSessionDetailPage({
                 This Session Is For You If…
               </h2>
             </ScrollReveal>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-x-3 gap-y-4">
               {item.whoIsItFor.map((who, i) => (
                 <ScrollReveal key={i} delay={i * 0.05}>
                   <span className="rounded-full border border-border bg-secondary px-5 py-2.5 text-sm font-medium text-secondary-foreground">
