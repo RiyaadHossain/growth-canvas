@@ -9,7 +9,7 @@ export interface ResourceItem {
   date: string;
   readingTime?: string;
   duration?: string;
-  ctaLabel: string;
+  ctaLabel?: string;
   featured?: boolean;
   slug?: string;
   // Detail page fields (optional — for detail pages only)
