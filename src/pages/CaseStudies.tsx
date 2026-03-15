@@ -1,5 +1,6 @@
 import ResourcePageShell from "@/components/resources/ResourcePageShell";
 import { caseStudiesItems } from "@/data/caseStudiesItems";
+import type { ResourceItem } from "@/components/resources/ResourceCard";
 
 const topics = [
   "Positioning",
@@ -15,7 +16,7 @@ export default function CaseStudies() {
     <ResourcePageShell
       headline="Case Studies"
       description="A closer look at how thoughtful positioning, better digital experiences, stronger acquisition systems, and smarter operations create measurable momentum for travel brands."
-      items={caseStudiesItems}
+      items={caseStudiesItems as unknown as ResourceItem[]}
       browseTopics={topics}
       cta={{
         headline: "Want to create your own next case study?",

@@ -9,7 +9,7 @@ export interface ResourceItem {
   date: string;
   readingTime?: string;
   duration?: string;
-  ctaLabel: string;
+  ctaLabel?: string;
   featured?: boolean;
   slug?: string;
   // Detail page fields (optional — for detail pages only)
@@ -35,9 +35,11 @@ export function ResourceCard({ item, index }: { item: ResourceItem; index: numbe
           </>
         )}
       </div>
-      <p className="mt-4 text-sm font-semibold text-primary transition-colors group-hover:text-primary/80">
-        {item.ctaLabel} →
-      </p>
+      {item.ctaLabel && (
+        <p className="mt-4 text-sm font-semibold text-primary transition-colors group-hover:text-primary/80">
+          {item.ctaLabel} →
+        </p>
+      )}
     </div>
   );
 
@@ -68,7 +70,7 @@ export function FeaturedResourceCard({ item }: { item: ResourceItem }) {
         <span className="h-1 w-1 rounded-full bg-border" />
         <span>{item.readingTime || item.duration}</span>
       </div>
-      <p className="mt-6 text-sm font-semibold text-primary">{item.ctaLabel} →</p>
+      {item.ctaLabel && <p className="mt-6 text-sm font-semibold text-primary">{item.ctaLabel} →</p>}
     </div>
   );
 
