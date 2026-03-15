@@ -70,7 +70,7 @@ export function FeaturedResourceCard({ item }: { item: ResourceItem }) {
         <span className="h-1 w-1 rounded-full bg-border" />
         <span>{item.readingTime || item.duration}</span>
       </div>
-      <p className="mt-6 text-sm font-semibold text-primary">{item.ctaLabel} →</p>
+      {item.ctaLabel && <p className="mt-6 text-sm font-semibold text-primary">{item.ctaLabel} →</p>}
     </div>
   );
 
