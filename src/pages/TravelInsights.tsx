@@ -1,5 +1,6 @@
 import ResourcePageShell from "@/components/resources/ResourcePageShell";
 import { travelInsightsItems } from "@/data/travelInsightsItems";
+import type { ResourceItem } from "@/components/resources/ResourceCard";
 
 const topics = [
   "Brand Strategy",
