@@ -44,6 +44,7 @@ export interface VideoSessionItem {
   slug: string;
 
   // Rich detail fields
+  thumbnail?: string;       // path to thumbnail image
   categoryPill?: string;
   format?: string;            // Workshop, Breakdown, Training, Q&A, Case Review
   audience?: string;          // "For tour operators", etc.
