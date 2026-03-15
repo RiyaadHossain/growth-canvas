@@ -232,12 +232,6 @@ export default function VideoSessionDetailPage({
                     <div className="flex h-24 w-24 items-center justify-center rounded-full bg-background/75 shadow-xl backdrop-blur-sm border border-primary/20">
                       <Play className="h-10 w-10 text-primary ml-1.5" />
                     </div>
-                    <div>
-                      <p className="font-heading text-xl font-bold text-white drop-shadow">{item.title}</p>
-                      <p className="mt-1 text-sm text-white/70">{item.duration} · {item.format ?? item.type} · {item.date}</p>
-                    </div>
-                    <p className="max-w-md text-sm text-white/60">{item.excerpt}</p>
-                  </div>
                 </div>
               )}
               {/* Below-player meta */}
