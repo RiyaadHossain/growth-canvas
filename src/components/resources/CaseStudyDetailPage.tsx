@@ -56,6 +56,7 @@ export interface CaseStudyItem {
   featured?: boolean;
   slug: string;
   industryTag?: string;
+  coverImage?: string;
 
   // New rich fields
   metrics?: CaseStudyMetric[];
