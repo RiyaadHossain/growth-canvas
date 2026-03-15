@@ -113,6 +113,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Feb 2026",
     readingTime: "7 min read",
     ctaLabel: "Read insight",
+    coverImage: imgTrafficIntent,
     slug: "/resources/travel-insights/traffic-vs-booking-intent",
     keyTakeaways: [
       "Ranking for broad travel keywords drives volume but rarely drives bookings — intent alignment is what converts.",
