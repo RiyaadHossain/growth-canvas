@@ -44,9 +44,9 @@ export default function Index() {
                 </div>
               </ScrollReveal>
             </div>
-            <ScrollReveal delay={0.2} className="hidden lg:flex lg:items-center order-1 lg:order-2">
-              <div className="grid grid-cols-2 gap-3 w-full max-h-[calc(100vh-8rem)] overflow-hidden">
-                <div className="space-y-3 flex flex-col">
+            <ScrollReveal delay={0.2} className="hidden lg:block order-1 lg:order-2 h-[calc(100vh-8rem)]">
+              <div className="grid grid-cols-2 gap-3 h-full">
+                <div className="flex flex-col gap-3 h-full">
                   <div className="flex-[3] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel1} alt="Luxury travel destination" className="h-full w-full object-cover" />
                   </div>
@@ -54,7 +54,7 @@ export default function Index() {
                     <img src={heroTravel2} alt="Travel brand strategy" className="h-full w-full object-cover" />
                   </div>
                 </div>
-                <div className="mt-8 space-y-3 flex flex-col">
+                <div className="flex flex-col gap-3 h-full pt-8">
                   <div className="flex-[2] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel3} alt="Adventure travel" className="h-full w-full object-cover" />
                   </div>
