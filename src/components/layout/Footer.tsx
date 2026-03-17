@@ -32,7 +32,10 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <p className="font-heading text-xl font-bold text-foreground">TripUp Studio</p>
+            <div className="flex items-center gap-2">
+              <img src={logoMark} alt="TripUp Studio logo" className="h-7 w-7 object-contain" />
+              <p className="font-heading text-xl font-bold text-foreground">TripUp Studio</p>
+            </div>
             <p className="mt-3 text-sm text-foreground/60">
               The full-stack growth partner for travel businesses — from research and strategy to products and marketing.
             </p>
