@@ -44,7 +44,7 @@ export default function Index() {
                 </div>
               </ScrollReveal>
             </div>
-            <ScrollReveal delay={0.2} className="order-1 lg:order-2">
+            <ScrollReveal delay={0.2} className="hidden lg:block order-1 lg:order-2">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
