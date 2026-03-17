@@ -44,21 +44,21 @@ export default function Index() {
                 </div>
               </ScrollReveal>
             </div>
-            <ScrollReveal delay={0.2} className="hidden lg:block order-1 lg:order-2 h-[calc(100vh-8rem)]">
-              <div className="grid grid-cols-2 gap-3 h-full">
-                <div className="flex flex-col gap-3 h-full">
-                  <div className="flex-[3] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
+            <ScrollReveal delay={0.2} className="hidden lg:block order-1 lg:order-2 py-6">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="space-y-3">
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel1} alt="Luxury travel destination" className="h-full w-full object-cover" />
                   </div>
-                  <div className="flex-[2] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
+                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel2} alt="Travel brand strategy" className="h-full w-full object-cover" />
                   </div>
                 </div>
-                <div className="flex flex-col gap-3 h-full pt-8">
-                  <div className="flex-[2] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
+                <div className="mt-8 space-y-3">
+                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel3} alt="Adventure travel" className="h-full w-full object-cover" />
                   </div>
-                  <div className="flex-[3] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel4} alt="Luxury hotel" className="h-full w-full object-cover" />
                   </div>
                 </div>
