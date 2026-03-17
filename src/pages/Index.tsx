@@ -22,7 +22,7 @@ export default function Index() {
       <section className="section-padding !pb-0">
         <div className="container-wide">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 text-center lg:text-left">
               <ScrollReveal>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
                   Travel Business Growth Partner
@@ -31,10 +31,10 @@ export default function Index() {
                   The full-stack growth partner for{" "}
                   <span className="text-primary">travel businesses</span>
                 </h1>
-                <p className="mt-6 max-w-lg text-lg text-muted-foreground">
+                <p className="mt-6 max-w-lg text-lg text-muted-foreground mx-auto lg:mx-0">
                   From market research and strategy to branding, digital products, and marketing execution — one team to take your travel brand from insight to scalable growth.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-4">
+                <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
                   <Button variant="hero" size="lg">
                     Book a strategy call
                   </Button>
