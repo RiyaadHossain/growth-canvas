@@ -15,7 +15,7 @@ export default function ServiceGrid() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 0.05} className="flex">
-              <div className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <Link to={service.slug} className="group flex h-full w-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40">
                 <service.icon className="h-6 w-6 text-primary" />
                 <h3 className="mt-4 font-heading text-lg font-semibold text-foreground">
                   {service.title}
