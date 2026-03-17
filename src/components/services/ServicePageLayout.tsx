@@ -424,7 +424,7 @@ function ProcessSection({
                     initial={{ opacity: 0, x: -12 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.3, delay: base + 0.4 }}
-                    className="font-heading text-lg font-bold text-foreground"
+                    className="font-heading text-lg font-bold text-foreground pl-3"
                   >
                     {step.title}
                   </motion.h3>
@@ -434,7 +434,7 @@ function ProcessSection({
                     initial={{ opacity: 0, x: -8 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.3, delay: base + 0.7 }}
-                    className="mt-2 text-sm text-muted-foreground"
+                    className="mt-2 text-sm text-muted-foreground pl-3"
                   >
                     {step.desc}
                   </motion.p>
