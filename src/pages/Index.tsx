@@ -22,7 +22,7 @@ export default function Index() {
       <section className="section-padding !pb-0">
         <div className="container-wide">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
+            <div className="order-2 lg:order-1">
               <ScrollReveal>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
                   Travel Business Growth Partner
