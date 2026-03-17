@@ -97,7 +97,7 @@ export default function FirstThirtyDays() {
                   initial={{ scale: 0, opacity: 0 }}
                   animate={inView ? { scale: 1, opacity: 1 } : {}}
                   transition={{ duration: 0.4, delay: base, type: "spring", stiffness: 200, damping: 15 }}
-                  className="relative z-10 inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary tracking-wide"
+                  className="relative z-10 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground tracking-wide"
                 >
                   {milestone.label}
                 </motion.span>
