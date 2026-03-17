@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
+import logoMark from "@/assets/logo-mark.png";
 import { services, serviceCategories } from "@/data/services";
 import { resources } from "@/data/resources";
 import { motion, AnimatePresence } from "framer-motion";
@@ -56,7 +57,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container-wide flex h-16 items-center justify-between px-6 lg:px-10">
         {/* Logo */}
-        <Link to="/" className="font-heading text-xl font-bold tracking-tight text-foreground">
+        <Link to="/" className="flex items-center gap-2 font-heading text-xl font-bold tracking-tight text-foreground">
+          <img src={logoMark} alt="TripUp Studio logo" className="h-7 w-7 object-contain" />
           TripUp Studio
         </Link>
 

@@ -22,7 +22,7 @@ export default function Index() {
       <section className="section-padding !pb-0">
         <div className="container-wide">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
+            <div className="order-2 lg:order-1">
               <ScrollReveal>
                 <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
                   Travel Business Growth Partner
@@ -44,7 +44,7 @@ export default function Index() {
                 </div>
               </ScrollReveal>
             </div>
-            <ScrollReveal delay={0.2}>
+            <ScrollReveal delay={0.2} className="order-1 lg:order-2">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
