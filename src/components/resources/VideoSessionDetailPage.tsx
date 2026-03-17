@@ -168,8 +168,8 @@ export default function VideoSessionDetailPage({
               </div>
             </ScrollReveal>
 
-            {/* Right: video thumbnail / preview card */}
-            <ScrollReveal delay={0.15}>
+            {/* Right: video thumbnail / preview card — desktop only */}
+            <ScrollReveal delay={0.15} className="hidden lg:block">
               <div className="relative overflow-hidden rounded-2xl border border-border aspect-video flex items-center justify-center bg-gradient-to-br from-secondary to-card">
                 {item.videoUrl ? (
                   <iframe
