@@ -44,21 +44,21 @@ export default function Index() {
                 </div>
               </ScrollReveal>
             </div>
-            <ScrollReveal delay={0.2} className="hidden lg:block order-1 lg:order-2">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="space-y-3">
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
+            <ScrollReveal delay={0.2} className="hidden lg:flex lg:items-center order-1 lg:order-2">
+              <div className="grid grid-cols-2 gap-3 w-full max-h-[calc(100vh-8rem)] overflow-hidden">
+                <div className="space-y-3 flex flex-col">
+                  <div className="flex-[3] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel1} alt="Luxury travel destination" className="h-full w-full object-cover" />
                   </div>
-                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
+                  <div className="flex-[2] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel2} alt="Travel brand strategy" className="h-full w-full object-cover" />
                   </div>
                 </div>
-                <div className="mt-8 space-y-3">
-                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
+                <div className="mt-8 space-y-3 flex flex-col">
+                  <div className="flex-[2] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel3} alt="Adventure travel" className="h-full w-full object-cover" />
                   </div>
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
+                  <div className="flex-[3] min-h-0 rounded-2xl overflow-hidden ring-1 ring-border/30">
                     <img src={heroTravel4} alt="Luxury hotel" className="h-full w-full object-cover" />
                   </div>
                 </div>
