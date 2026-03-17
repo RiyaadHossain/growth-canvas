@@ -26,7 +26,7 @@ export default function ServiceGrid() {
                   )}
                 </h3>
                 <p className="mt-2 flex-1 text-sm text-muted-foreground">{service.description}</p>
-              </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
