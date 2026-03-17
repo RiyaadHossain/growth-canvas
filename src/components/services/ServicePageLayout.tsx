@@ -392,19 +392,20 @@ function ProcessSection({
 
         {/* Mobile / Tablet: vertical timeline */}
         <div className="mt-12 lg:hidden">
-          <div className="relative ml-5 border-l-2 border-primary/20 pl-8">
+          <div className="relative ml-5 pl-8">
             {steps.map((step, i) => {
               const base = getStepDelay(i);
+              const isLast = i === steps.length - 1;
               return (
                 <div key={step.number} className="relative pb-10 last:pb-0">
-                  {/* Animated line segment */}
-                  {i > 0 && (
+                  {/* Animated line segment — draws downward from THIS badge to the next */}
+                  {!isLast && (
                     <motion.div
                       initial={{ scaleY: 0 }}
                       animate={inView ? { scaleY: 1 } : {}}
-                      transition={{ duration: 0.5, delay: base - 0.5, ease: "easeInOut" }}
-                      className="absolute -left-8 bottom-full h-full w-[2px] origin-top bg-primary/40"
-                      style={{ top: 0 }}
+                      transition={{ duration: 0.5, delay: base + 1.0, ease: "easeInOut" }}
+                      className="absolute -left-8 top-10 w-[2px] origin-top bg-primary/40"
+                      style={{ height: "calc(100% - 2.5rem)" }}
                     />
                   )}
 
