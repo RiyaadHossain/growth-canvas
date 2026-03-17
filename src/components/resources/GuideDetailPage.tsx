@@ -265,9 +265,9 @@ export default function GuideDetailPage({
               </div>
             </ScrollReveal>
 
-            {/* Right: visual mockup */}
-            <ScrollReveal delay={0.15}>
-              <div className="flex items-center justify-center py-8 lg:py-0">
+            {/* Right: visual mockup — desktop only */}
+            <ScrollReveal delay={0.15} className="hidden lg:block">
+              <div className="flex items-center justify-center">
                 <GuideMockup type={item.type} />
               </div>
             </ScrollReveal>
