@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <img src={logoMark} alt="TripUp Studio logo" className="h-7 w-7 object-contain" />
+              <img src={logoMark} alt="TripUp Studio logo" className="h-[1em] w-auto object-contain mix-blend-screen" />
               <p className="font-heading text-xl font-bold text-foreground">TripUp Studio</p>
             </div>
             <p className="mt-3 text-sm text-foreground/60">
