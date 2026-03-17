@@ -58,7 +58,7 @@ export default function Header() {
       <div className="container-wide flex h-16 items-center justify-between px-6 lg:px-10">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 font-heading text-xl font-bold tracking-tight text-foreground">
-          <img src={logoMark} alt="TripUp Studio logo" className="h-7 w-7 object-contain" />
+          <img src={logoMark} alt="TripUp Studio logo" className="h-[1em] w-auto object-contain mix-blend-screen" />
           TripUp Studio
         </Link>
 
