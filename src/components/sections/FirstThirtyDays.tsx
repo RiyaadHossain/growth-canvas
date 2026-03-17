@@ -144,19 +144,20 @@ export default function FirstThirtyDays() {
 
         {/* Mobile / Tablet: vertical timeline */}
         <div className="lg:hidden">
-          <div className="relative ml-5 border-l-2 border-primary/20 pl-8">
+          <div className="relative ml-5 pl-8">
             {milestones.map((milestone, i) => {
               const base = getStepDelay(i);
+              const isLast = i === milestones.length - 1;
               return (
                 <div key={milestone.label} className="relative pb-10 last:pb-0">
-                  {/* Animated line segment */}
-                  {i > 0 && (
+                  {/* Animated line segment — draws downward from THIS badge to the next */}
+                  {!isLast && (
                     <motion.div
                       initial={{ scaleY: 0 }}
                       animate={inView ? { scaleY: 1 } : {}}
-                      transition={{ duration: 0.5, delay: base - 0.5, ease: "easeInOut" }}
-                      className="absolute -left-8 bottom-full h-full w-[2px] origin-top bg-primary/40"
-                      style={{ top: 0 }}
+                      transition={{ duration: 0.5, delay: base + 1.0, ease: "easeInOut" }}
+                      className="absolute -left-8 top-7 w-[2px] origin-top bg-primary/40"
+                      style={{ height: "calc(100% - 1.75rem)" }}
                     />
                   )}
 
