@@ -48,17 +48,20 @@ export default function Index() {
           {/* Headline */}
           <ScrollReveal>
             <h1 className="font-heading text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto">
-              Turn Views Into{" "}
-              <span className="text-primary">Clients</span>
+              Bangladesh's First{" "}
+              <span className="text-primary">Travel</span>
               <br />
-              <span className="text-muted-foreground/80">Scale Your Brand</span>
+              <span className="text-muted-foreground/80">Growth Company</span>
             </h1>
           </ScrollReveal>
 
           {/* Subheadline */}
           <ScrollReveal delay={0.1}>
-            <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
-              We help travel brands grow with done-for-you content systems, strategic short-form videos, and lead-focused creative that works on autopilot.
+            <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg leading-relaxed">
+              <span className="text-muted-foreground">Get Predictable Bookings Using Structured Growth Systems.</span>
+              <br className="hidden sm:block" /><br className="hidden sm:block" />
+              <span className="text-muted-foreground">We help travel businesses grow sustainably with AI and expert-managed growth systems. </span>
+              <span className="text-primary font-medium">So you can stop guessing and start seeing steady, predictable bookings.</span>
             </p>
           </ScrollReveal>
 
