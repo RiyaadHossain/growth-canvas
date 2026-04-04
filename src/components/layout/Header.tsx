@@ -12,7 +12,7 @@ type MegaMenuKey = "services" | "resources";
 const navLinks = [
   { label: "Our Work", to: "/our-work" },
   { label: "Why Us", to: "/why-us" },
-  { label: "Pricing", to: "/pricing" },
+  // { label: "Pricing", to: "/pricing" },
   { label: "About Us", to: "/about" },
 ];
 
