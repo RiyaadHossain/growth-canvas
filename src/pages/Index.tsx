@@ -1,10 +1,13 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import heroTravel1 from "@/assets/hero-travel-1.jpg";
-import heroTravel2 from "@/assets/hero-travel-2.jpg";
-import heroTravel3 from "@/assets/hero-travel-3.jpg";
-import heroTravel4 from "@/assets/hero-travel-4.jpg";
+import { motion } from "framer-motion";
+import { ArrowRight, Star } from "lucide-react";
+import avatar1 from "@/assets/avatar-1.jpg";
+import avatar2 from "@/assets/avatar-2.jpg";
+import avatar3 from "@/assets/avatar-3.jpg";
+import avatar4 from "@/assets/avatar-4.jpg";
+import avatar5 from "@/assets/avatar-5.jpg";
 import LogoStrip from "@/components/sections/LogoStrip";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
@@ -15,56 +18,97 @@ import FirstThirtyDays from "@/components/sections/FirstThirtyDays";
 import ComparisonTable from "@/components/sections/ComparisonTable";
 import { Link } from "react-router-dom";
 
+const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
+
 export default function Index() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="flex items-center px-6 md:px-12 lg:px-20 py-10 md:py-12 lg:py-0 min-h-[calc(100vh-4rem)]">
-        <div className="container-wide w-full">
-          <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
-            <div className="order-2 lg:order-1 text-center lg:text-left">
-              <ScrollReveal>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
-                  Travel Business Growth Partner
-                </p>
-                <h1 className="font-heading text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
-                  The full-stack growth partner for{" "}
-                  <span className="text-primary">travel businesses</span>
-                </h1>
-                <p className="mt-4 max-w-lg text-base md:text-lg text-muted-foreground mx-auto lg:mx-0">
-                  From market research and strategy to branding, digital products, and marketing execution — one team to take your travel brand from insight to scalable growth.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-3 justify-center lg:justify-start">
-                  <Button variant="hero" size="lg">
-                    Book a strategy call
-                  </Button>
-                  <Button variant="hero-outline" size="lg" asChild>
-                    <Link to="/our-work">See our work</Link>
-                  </Button>
+      <section className="relative flex items-center justify-center min-h-[calc(100vh-4rem)] overflow-hidden px-6 md:px-12 lg:px-20">
+        {/* Ambient background glow */}
+        <div className="pointer-events-none absolute inset-0">
+          <motion.div
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-primary/10 blur-[140px]"
+            animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.6, 0.4] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute right-1/4 top-1/3 h-[300px] w-[300px] rounded-full bg-primary/5 blur-[100px]"
+            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          />
+          <motion.div
+            className="absolute left-1/4 bottom-1/4 h-[250px] w-[250px] rounded-full bg-primary/5 blur-[120px]"
+            animate={{ scale: [1.1, 1, 1.1], opacity: [0.2, 0.4, 0.2] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+          />
+        </div>
+
+        <div className="relative z-10 container-wide w-full text-center">
+          {/* Headline */}
+          <ScrollReveal>
+            <h1 className="font-heading text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto">
+              Turn Views Into{" "}
+              <span className="text-primary">Clients</span>
+              <br />
+              <span className="text-muted-foreground/80">Scale Your Brand</span>
+            </h1>
+          </ScrollReveal>
+
+          {/* Subheadline */}
+          <ScrollReveal delay={0.1}>
+            <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed">
+              We help travel brands grow with done-for-you content systems, strategic short-form videos, and lead-focused creative that works on autopilot.
+            </p>
+          </ScrollReveal>
+
+          {/* Social Proof */}
+          <ScrollReveal delay={0.2}>
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex items-center">
+                {/* Overlapping avatars */}
+                <div className="flex -space-x-3">
+                  {avatars.map((src, i) => (
+                    <img
+                      key={i}
+                      src={src}
+                      alt="Client"
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 rounded-full border-2 border-background object-cover"
+                    />
+                  ))}
                 </div>
-              </ScrollReveal>
-            </div>
-            <ScrollReveal delay={0.2} className="hidden lg:block order-1 lg:order-2 py-6">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="space-y-3">
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
-                    <img src={heroTravel1} alt="Luxury travel destination" className="h-full w-full object-cover" />
+                {/* Rating + text */}
+                <div className="ml-4 text-left">
+                  <div className="flex items-center gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-3.5 w-3.5 fill-primary text-primary" />
+                    ))}
+                    <span className="ml-1.5 text-sm font-semibold text-foreground">5.0</span>
                   </div>
-                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
-                    <img src={heroTravel2} alt="Travel brand strategy" className="h-full w-full object-cover" />
-                  </div>
-                </div>
-                <div className="mt-8 space-y-3">
-                  <div className="aspect-square rounded-2xl overflow-hidden ring-1 ring-border/30">
-                    <img src={heroTravel3} alt="Adventure travel" className="h-full w-full object-cover" />
-                  </div>
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-border/30">
-                    <img src={heroTravel4} alt="Luxury hotel" className="h-full w-full object-cover" />
-                  </div>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    Trusted by <span className="text-foreground font-medium">500+</span> travel brands
+                  </p>
                 </div>
               </div>
-            </ScrollReveal>
-          </div>
+            </div>
+          </ScrollReveal>
+
+          {/* CTA */}
+          <ScrollReveal delay={0.3}>
+            <div className="mt-8 md:mt-10">
+              <Button variant="hero" size="lg" className="group text-base px-8 py-6 h-auto" asChild>
+                <Link to="/contact">
+                  Book a Strategy Call
+                  <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <p className="mt-3 text-xs text-muted-foreground">
+                Free 30-minute consultation · No commitment
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
