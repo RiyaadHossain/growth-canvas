@@ -47,8 +47,9 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/services/branding-identity" element={<BrandingIdentity />} />
-          <Route path="/services/market-research" element={<MarketResearch />} />
-          <Route path="/services/growth-strategy" element={<GrowthStrategy />} />
+          <Route path="/services/market-research-growth-strategy" element={<MarketResearchGrowthStrategy />} />
+          <Route path="/services/market-research" element={<MarketResearchGrowthStrategy />} />
+          <Route path="/services/growth-strategy" element={<MarketResearchGrowthStrategy />} />
           <Route path="/services/web-design-development" element={<WebDesignDevelopment />} />
           <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
           <Route path="/services/content-creative" element={<ContentCreative />} />
