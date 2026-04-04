@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <img src={logoMark} alt="TripUp Studio logo" className="h-8 w-auto object-contain mix-blend-screen rounded-md" />
-              <p className="font-heading text-xl font-bold text-foreground">TripUp Studio</p>
+              <p className="font-heading text-xl text-foreground"><span className="font-bold">TripUp</span> Studio</p>
             </div>
             <p className="mt-3 text-sm text-foreground/60">
               The full-stack growth partner for travel businesses — from research and strategy to products and marketing.
