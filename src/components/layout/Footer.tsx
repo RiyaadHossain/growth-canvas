@@ -75,8 +75,17 @@ export default function Footer() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-foreground/40">Services</p>
             <ul className="space-y-2">
               {services.map((s) => (
-                <li key={s.title}>
-                  <Link to={s.slug} className="text-sm text-foreground/70 transition-colors hover:text-foreground">{s.title}</Link>
+                <li key={s.title} className="flex items-center gap-2">
+                  {s.comingSoon ? (
+                    <span className="text-sm text-foreground/40 cursor-default">
+                      {s.title}
+                      <span className="ml-2 inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                        Coming Soon
+                      </span>
+                    </span>
+                  ) : (
+                    <Link to={s.slug} className="text-sm text-foreground/70 transition-colors hover:text-foreground">{s.title}</Link>
+                  )}
                 </li>
               ))}
             </ul>
