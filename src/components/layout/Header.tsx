@@ -12,7 +12,7 @@ type MegaMenuKey = "services" | "resources";
 const navLinks = [
   { label: "Our Work", to: "/our-work" },
   { label: "Why Us", to: "/why-us" },
-  { label: "Pricing", to: "/pricing" },
+  // { label: "Pricing", to: "/pricing" },
   { label: "About Us", to: "/about" },
 ];
 
@@ -57,9 +57,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container-wide flex h-16 items-center justify-between px-6 lg:px-10">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 font-heading text-xl font-bold tracking-tight text-foreground">
+        <Link to="/" className="flex items-center gap-2 font-heading text-xl tracking-tight text-foreground">
           <img src={logoMark} alt="TripUp Studio logo" className="h-8 w-auto object-contain mix-blend-screen rounded-md" />
-          TripUp Studio
+          <span><span className="font-bold">TripUp</span> Studio</span>
         </Link>
 
         {/* Desktop Nav */}
