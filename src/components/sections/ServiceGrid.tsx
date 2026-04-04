@@ -19,9 +19,9 @@ export default function ServiceGrid() {
                 <service.icon className="h-6 w-6 text-primary" />
                 <h3 className="mt-4 font-heading text-lg font-semibold text-foreground">
                   {service.title}
-                  {service.isNew && (
-                    <span className="ml-2 inline-block rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">
-                      New
+                  {service.comingSoon && (
+                    <span className="ml-2 inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                      Coming Soon
                     </span>
                   )}
                 </h3>
