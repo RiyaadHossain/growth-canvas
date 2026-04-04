@@ -115,9 +115,9 @@ export default function Header() {
                                 <div>
                                   <p className="text-sm font-semibold text-foreground flex items-center gap-2">
                                     {item.title}
-                                    {item.isNew && (
-                                      <span className="inline-block rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">
-                                        New
+                                    {item.comingSoon && (
+                                      <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                                        Coming Soon
                                       </span>
                                     )}
                                   </p>
