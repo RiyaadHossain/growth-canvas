@@ -105,26 +105,40 @@ export default function Header() {
                         <div key={cat}>
                           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-primary">{cat}</p>
                           <div className="space-y-1">
-                            {services.filter((s) => s.category === cat).map((item) => (
-                              <Link
-                                key={item.title}
-                                to={item.slug}
-                                className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary"
-                              >
-                                <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                                <div>
-                                  <p className="text-sm font-semibold text-foreground flex items-center gap-2">
-                                    {item.title}
-                                    {item.comingSoon && (
-                                      <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
-                                        Coming Soon
-                                      </span>
-                                    )}
-                                  </p>
-                                  <p className="text-xs text-muted-foreground">{item.description}</p>
+                            {services.filter((s) => s.category === cat).map((item) => {
+                              const inner = (
+                                <>
+                                  <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                                  <div>
+                                    <p className="text-sm font-semibold text-foreground flex items-center gap-2">
+                                      {item.title}
+                                      {item.comingSoon && (
+                                        <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                                          Coming Soon
+                                        </span>
+                                      )}
+                                    </p>
+                                    <p className="text-xs text-muted-foreground">{item.description}</p>
+                                  </div>
+                                </>
+                              );
+                              return item.comingSoon ? (
+                                <div
+                                  key={item.title}
+                                  className="group flex gap-3 rounded-lg p-3 opacity-60 cursor-default"
+                                >
+                                  {inner}
                                 </div>
-                              </Link>
-                            ))}
+                              ) : (
+                                <Link
+                                  key={item.title}
+                                  to={item.slug}
+                                  className="group flex gap-3 rounded-lg p-3 transition-colors hover:bg-secondary"
+                                >
+                                  {inner}
+                                </Link>
+                              );
+                            })}
                           </div>
                         </div>
                       ))}
@@ -226,12 +240,30 @@ function MobileServicesSection() {
             {serviceCategories.map((cat) => (
               <div key={cat} className="px-8 pb-2">
                 <p className="py-2 text-[11px] font-bold uppercase tracking-widest text-primary">{cat}</p>
-                {services.filter((s) => s.category === cat).map((item) => (
-                  <Link key={item.title} to={item.slug} className="block px-2 py-1.5">
-                    <p className="text-sm font-medium text-foreground">{item.title}</p>
-                    <p className="text-xs text-muted-foreground">{item.description}</p>
-                  </Link>
-                ))}
+                {services.filter((s) => s.category === cat).map((item) => {
+                  const content = (
+                    <>
+                      <p className="text-sm font-medium text-foreground flex items-center gap-2">
+                        {item.title}
+                        {item.comingSoon && (
+                          <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                            Coming Soon
+                          </span>
+                        )}
+                      </p>
+                      <p className="text-xs text-muted-foreground">{item.description}</p>
+                    </>
+                  );
+                  return item.comingSoon ? (
+                    <div key={item.title} className="block px-2 py-1.5 opacity-60 cursor-default">
+                      {content}
+                    </div>
+                  ) : (
+                    <Link key={item.title} to={item.slug} className="block px-2 py-1.5">
+                      {content}
+                    </Link>
+                  );
+                })}
               </div>
             ))}
           </motion.div>
