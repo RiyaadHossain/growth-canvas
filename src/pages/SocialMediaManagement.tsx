@@ -80,7 +80,7 @@ const data: ServicePageData = {
   deliverables: {
     heading: "Why Social Media Matters More in Travel",
     paragraph:
-      "Travel is emotional, visual, and trust-driven. Before someone books, they often check your social media to answer silent questions: Does this brand look credible? Does this experience feel worth it? Is this business active and professional? Can I trust them with my trip? If your social presence can't answer those questions clearly, you lose attention before the sales conversation even starts.",
+      "Travel is emotional, visual, and trust-driven. Before someone books, they often check your social media to answer silent questions: Does this experience feel worth it? Can I trust them with my trip? If your social presence can't answer those questions clearly, you lose attention before the sales conversation even starts.",
     groups: [
       {
         label: "Trust & Credibility",
