@@ -8,15 +8,15 @@ import {
 const data: ServicePageData = {
   hero: {
     eyebrow: "Performance Marketing for Travel Businesses",
-    headline: "Turn paid acquisition into a measurable",
-    highlightedText: "growth engine.",
-    description: "Paid marketing should create predictable opportunities—not just spend. We help travel brands launch and optimize performance campaigns built around clear messaging, efficient targeting, and conversion-focused landing experiences.",
+    headline: "Build a Paid Growth System, Not Just",
+    highlightedText: "Campaigns",
+    description: "We turn your ad spend into a predictable growth system, so every dollar works toward generating real leads and bookings.",
     trustLine: "Built for travel brands that want paid campaigns to drive real, measurable outcomes.",
   },
   problem: {
-    headline: "Without the right strategy,",
-    highlightedText: "ad spend disappears fast.",
-    paragraph: "We connect targeting, creative, landing pages, and funnel logic so your campaigns generate better traffic, better leads, and better outcomes.",
+    headline: "Half your ad budget could be wasted without the",
+    highlightedText: "right system.",
+    paragraph: "Many travel businesses invest in ads but see little return because campaigns lack clear strategy, targeting, and conversion focus. Without a structured approach, clicks don't turn into bookings. In performance marketing, it's not about spending more — it's about making every dollar work.",
     painPoints: [
       { icon: Shuffle, text: "Low return on ad spend" },
       { icon: AlertTriangle, text: "Weak lead quality from campaigns" },
