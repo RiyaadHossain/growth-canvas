@@ -8,15 +8,15 @@ import {
 const data: ServicePageData = {
   hero: {
     eyebrow: "Branding & Identity for Travel Businesses",
-    headline: "Build a travel brand people remember —",
-    highlightedText: "and choose.",
-    description: "TripUp Studio helps travel brands create a clear position, compelling story, and cohesive identity system that turns attention into trust and trust into bookings. From brand strategy to messaging and visual direction, we help you become the obvious choice in a crowded market.",
+    headline: "Make Your Brand Impossible to",
+    highlightedText: "Ignore",
+    description: "We design brand systems that position your travel business clearly, communicate value effectively, and drive booking decisions.",
     trustLine: "Built for hotels, destinations, tour operators, travel startups, and experience-led brands.",
   },
   problem: {
-    headline: "Most travel brands don't have a visibility problem — they have a",
-    highlightedText: "clarity problem.",
-    paragraph: "Many travel businesses struggle to stand out because their brand feels generic, inconsistent, or too focused on features instead of experience. In a market full of similar offers, unclear positioning and weak storytelling make it harder to earn trust, attract the right audience, and convert interest into bookings.",
+    headline: "If your brand feels generic,",
+    highlightedText: "your growth will too.",
+    paragraph: "In a crowded tourism market, many businesses struggle to stand out because their positioning is unclear and branding feels inconsistent. This makes it harder to build trust and convert attention into bookings. Without a strong, cohesive brand, even great offers get overlooked.",
     painPoints: [
       { icon: Shuffle, text: "Generic positioning that blends in with competitors" },
       { icon: AlertTriangle, text: "Inconsistent messaging across website, social, and campaigns" },
