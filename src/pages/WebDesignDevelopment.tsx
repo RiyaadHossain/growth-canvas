@@ -7,16 +7,16 @@ import {
 
 const data: ServicePageData = {
   hero: {
-    eyebrow: "Web Design & Development for Travel Businesses",
-    headline: "Build a digital experience that earns trust and",
-    highlightedText: "drives action.",
-    description: "Your website should do more than look polished. It should communicate credibility, guide decision-making, and convert interest into inquiries, bookings, or qualified leads. We design and build travel websites that balance brand, performance, and usability.",
+    eyebrow: "Product Design & Development for Travel Businesses",
+    headline: "Build Digital Systems That Turn Demand Into",
+    highlightedText: "Bookings",
+    description: "We design and develop websites, apps, CRM, and automation systems that work together to turn demand into consistent business growth.",
     trustLine: "Built for travel brands that need a website that performs as well as it looks.",
   },
   problem: {
-    headline: "If your website doesn't build trust instantly,",
-    highlightedText: "visitors leave.",
-    paragraph: "We create sites that feel premium, intuitive, and conversion-aware from the first scroll.",
+    headline: "Most visitors leave before you get a chance to",
+    highlightedText: "convert them.",
+    paragraph: "If your website doesn't instantly communicate trust and clarity, potential customers drop off within seconds. In travel, where decisions are quick and options are many, a weak first impression means lost bookings. A strong, intuitive experience is what turns interest into action.",
     painPoints: [
       { icon: Shuffle, text: "Outdated or low-trust website design" },
       { icon: AlertTriangle, text: "Poor mobile experience" },

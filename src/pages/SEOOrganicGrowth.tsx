@@ -8,15 +8,15 @@ import {
 const data: ServicePageData = {
   hero: {
     eyebrow: "Content & SEO for Travel Businesses",
-    headline: "Build organic reach through strategic content and",
-    highlightedText: "authority that compounds.",
-    description: "Travel decisions begin long before booking. People search, compare, explore destinations, evaluate trust, and gather inspiration before they act. We help travel brands build content and SEO systems that improve discoverability, strengthen authority, and support long-term growth through useful, search-aligned content.",
+    headline: "Be the First Choice When Travelers",
+    highlightedText: "Search",
+    description: "We create content and SEO systems that help your travel business get discovered by the right audience, build trust over time, and convert search traffic into steady, high-intent bookings.",
     trustLine: "Built for travel brands that want organic visibility without depending entirely on paid spend.",
   },
   problem: {
-    headline: "Content without strategy is noise. SEO without content is",
-    highlightedText: "invisible.",
-    paragraph: "When content and SEO work together, your brand stays top-of-mind before a booking decision is made. Most travel businesses either lack a clear content direction or run SEO in isolation from their content strategy.",
+    headline: "If You're Not Showing Up in Search, You're Losing",
+    highlightedText: "Bookings",
+    paragraph: "Travelers are actively searching for what you offer, but if your business isn't visible, they choose competitors instead. Without strong SEO and content, you miss high-intent demand every day. In search, visibility isn't optional — it's what drives consistent, long-term bookings.",
     painPoints: [
       { icon: Eye, text: "Low search visibility in competitive travel categories" },
       { icon: Shuffle, text: "Weak or inconsistent content direction" },
