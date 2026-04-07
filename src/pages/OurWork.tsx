@@ -66,13 +66,11 @@ function HeroSection() {
         <ScrollReveal>
           <Pill className="mb-6 bg-accent text-accent-foreground">Our Work</Pill>
           <h1 className="font-heading max-w-4xl text-5xl font-extrabold leading-[1.05] md:text-6xl lg:text-7xl">
-            Proof, strategy, and&nbsp;
-            <span className="text-primary">growth work</span> for travel&nbsp;brands
+            How TripUp Studio Helps Travel Brands to ensure&nbsp;
+            <span className="text-primary">Growth</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            This page combines real project work, strategic case studies, and practical resources
-            that show how TripUp Studio approaches growth for travel brands — from positioning and
-            digital experience to acquisition systems and long-term organic growth.
+            From market insight to scalable acquisition, explore the strategies and systems we use to turn visibility into predictable bookings.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link

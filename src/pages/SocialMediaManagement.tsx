@@ -9,18 +9,18 @@ import {
 const data: ServicePageData = {
   hero: {
     eyebrow: "Social Media Management for Travel Businesses",
-    headline: "Turn Social Media Into a Consistent",
-    highlightedText: "Demand Channel",
+    headline: "Turn Social Media Into Consistent",
+    highlightedText: "Bookings",
     description:
-      "We help travel brands build a stronger social presence that increases visibility, builds trust, and turns attention into more inquiries, leads, and bookings.",
+      "We manage your content, messaging, and growth strategy to attract the right audience and convert attention into real inquiries and bookings.",
     trustLine:
       "Most travel businesses post regularly but still don't see real business results. The problem usually isn't effort — it's the lack of strategy, consistency, and conversion-focused execution. In travel, social media is often the first place potential customers judge your brand. If the content feels inconsistent, generic, or disconnected from your offers, trust drops fast. TripUp Studio manages social media with a growth-first approach — combining strategy, content direction, brand consistency, and platform execution to help travel businesses build demand, not just stay active online.",
   },
   problem: {
-    headline: "Why Most Travel Brands Struggle on",
-    highlightedText: "Social Media",
+    headline: "Being active isn't the same as being",
+    highlightedText: "effective",
     paragraph:
-      "Many travel brands treat social media like a posting task instead of a growth system. That leads to inconsistent content, weak positioning, low engagement, and a social presence that looks active — but doesn't actually support bookings. Without a clear strategy, social media becomes noise. With the right system, it becomes one of your strongest trust and demand channels.",
+      "Many travel businesses stay active online but struggle to turn attention into real results. Without clear strategy, consistent messaging, and audience focus, engagement doesn't translate into inquiries. Social media should do more than look good — it should build trust and drive actual bookings.",
     painPoints: [
       { icon: Shuffle, text: "Inconsistent posting without measurable business impact" },
       { icon: Eye, text: "Weak or disconnected visual brand presence" },
