@@ -70,11 +70,10 @@ const data: ServicePageData = {
   process: {
     heading: "How Our Social Media Management Works",
     steps: [
-      { number: "01", title: "Audit & Direction", desc: "Review your current social presence, identify gaps, and define the right strategic direction." },
-      { number: "02", title: "Monthly Planning", desc: "Create a structured content and campaign plan based on your offers, audience behavior, and growth priorities." },
-      { number: "03", title: "Content & Messaging", desc: "Shape the content structure, visual direction, and messaging needed to keep your brand clear and consistent." },
-      { number: "04", title: "Publish & Manage", desc: "Manage rollout, scheduling, and ongoing execution so your channels stay active and aligned." },
-      { number: "05", title: "Review & Improve", desc: "Analyze performance each cycle and refine the strategy for better results over time." },
+      { number: "01", title: "Audit & Strategy", desc: "Review your current social presence, identify gaps, and define the right strategic direction based on your audience, offers, and business goals." },
+      { number: "02", title: "Content Planning & Creative Direction", desc: "Build a structured monthly content plan with clear themes, campaigns, messaging direction, and visual consistency." },
+      { number: "03", title: "Publishing & Ongoing Management", desc: "Manage scheduling, publishing, and ongoing execution so your channels stay active, organized, and aligned." },
+      { number: "04", title: "Performance Review & Optimization", desc: "Analyze content performance, engagement trends, and audience response, then refine the strategy for stronger results over time." },
     ],
   },
   deliverables: {
