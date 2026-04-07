@@ -14,7 +14,7 @@ const data: ServicePageData = {
     description:
       "We manage your content, messaging, and growth strategy to attract the right audience and convert attention into real inquiries and bookings.",
     trustLine:
-      "Most travel businesses post regularly but still don't see real business results. The problem usually isn't effort — it's the lack of strategy, consistency, and conversion-focused execution. In travel, social media is often the first place potential customers judge your brand. If the content feels inconsistent, generic, or disconnected from your offers, trust drops fast. TripUp Studio manages social media with a growth-first approach — combining strategy, content direction, brand consistency, and platform execution to help travel businesses build demand, not just stay active online.",
+      "Posting regularly isn't enough. Without strategy and consistency, social media won't drive real results.",
   },
   problem: {
     headline: "Being active isn't the same as being",
