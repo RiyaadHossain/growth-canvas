@@ -117,7 +117,7 @@ const data: ServicePageData = {
   whyUs: {
     heading: "Why TripUp Studio",
     paragraph:
-      "Most agencies treat social media as a content task. We treat it as a growth system. TripUp Studio combines travel market understanding, brand strategy, messaging psychology, and execution discipline to build social media systems that help travel brands look stronger, communicate better, and convert attention into demand. We don't just help you post more. We help you make social media actually matter.",
+      "Most agencies treat social media as a content task. We treat it as a growth system. TripUp Studio combines travel market understanding, brand strategy, messaging psychology, and execution discipline to build social media systems that help travel brands communicate better, and convert attention into demand. We help you make social media actually matter.",
     points: [
       { title: "Growth-first approach", desc: "Every piece of content is connected to your business goals, not just engagement metrics." },
       { title: "Built for travel", desc: "We understand how travelers discover, evaluate, and decide — and we design social strategies around that." },
