@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone, Send, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { CALENDLY_URL } from "@/data/constants";
 
 const contactInfo = [
   {
@@ -91,9 +92,11 @@ export default function Contact() {
                   Prefer a conversation? Book a free discovery call and we'll
                   walk through your goals together.
                 </p>
-                <Button variant="hero" size="lg" className="mt-6">
-                  Book a Free Discovery Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button variant="hero" size="lg" className="mt-6" asChild>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                    Book a Free Discovery Call
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </ScrollReveal>
 
@@ -286,9 +289,14 @@ export default function Contact() {
               Book a free strategy call and see how TripUp Studio can take you
               from insight to scalable growth.
             </p>
-            <button className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
               Book a Strategy Call
-            </button>
+            </a>
           </ScrollReveal>
         </div>
       </section>

@@ -6,6 +6,7 @@ import logoMark from "@/assets/logo-mark.png";
 import { services, serviceCategories } from "@/data/services";
 import { resources } from "@/data/resources";
 import { motion, AnimatePresence } from "framer-motion";
+import { CALENDLY_URL } from "@/data/constants";
 
 type MegaMenuKey = "services" | "resources";
 
@@ -168,8 +169,8 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <Button variant="hero" size="default" className="text-sm">
-            Free Consultation
+          <Button variant="hero" size="default" className="text-sm" asChild>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
           </Button>
         </div>
 
@@ -207,8 +208,8 @@ export default function Header() {
               </Link>
             ))}
             <div className="p-6">
-              <Button variant="hero" className="w-full">
-                Free Consultation
+              <Button variant="hero" className="w-full" asChild>
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
               </Button>
             </div>
           </motion.div>

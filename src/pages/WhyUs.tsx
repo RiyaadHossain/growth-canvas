@@ -7,6 +7,7 @@ import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
 import CTABand from "@/components/sections/CTABand";
 import HowWeWork from "@/components/sections/HowWeWork";
 import ComparisonTable from "@/components/sections/ComparisonTable";
+import { CALENDLY_URL } from "@/data/constants";
 
 export default function WhyUs() {
   return (
@@ -22,8 +23,8 @@ export default function WhyUs() {
             <p className="mt-4 text-lg text-muted-foreground">
               Stop juggling research firms, brand agencies, developers, and media buyers. Get one specialist team that covers everything — from market insight to scalable growth systems.
             </p>
-            <Button variant="hero" size="lg" className="mt-8">
-              Book a strategy call
+            <Button variant="hero" size="lg" className="mt-8" asChild>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
             </Button>
           </ScrollReveal>
         </div>

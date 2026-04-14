@@ -12,6 +12,7 @@ import {
   TrendingUp,
   Zap,
 } from "lucide-react";
+import { CALENDLY_URL } from "@/data/constants";
 import Layout from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import CTABand from "@/components/sections/CTABand";
@@ -182,7 +183,7 @@ export default function TravelInsightDetailPage({
             {/* Subtle CTAs */}
             <div className="mt-8 flex flex-wrap gap-3">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/contact">Book a Strategy Call</Link>
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
                 <Link to="/services/market-research">Explore Services</Link>
@@ -310,7 +311,7 @@ export default function TravelInsightDetailPage({
                   We're publishing the complete version shortly. In the meantime, book a call to discuss these ideas directly with our team.
                 </p>
                 <Button variant="hero" size="sm" className="mt-4" asChild>
-                  <Link to="/contact">Book a Strategy Call</Link>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
                 </Button>
               </div>
             </ScrollReveal>

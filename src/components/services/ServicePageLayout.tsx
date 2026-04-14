@@ -4,6 +4,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import CTABand from "@/components/sections/CTABand";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
+import { CALENDLY_URL } from "@/data/constants";
 import {
   Accordion,
   AccordionContent,
@@ -89,8 +90,8 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
               {data.hero.description}
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-              <Button variant="hero" size="lg">
-                Book a Free Discovery Call
+              <Button variant="hero" size="lg" asChild>
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Free Discovery Call</a>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
                 <Link to="/why-us">See How We Work</Link>
