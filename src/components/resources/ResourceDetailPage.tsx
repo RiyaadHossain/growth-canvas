@@ -4,6 +4,7 @@ import CTABand from "@/components/sections/CTABand";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Clock, Tag, CalendarDays, CheckCircle2 } from "lucide-react";
+import { CALENDLY_URL } from "@/data/constants";
 import type { ResourceItem } from "./ResourceCard";
 
 interface ResourceDetailPageProps {
