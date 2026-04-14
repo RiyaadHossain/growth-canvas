@@ -1,9 +1,10 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { CALENDLY_URL } from "@/data/constants";
 
 export default function CTABand({
   headline = "Ready to Grow Your Travel Business?",
   subtext = "Book a free strategy call and see how TripUp Studio can take you from insight to scalable growth.",
-  cta = "Book a strategy call",
+  cta = "Book a Strategy Call",
 }: {
   headline?: string;
   subtext?: string;
@@ -15,9 +16,14 @@ export default function CTABand({
         <ScrollReveal>
           <h2 className="font-heading text-3xl font-bold md:text-5xl">{headline}</h2>
           <p className="mt-4 text-background/60">{subtext}</p>
-          <button className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          >
             {cta}
-          </button>
+          </a>
         </ScrollReveal>
       </div>
     </section>
