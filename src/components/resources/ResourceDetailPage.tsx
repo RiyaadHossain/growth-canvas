@@ -127,8 +127,8 @@ export default function ResourceDetailPage({
                 <p className="mt-1 text-sm text-muted-foreground">
                   We're publishing the complete version shortly. In the meantime, if you'd like to discuss the ideas in this {item.type.toLowerCase()} directly with our team, book a call below.
                 </p>
-                <Button variant="hero" size="sm" className="mt-4">
-                  Book a Strategy Call
+                <Button variant="hero" size="sm" className="mt-4" asChild>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
                 </Button>
               </div>
             </ScrollReveal>
