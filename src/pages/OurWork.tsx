@@ -6,6 +6,7 @@ import { travelInsightsItems } from "@/data/travelInsightsItems";
 import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
 import { videoSessionsItems } from "@/data/videoSessionsItems";
 import { ArrowRight, Play, Clock, BookOpen } from "lucide-react";
+import { CALENDLY_URL } from "@/data/constants";
 
 // ─── Pill badge ────────────────────────────────────────────────────────────
 function Pill({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -73,12 +74,14 @@ function HeroSection() {
             From market insight to scalable acquisition, explore the strategies and systems we use to turn visibility into predictable bookings.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              to="/contact"
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 font-heading font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
               Book a Strategy Call
-            </Link>
+            </a>
             <Link
               to="/services/market-research"
               className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-heading font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
@@ -573,12 +576,14 @@ function FinalCTA() {
             conversions, grow organically, and build smarter systems.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 font-heading font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
               Book a Strategy Call
-            </Link>
+            </a>
             <Link
               to="/services/market-research"
               className="inline-flex items-center gap-2 rounded-full border-2 border-background/20 px-8 py-3.5 font-heading font-semibold text-background transition-colors hover:border-background/50"
