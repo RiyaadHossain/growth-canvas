@@ -13,6 +13,7 @@ import {
   BookOpen,
   ExternalLink,
 } from "lucide-react";
+import { CALENDLY_URL } from "@/data/constants";
 import Layout from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import CTABand from "@/components/sections/CTABand";
@@ -153,7 +154,7 @@ export default function VideoSessionDetailPage({
                   </a>
                 </Button>
                 <Button variant="hero-outline" size="lg" asChild>
-                  <Link to="/contact">Book a Strategy Call</Link>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
                 </Button>
               </div>
 
@@ -440,7 +441,7 @@ export default function VideoSessionDetailPage({
               </p>
               <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
                 <Button variant="hero" size="lg" asChild>
-                  <Link to="/contact">Book a Strategy Call</Link>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
                 </Button>
                 {item.relatedServiceTo && (
                   <Button variant="hero-outline" size="lg" asChild>

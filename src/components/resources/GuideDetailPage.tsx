@@ -18,6 +18,7 @@ import {
   AlertTriangle,
   Lightbulb,
 } from "lucide-react";
+import { CALENDLY_URL } from "@/data/constants";
 import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -260,7 +261,7 @@ export default function GuideDetailPage({
                   </Link>
                 </Button>
                 <Button variant="hero-outline" size="lg" asChild>
-                  <Link to="/contact">Book a Strategy Call</Link>
+                  <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
                 </Button>
               </div>
             </ScrollReveal>
