@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
+import { CALENDLY_URL } from "@/data/constants";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
@@ -100,10 +101,10 @@ export default function Index() {
           <ScrollReveal delay={0.3}>
             <div className="mt-8 md:mt-10">
               <Button variant="hero" size="lg" className="group text-base px-8 py-6 h-auto" asChild>
-                <Link to="/contact">
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                   Book a Strategy Call
                   <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
+                </a>
               </Button>
               <p className="mt-3 text-xs text-muted-foreground">
                 Free 30-minute consultation · No commitment
