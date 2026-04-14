@@ -4,6 +4,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import TeamSection from "@/components/sections/TeamSection";
 import StatsStrip from "@/components/sections/StatsStrip";
 import CTABand from "@/components/sections/CTABand";
+import { CALENDLY_URL } from "@/data/constants";
 
 const milestones = [
   { year: "2016", label: "Founded", detail: "Started as a two-person travel strategy consultancy with a bold vision for the industry." },
@@ -27,8 +28,8 @@ export default function About() {
             <p className="mt-4 text-lg text-muted-foreground">
               TripUp Studio is a full-stack consultancy and growth partner exclusively for travel businesses. We embed into your team, challenge assumptions, and build the systems that take you from insight to scalable growth.
             </p>
-            <Button variant="hero" size="lg" className="mt-8">
-              Free Consultation
+            <Button variant="hero" size="lg" className="mt-8" asChild>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Book a Strategy Call</a>
             </Button>
           </ScrollReveal>
         </div>
