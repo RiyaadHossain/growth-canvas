@@ -49,18 +49,16 @@ export default function Index() {
           {/* Headline */}
           <ScrollReveal>
             <h1 className="font-heading text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto">
-              Bangladesh's First{" "}
-              <span className="text-primary">Travel</span>
+              Get <span className="text-primary">Predictable Bookings</span>
               <br />
-              <span className="text-muted-foreground/80">Growth Company</span>
+              <span className="text-muted-foreground/80">Using Structured Growth Systems.</span>
             </h1>
           </ScrollReveal>
 
           {/* Subheadline */}
           <ScrollReveal delay={0.1}>
-            <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg leading-relaxed">
-              <span className="text-primary font-medium">We help travel businesses grow sustainably</span>
-              <span className="text-muted-foreground"> with AI and expert-managed growth systems. So you can stop guessing and start seeing steady, predictable bookings.</span>
+            <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-muted-foreground">
+              We help travel businesses grow sustainably with AI and expert-managed growth systems.
             </p>
           </ScrollReveal>
 
