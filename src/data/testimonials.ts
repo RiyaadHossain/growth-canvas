@@ -1,32 +1,27 @@
+import avatar1 from "@/assets/avatar-1.jpg";
+import avatar2 from "@/assets/avatar-2.jpg";
+import avatar3 from "@/assets/avatar-3.jpg";
+
 export const testimonials = [
   {
-    quote: "TripUp Studio didn't just build us a website — they mapped our entire customer journey and rebuilt our strategy from the ground up. Bookings climbed 40% in the first quarter.",
-    name: "Sarah Chen",
+    quote: "TripUp Studio didn't just rebuild our website — they mapped our entire customer journey from Dhaka to the destinations. Bookings climbed 40% within the first quarter.",
+    name: "Tanvir Ahmed",
     role: "Co-Founder",
-    company: "Nomad Routes",
+    company: "Bengal Trails",
+    avatar: avatar1,
   },
   {
-    quote: "They identified a positioning gap in our market we'd been blind to for two years. Within six months we repositioned, relaunched, and saw a 3x increase in qualified leads.",
-    name: "Marcus Williams",
+    quote: "They spotted a positioning gap in the local outbound market we had been blind to for years. Within six months we repositioned, relaunched, and saw a 3x jump in qualified leads.",
+    name: "Nusrat Jahan",
     role: "CEO",
-    company: "Apex Expeditions",
+    company: "Padma Voyages",
+    avatar: avatar2,
   },
   {
-    quote: "The branding work transformed how our guests see us. We went from feeling like a commodity tour operator to a premium experience brand — and our prices reflect that now.",
-    name: "Elena Rodríguez",
+    quote: "Their branding work transformed how guests perceive us. We stopped competing on price and started selling premium Sundarbans experiences — and our margins finally reflect that.",
+    name: "Rakibul Hasan",
     role: "Founder",
-    company: "Selva Travel Co.",
-  },
-  {
-    quote: "Having one team handle research, strategy, and execution means everything is connected. Our campaigns actually reflect what our customers want instead of what we assume.",
-    name: "David Park",
-    role: "Head of Marketing",
-    company: "Drift Hospitality",
-  },
-  {
-    quote: "Their AI-driven personalisation lifted our direct booking revenue by 65%. They're always two steps ahead of where travel tech is going.",
-    name: "Amara Osei",
-    role: "Digital Director",
-    company: "Kasa Collection",
+    company: "Shomudro Holidays",
+    avatar: avatar3,
   },
 ];

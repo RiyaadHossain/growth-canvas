@@ -88,7 +88,7 @@ export default function Index() {
                     <span className="ml-1.5 text-sm font-semibold text-foreground">5.0</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    Trusted by <span className="text-foreground font-medium">500+</span> travel brands
+                    Trusted by <span className="text-foreground font-medium">50+</span> travel brands
                   </p>
                 </div>
               </div>
