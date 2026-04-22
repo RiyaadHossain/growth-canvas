@@ -59,8 +59,8 @@ export default function Index() {
           {/* Subheadline */}
           <ScrollReveal delay={0.1}>
             <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg leading-relaxed">
-              <span className="text-muted-foreground">We help travel businesses grow sustainably with AI and expert-managed growth systems. </span>
-              <span className="text-primary font-medium">So you can stop guessing and start seeing steady, predictable bookings.</span>
+              <span className="text-primary font-medium">We help travel businesses grow sustainably</span>
+              <span className="text-muted-foreground"> with AI and expert-managed growth systems. So you can stop guessing and start seeing steady, predictable bookings.</span>
             </p>
           </ScrollReveal>
 
