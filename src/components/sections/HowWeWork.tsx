@@ -7,7 +7,7 @@ import { Check, BarChart2, Palette, Code2, Rocket } from "lucide-react";
 const steps = [
   {
     number: "01",
-    badge: "Discover (FREE)",
+    badge: "Discover",
     label: "Insight → Strategy / Direction",
     icon: BarChart2,
     color: "hsl(72 79% 52%)",
