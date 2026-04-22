@@ -14,7 +14,7 @@ const footerNav = [
   { label: "Our Work", to: "/our-work" },
   { label: "Why Us", to: "/why-us" },
   // { label: "Pricing", to: "/pricing" },
-  { label: "About Us", to: "/about" },
+  // { label: "About Us", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
 
