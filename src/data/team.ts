@@ -1,38 +1,52 @@
+import rakibAhmed from "@/assets/team/rakib-ahmed.jpg";
+import riyadHossain from "@/assets/team/riyad-hossain.jpg";
+import apurboSaha from "@/assets/team/apurbo-saha.png";
+import towhidulIslam from "@/assets/team/towhidul-islam.png";
+import hasibUlHaque from "@/assets/team/hasib-ul-haque.jpg";
+import jannatBorsha from "@/assets/team/jannat-borsha.jpg";
+import ridoyShanto from "@/assets/team/ridoy-ahmed-shanto.jpg";
+
 export const team = [
   {
-    name: "Jordan Reeves",
-    role: "Strategy Director",
-    bio: "Travel industry strategist obsessed with turning market data into growth roadmaps.",
-    gradient: "from-primary/30 to-accent/20",
+    name: "Rakib Ahmed",
+    role: "Brand & Growth Strategist",
+    bio: "Leads the vision behind TripUp Studio — turning travel brands into structured, scalable growth machines.",
+    image: rakibAhmed,
   },
   {
-    name: "Priya Sharma",
-    role: "Brand & Creative Lead",
-    bio: "Builds travel brands that are impossible to ignore. Thinks in journeys, not just visuals.",
-    gradient: "from-accent/25 to-primary/15",
+    name: "Riyad Hossain",
+    role: "Lead Product Engineer",
+    bio: "Architects booking platforms and growth tech stacks that keep travel businesses running smoothly at scale.",
+    image: riyadHossain,
   },
   {
-    name: "Marcus Cole",
-    role: "Digital Product Director",
-    bio: "Engineers booking experiences and travel platforms that convert at every touchpoint.",
-    gradient: "from-primary/20 to-muted",
+    name: "Apurbo Saha",
+    role: "Meta Ads & Sales",
+    bio: "Runs high-intent Meta ad funnels that turn travel scrollers into booked, paying customers.",
+    image: apurboSaha,
   },
   {
-    name: "Aisha Nakamura",
-    role: "Research & Insights Lead",
-    bio: "Digs deep into travel markets to surface the opportunities brands consistently miss.",
-    gradient: "from-muted to-accent/20",
+    name: "Towhidul Islam Sarker",
+    role: "Email Marketer",
+    bio: "Builds lifecycle email flows that nurture travelers from first click to repeat booking.",
+    image: towhidulIslam,
   },
   {
-    name: "Tom Brennan",
-    role: "Growth Marketing Lead",
-    bio: "Runs paid media and SEO strategies built specifically for travel acquisition funnels.",
-    gradient: "from-accent/20 to-primary/25",
+    name: "Hasib-ul-Haque",
+    role: "Video Editor",
+    bio: "Crafts scroll-stopping travel edits that drive engagement, ad performance, and brand recall.",
+    image: hasibUlHaque,
   },
   {
-    name: "Sofia Mendez",
-    role: "Partnerships & Client Strategy",
-    bio: "Connects travel brands with the right channels, partners, and distribution strategies.",
-    gradient: "from-primary/15 to-accent/30",
+    name: "Jannat Islam Borsha",
+    role: "Visual Designer",
+    bio: "Designs travel brand visuals that feel premium, on-trend, and built to convert.",
+    image: jannatBorsha,
+  },
+  {
+    name: "Ridoy Ahmed Shanto",
+    role: "Brand & Visual Designer",
+    bio: "Shapes brand systems and visual identities that help travel businesses stand out in a crowded market.",
+    image: ridoyShanto,
   },
 ];
