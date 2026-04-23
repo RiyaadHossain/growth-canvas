@@ -51,14 +51,14 @@ export default function Index() {
             <h1 className="font-heading text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto">
               Get <span className="text-primary">Predictable Bookings</span>
               <br />
-              <span className="text-foreground">Using Structured Growth Systems.</span>
+              <span className="text-foreground">Using Growth Systems.</span>
             </h1>
           </ScrollReveal>
 
           {/* Subheadline */}
           <ScrollReveal delay={0.1}>
             <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-muted-foreground">
-              We help travel businesses grow sustainably with AI and expert-managed growth systems.
+              We help travel businesses grow sustainably with AI and expert-managed growth systems — so you stop guessing what works and start running on a system that consistently brings in bookings.
             </p>
           </ScrollReveal>
 
