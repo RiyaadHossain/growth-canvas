@@ -15,12 +15,22 @@ export default function TeamSection() {
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 0.05}>
               <div className="group rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="mb-4 h-16 w-16 rounded-full object-cover border border-border"
-                  loading="lazy"
-                />
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="mb-4 h-16 w-16 rounded-full object-cover border border-border"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-border bg-gradient-to-br from-primary/20 to-accent/10 font-heading text-lg font-bold text-primary">
+                    {member.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .slice(0, 2)
+                      .join("")}
+                  </div>
+                )}
                 <h3 className="font-heading text-lg font-bold text-foreground">{member.name}</h3>
                 <p className="text-sm font-medium text-primary">{member.role}</p>
                 <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
