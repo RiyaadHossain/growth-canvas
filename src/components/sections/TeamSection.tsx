@@ -11,10 +11,10 @@ export default function TeamSection() {
             Senior talent across every discipline — no juniors learning on your dime.
           </p>
         </ScrollReveal>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((member, i) => (
-            <ScrollReveal key={member.name} delay={i * 0.05}>
-              <div className="group rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <ScrollReveal key={member.name} delay={i * 0.05} className="h-full">
+              <div className="group flex h-full flex-col rounded-xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 {member.image ? (
                   <img
                     src={member.image}
