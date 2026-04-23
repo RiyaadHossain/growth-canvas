@@ -1,9 +1,4 @@
 import rakibAhmed from "@/assets/team/rakib-ahmed.jpg";
-import riyadHossain from "@/assets/team/riyad-hossain.jpg";
-import apurboSaha from "@/assets/team/apurbo-saha.png";
-import towhidulIslam from "@/assets/team/towhidul-islam.png";
-import hasibUlHaque from "@/assets/team/hasib-ul-haque.jpg";
-import jannatBorsha from "@/assets/team/jannat-borsha.jpg";
 import ridoyShanto from "@/assets/team/ridoy-ahmed-shanto.jpg";
 
 export const team = [
@@ -17,31 +12,31 @@ export const team = [
     name: "Riyad Hossain",
     role: "Lead Product Engineer",
     bio: "Architects booking platforms and growth tech stacks that keep travel businesses running smoothly at scale.",
-    image: riyadHossain,
+    image: null,
   },
   {
     name: "Apurbo Saha",
     role: "Meta Ads & Sales",
     bio: "Runs high-intent Meta ad funnels that turn travel scrollers into booked, paying customers.",
-    image: apurboSaha,
+    image: null,
   },
   {
     name: "Towhidul Islam Sarker",
     role: "Email Marketer",
     bio: "Builds lifecycle email flows that nurture travelers from first click to repeat booking.",
-    image: towhidulIslam,
+    image: null,
   },
   {
     name: "Hasib-ul-Haque",
     role: "Video Editor",
     bio: "Crafts scroll-stopping travel edits that drive engagement, ad performance, and brand recall.",
-    image: hasibUlHaque,
+    image: null,
   },
   {
     name: "Jannat Islam Borsha",
     role: "Visual Designer",
     bio: "Designs travel brand visuals that feel premium, on-trend, and built to convert.",
-    image: jannatBorsha,
+    image: null,
   },
   {
     name: "Ridoy Ahmed Shanto",
