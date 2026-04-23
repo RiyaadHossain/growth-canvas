@@ -51,7 +51,7 @@ export default function Index() {
             <h1 className="font-heading text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl mx-auto">
               Get <span className="text-primary">Sustainable Growth</span>
               <br />
-              <span className="text-foreground">Using </span><span className="text-muted-foreground">Growth Systems.</span>
+              <span className="text-foreground">Using </span><span className="text-muted-foreground">Structured Systems.</span>
             </h1>
           </ScrollReveal>
 
