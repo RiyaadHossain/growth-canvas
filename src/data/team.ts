@@ -26,14 +26,14 @@ export const team = [
     image: apurboSaha,
   },
   {
-    name: "Towhidul Islam Sarker",
-    role: "Email Marketer",
-    bio: "Builds lifecycle email flows that nurture travelers from first click to repeat booking.",
-    image: towhidulIslam,
+    name: "Ridoy Ahmed Shanto",
+    role: "Brand & Visual Designer",
+    bio: "Shapes brand systems and visual identities that help travel businesses stand out in a crowded market.",
+    image: ridoyShanto,
   },
   {
     name: "Hasib-ul-Haque",
-    role: "Video Editor",
+    role: "Video & Content Editor",
     bio: "Crafts scroll-stopping travel edits that drive engagement, ad performance, and brand recall.",
     image: hasibUlHaque,
   },
@@ -44,9 +44,9 @@ export const team = [
     image: jannatBorsha,
   },
   {
-    name: "Ridoy Ahmed Shanto",
-    role: "Brand & Visual Designer",
-    bio: "Shapes brand systems and visual identities that help travel businesses stand out in a crowded market.",
-    image: ridoyShanto,
+    name: "Towhidul Islam Sarker",
+    role: "Email & CRM Specialist",
+    bio: "Builds lifecycle email flows that nurture travelers from first click to repeat booking.",
+    image: towhidulIslam,
   },
 ];
