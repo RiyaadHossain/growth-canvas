@@ -37,7 +37,7 @@ export default function Footer() {
               <p className="font-heading text-xl text-foreground"><span className="font-bold">TripUp</span> Studio</p>
             </div>
             <p className="mt-3 text-sm text-foreground/60">
-              The full-stack growth partner for travel businesses — from research and strategy to products and marketing.
+              Bangladesh's First growth partner for travel brands.
             </p>
             {/* Social Icons */}
             <div className="mt-6 flex gap-3">
