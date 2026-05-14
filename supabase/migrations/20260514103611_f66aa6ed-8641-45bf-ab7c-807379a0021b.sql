@@ -1,0 +1,2 @@
+insert into storage.buckets (id, name, public) values ('team-images', 'team-images', true) on conflict (id) do nothing;
+create policy "Public read team-images" on storage.objects for select using (bucket_id = 'team-images');
