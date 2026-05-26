@@ -58,7 +58,7 @@ const App = () => (
           <Route path="/services/ai-automation" element={<CRMFunnelsAutomation />} />
           <Route path="/services/social-media" element={<SocialMediaManagement />} />
           <Route path="/resources/travel-insights" element={<TravelInsights />} />
-          <Route path="/resources/travel-insights/:slug" element={<TravelInsightDetail />} />
+          <Route path="/resources/travel-insights/:id" element={<TravelInsightDetail />} />
           <Route path="/resources/guides-playbooks" element={<GuidesPlaybooks />} />
           <Route path="/resources/guides-playbooks/:slug" element={<GuideDetail />} />
           {/* <Route path="/resources/video-sessions" element={<VideoSessions />} /> */}

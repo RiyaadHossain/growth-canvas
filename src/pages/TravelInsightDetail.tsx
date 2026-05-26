@@ -1,18 +1,69 @@
 import { useParams, Navigate } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import TravelInsightDetailPage from "@/components/resources/TravelInsightDetailPage";
-import { travelInsightsItems } from "@/data/travelInsightsItems";
+import Layout from "@/components/layout/Layout";
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  fetchTravelInsightById,
+  fetchTravelInsights,
+  toTravelInsightItem,
+  toResourceItem,
+} from "@/lib/travelInsightsApi";
+import type { TravelInsightItem } from "@/components/resources/TravelInsightDetailPage";
 
 export default function TravelInsightDetail() {
-  const { slug } = useParams<{ slug: string }>();
-  const fullSlug = `/resources/travel-insights/${slug}`;
-  const item = travelInsightsItems.find((i) => i.slug === fullSlug);
+  const { id } = useParams<{ id: string }>();
 
-  if (!item) return <Navigate to="/resources/travel-insights" replace />;
+  const detailQuery = useQuery({
+    queryKey: ["travel-insight", id],
+    queryFn: () => fetchTravelInsightById(id!),
+    enabled: !!id,
+  });
 
-  const related = travelInsightsItems
-    .filter((i) => i.slug !== fullSlug)
-    .filter((i) => i.category === item.category || true) // show up to 3 regardless of category
-    .slice(0, 3);
+  const listQuery = useQuery({
+    queryKey: ["travel-insights"],
+    queryFn: fetchTravelInsights,
+    staleTime: 5 * 60 * 1000,
+  });
+
+  if (!id) return <Navigate to="/resources/travel-insights" replace />;
+
+  if (detailQuery.isLoading) {
+    return (
+      <Layout>
+        <section className="section-padding">
+          <div className="container-wide max-w-4xl space-y-6">
+            <Skeleton className="h-5 w-32" />
+            <Skeleton className="h-12 w-3/4" />
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="aspect-[21/9] w-full rounded-2xl" />
+          </div>
+        </section>
+      </Layout>
+    );
+  }
+
+  if (detailQuery.isError || !detailQuery.data) {
+    return <Navigate to="/resources/travel-insights" replace />;
+  }
+
+  const item = toTravelInsightItem(detailQuery.data);
+
+  const related: TravelInsightItem[] = (listQuery.data || [])
+    .filter((i) => i.id !== id)
+    .slice(0, 3)
+    .map((i) => {
+      const r = toResourceItem(i);
+      return {
+        type: r.type,
+        title: r.title,
+        excerpt: r.excerpt,
+        category: r.category,
+        date: r.date,
+        readingTime: r.readingTime,
+        slug: r.slug!,
+      };
+    });
 
   return (
     <TravelInsightDetailPage
