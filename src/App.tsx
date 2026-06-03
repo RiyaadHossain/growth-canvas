@@ -12,14 +12,7 @@ import About from "./pages/About";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
-import BrandingIdentity from "./pages/BrandingIdentity";
-import MarketResearchGrowthStrategy from "./pages/MarketResearchGrowthStrategy";
-import WebDesignDevelopment from "./pages/WebDesignDevelopment";
-import PerformanceMarketing from "./pages/PerformanceMarketing";
-import ContentCreative from "./pages/ContentCreative";
-import SEOOrganicGrowth from "./pages/SEOOrganicGrowth";
-import CRMFunnelsAutomation from "./pages/CRMFunnelsAutomation";
-import SocialMediaManagement from "./pages/SocialMediaManagement";
+import ServiceDetail from "./pages/ServiceDetail";
 import TravelInsights from "./pages/TravelInsights";
 import TravelInsightDetail from "./pages/TravelInsightDetail";
 import GuidesPlaybooks from "./pages/GuidesPlaybooks";
@@ -47,16 +40,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/services/branding-identity" element={<BrandingIdentity />} />
-          <Route path="/services/market-research-growth-strategy" element={<MarketResearchGrowthStrategy />} />
-          <Route path="/services/market-research" element={<MarketResearchGrowthStrategy />} />
-          <Route path="/services/growth-strategy" element={<MarketResearchGrowthStrategy />} />
-          <Route path="/services/web-design-development" element={<WebDesignDevelopment />} />
-          <Route path="/services/performance-marketing" element={<PerformanceMarketing />} />
-          <Route path="/services/content-creative" element={<ContentCreative />} />
-          <Route path="/services/content-seo" element={<SEOOrganicGrowth />} />
-          <Route path="/services/ai-automation" element={<CRMFunnelsAutomation />} />
-          <Route path="/services/social-media" element={<SocialMediaManagement />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/resources/travel-insights" element={<TravelInsights />} />
           <Route path="/resources/travel-insights/:id" element={<TravelInsightDetail />} />
           <Route path="/resources/guides-playbooks" element={<GuidesPlaybooks />} />
