@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoMark from "@/assets/logo-mark.png";
-import { services, serviceCategories } from "@/data/services";
+import { useServices } from "@/lib/servicesApi";
 import { resources } from "@/data/resources";
 import { motion, AnimatePresence } from "framer-motion";
 import { CALENDLY_URL } from "@/data/constants";
@@ -18,6 +18,7 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const { services, categories: serviceCategories } = useServices();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaMenu, setMegaMenu] = useState<MegaMenuKey | null>(null);
   const megaRef = useRef<HTMLDivElement>(null);
@@ -220,6 +221,7 @@ export default function Header() {
 }
 
 function MobileServicesSection() {
+  const { services, categories: serviceCategories } = useServices();
   const [open, setOpen] = useState(false);
   return (
     <div>
