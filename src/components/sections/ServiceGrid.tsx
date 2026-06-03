@@ -4,6 +4,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function ServiceGrid() {
   const { services } = useServices();
+  return (
     <section className="section-padding">
       <div className="container-wide">
         <ScrollReveal>
