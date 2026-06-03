@@ -3,7 +3,7 @@ import { useServices } from "@/lib/servicesApi";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function ServiceGrid() {
-  return (
+  const { services } = useServices();
     <section className="section-padding">
       <div className="container-wide">
         <ScrollReveal>
