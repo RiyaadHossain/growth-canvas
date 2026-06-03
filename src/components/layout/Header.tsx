@@ -18,6 +18,7 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const { services, categories: serviceCategories } = useServices();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaMenu, setMegaMenu] = useState<MegaMenuKey | null>(null);
   const megaRef = useRef<HTMLDivElement>(null);
