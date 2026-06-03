@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoMark from "@/assets/logo-mark.png";
-import { services, serviceCategories } from "@/data/services";
+import { useServices } from "@/lib/servicesApi";
 import { resources } from "@/data/resources";
 import { motion, AnimatePresence } from "framer-motion";
 import { CALENDLY_URL } from "@/data/constants";
