@@ -221,6 +221,7 @@ export default function Header() {
 }
 
 function MobileServicesSection() {
+  const { services, categories: serviceCategories } = useServices();
   const [open, setOpen] = useState(false);
   return (
     <div>
