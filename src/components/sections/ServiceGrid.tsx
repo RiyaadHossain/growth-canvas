@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { services } from "@/data/services";
+import { useServices } from "@/lib/servicesApi";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export default function ServiceGrid() {
