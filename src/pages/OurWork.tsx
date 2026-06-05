@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { caseStudiesItems } from "@/data/caseStudiesItems";
+import { caseStudiesItems as fallbackCaseStudies } from "@/data/caseStudiesItems";
+import { useCaseStudies } from "@/lib/caseStudiesApi";
 import { travelInsightsItems } from "@/data/travelInsightsItems";
 import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
 import { videoSessionsItems } from "@/data/videoSessionsItems";
@@ -97,7 +98,10 @@ function HeroSection() {
 
 // ─── FEATURED CASE STUDY ─────────────────────────────────────────────────────
 function FeaturedCaseStudy() {
+  const { data } = useCaseStudies();
+  const caseStudiesItems = data && data.length > 0 ? data : fallbackCaseStudies;
   const featured = caseStudiesItems.find((i) => i.featured) ?? caseStudiesItems[0];
+  if (!featured) return null;
   return (
     <section className="px-6 pb-20 md:px-12 lg:px-20">
       <div className="container-wide">
@@ -159,7 +163,9 @@ function FeaturedCaseStudy() {
 
 // ─── CASE STUDIES GRID ───────────────────────────────────────────────────────
 function CaseStudiesGrid() {
-  const items = caseStudiesItems.filter((i) => !i.featured).slice(0, 6);
+  const { data } = useCaseStudies();
+  const source = data && data.length > 0 ? data : fallbackCaseStudies;
+  const items = source.filter((i) => !i.featured).slice(0, 6);
   return (
     <section className="section-padding bg-secondary/20">
       <div className="container-wide">
