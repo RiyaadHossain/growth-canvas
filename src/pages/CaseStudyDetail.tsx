@@ -1,28 +1,27 @@
 import { useParams, Navigate } from "react-router-dom";
 import CaseStudyDetailPage from "@/components/resources/CaseStudyDetailPage";
-import { caseStudiesItems } from "@/data/caseStudiesItems";
+import { useCaseStudy } from "@/lib/caseStudiesApi";
 
 export default function CaseStudyDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const fullSlug = `/resources/case-studies/${slug}`;
-  const item = caseStudiesItems.find((i) => i.slug === fullSlug);
+  const { data, isLoading, error } = useCaseStudy(slug);
 
-  if (!item) return <Navigate to="/resources/case-studies" replace />;
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="h-10 w-10 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+      </div>
+    );
+  }
 
-  const related = caseStudiesItems
-    .filter((i) => i.slug !== fullSlug && i.category === item.category)
-    .slice(0, 3);
-
-  // Fallback to any other items if no same-category
-  const relatedItems =
-    related.length > 0
-      ? related
-      : caseStudiesItems.filter((i) => i.slug !== fullSlug).slice(0, 3);
+  if (error || !data?.item) {
+    return <Navigate to="/resources/case-studies" replace />;
+  }
 
   return (
     <CaseStudyDetailPage
-      item={item}
-      relatedItems={relatedItems}
+      item={data.item}
+      relatedItems={data.related}
       backTo="/resources/case-studies"
     />
   );
