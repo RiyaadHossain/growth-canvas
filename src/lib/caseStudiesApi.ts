@@ -157,3 +157,31 @@ export function useCaseStudy(id: string | undefined) {
     staleTime: 5 * 60 * 1000,
   });
 }
+
+/* ─── CATEGORIES ─── */
+
+export interface ApiCaseStudyCategory {
+  label: string;
+  value: string;
+}
+
+export async function fetchCaseStudyCategories(): Promise<ApiCaseStudyCategory[]> {
+  const res = await fetch(`${API_BASE}/admin/case-study-categories/listing`);
+  if (!res.ok) throw new Error("Failed to fetch case study categories");
+  const json: ApiCaseStudyCategory[] | { data?: ApiCaseStudyCategory[] } = await res.json();
+  return Array.isArray(json) ? json : (json.data ?? []);
+}
+
+export function useCaseStudyCategories() {
+  return useQuery({
+    queryKey: ["case-studies", "categories"],
+    queryFn: fetchCaseStudyCategories,
+    staleTime: 5 * 60 * 1000,
+  });
+}
+
+export function useCaseStudyCategoryLabels() {
+  const { data, ...rest } = useCaseStudyCategories();
+  const labels = useMemo(() => (data ?? []).map((c) => c.label), [data]);
+  return { data: labels, ...rest };
+}
