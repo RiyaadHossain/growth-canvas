@@ -601,13 +601,12 @@ function FinalCTA() {
 export default function OurWork() {
   return (
     <Layout>
-      <HeroSection />
-      {/* <FeaturedCaseStudy /> */}
-      {/* <CaseStudiesGrid /> */}
+      <FeaturedCaseStudy />
+      <CaseStudiesGrid />
       <WhatThisWorkReflects />
       <TravelInsightsSection />
       <GuidesSection />
-      {/* <VideoSessionsSection /> */}
+      <VideoSessionsSection />
       <FinalCTA />
     </Layout>
   );
