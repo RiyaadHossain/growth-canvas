@@ -17,10 +17,10 @@ import TravelInsights from "./pages/TravelInsights";
 import TravelInsightDetail from "./pages/TravelInsightDetail";
 import GuidesPlaybooks from "./pages/GuidesPlaybooks";
 import GuideDetail from "./pages/GuideDetail";
-// import VideoSessions from "./pages/VideoSessions";
-// import VideoSessionDetail from "./pages/VideoSessionDetail";
-// import CaseStudies from "./pages/CaseStudies";
-// import CaseStudyDetail from "./pages/CaseStudyDetail";
+import VideoSessions from "./pages/VideoSessions";
+import VideoSessionDetail from "./pages/VideoSessionDetail";
+import CaseStudies from "./pages/CaseStudies";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
