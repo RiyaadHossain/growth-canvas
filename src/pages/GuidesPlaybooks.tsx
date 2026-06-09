@@ -1,7 +1,9 @@
 import ResourcePageShell from "@/components/resources/ResourcePageShell";
 import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
+import type { ResourceItem } from "@/components/resources/ResourceCard";
+import { usePlaybooks, usePlaybookCategoryLabels } from "@/lib/playbooksApi";
 
-const topics = [
+const fallbackTopics = [
   "Brand Strategy",
   "UX & Conversion",
   "Growth Strategy",
@@ -11,11 +13,16 @@ const topics = [
 ];
 
 export default function GuidesPlaybooks() {
+  const { data } = usePlaybooks();
+  const { data: categories } = usePlaybookCategoryLabels();
+  const items = (data && data.length > 0 ? data : guidesPlaybooksItems) as unknown as ResourceItem[];
+  const topics = categories && categories.length > 0 ? categories : fallbackTopics;
+
   return (
     <ResourcePageShell
       headline="Guides & Playbooks"
       description="A growing library of in-depth frameworks designed to help travel businesses make sharper decisions across positioning, digital experience, acquisition, and growth operations."
-      items={guidesPlaybooksItems}
+      items={items}
       browseTopics={topics}
       cta={{
         headline: "Need a framework built around your business?",
