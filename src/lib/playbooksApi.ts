@@ -112,7 +112,7 @@ export async function fetchPlaybooks(): Promise<GuideItem[]> {
 export async function fetchPlaybookBySlug(
   slugOrId: string,
 ): Promise<{ item: GuideItem; related: GuideItem[] }> {
-  const res = await fetch(`${API_BASE}/playbooks/${slugOrId}`);
+  const res = await fetch(`${API_BASE}/playbooks/${encodeURIComponent(slugOrId)}`);
   if (!res.ok) throw new Error("Failed to fetch playbook");
   const json: ApiPlaybookDetail | ApiEnvelope<ApiPlaybookDetail> = await res.json();
   const data: ApiPlaybookDetail =

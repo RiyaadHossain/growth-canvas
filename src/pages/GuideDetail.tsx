@@ -7,7 +7,7 @@ export default function GuideDetail() {
   const { slug } = useParams<{ slug: string }>();
   const fullSlug = `/resources/guides-playbooks/${slug}`;
 
-  const { data, isLoading, isError } = usePlaybook(slug);
+  const { data, isLoading, isError } = usePlaybook(slug ? fullSlug : undefined);
 
   if (data) {
     return (
