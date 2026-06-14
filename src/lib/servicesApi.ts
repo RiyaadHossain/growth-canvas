@@ -168,11 +168,11 @@ const mapDetail = (d: ApiServiceDetail): ServicePageData => ({
 });
 
 export async function fetchServiceBySlug(slug: string): Promise<ServicePageData | null> {
-  const res = await fetch(`${API_BASE}/travel-services`);
-  if (!res.ok) throw new Error("Failed to fetch services");
-  const json: ApiEnvelope<ApiServiceDetail[]> = await res.json();
-  const match = (json.data || []).find((s) => s.slug === slug);
-  return match ? mapDetail(match) : null;
+  const res = await fetch(`${API_BASE}/travel-services/slug/${encodeURIComponent(slug)}`);
+  if (!res.ok) return null;
+  const json: ApiEnvelope<ApiServiceDetail> | ApiServiceDetail = await res.json();
+  const data = (json as ApiEnvelope<ApiServiceDetail>).data ?? (json as ApiServiceDetail);
+  return data ? mapDetail(data) : null;
 }
 
 export function useServiceDetail(slug: string | undefined) {
