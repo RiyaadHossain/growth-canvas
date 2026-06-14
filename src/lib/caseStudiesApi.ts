@@ -80,7 +80,7 @@ export function mapListItem(item: ApiCaseStudyListItem): CaseStudyItem {
     readingTime: item.readingTime,
     ctaLabel: item.ctaLabel ?? "View case study",
     featured: item.isFeatured,
-    slug: buildSlug(item.id),
+    slug: buildSlug(item.slug || item.id),
     industryTag: item.industryTag,
     coverImage: item.coverImage,
   };
