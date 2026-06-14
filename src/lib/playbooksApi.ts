@@ -64,6 +64,7 @@ export function mapListItem(item: ApiPlaybookListItem): GuideItem {
     date: item.date,
     readingTime: item.readingTime,
     bestFor: item.bestFor,
+    author: item.author,
     ctaLabel: item.ctaLabel ?? "Read playbook",
     featured: item.isFeatured,
     slug: detailSlug(item),
