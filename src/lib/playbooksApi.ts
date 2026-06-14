@@ -18,6 +18,7 @@ export interface ApiPlaybookListItem {
   date: string;
   readingTime?: string;
   bestFor?: string;
+  author?: string;
   ctaLabel?: string;
   isPublished: boolean;
   isFeatured: boolean;
