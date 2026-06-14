@@ -18,6 +18,7 @@ export interface ApiPlaybookListItem {
   date: string;
   readingTime?: string;
   bestFor?: string;
+  author?: string;
   ctaLabel?: string;
   isPublished: boolean;
   isFeatured: boolean;
@@ -63,6 +64,7 @@ export function mapListItem(item: ApiPlaybookListItem): GuideItem {
     date: item.date,
     readingTime: item.readingTime,
     bestFor: item.bestFor,
+    author: item.author,
     ctaLabel: item.ctaLabel ?? "Read playbook",
     featured: item.isFeatured,
     slug: detailSlug(item),
