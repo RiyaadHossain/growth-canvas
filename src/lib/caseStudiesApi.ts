@@ -132,7 +132,7 @@ export async function fetchCaseStudyById(
     date: r.date,
     readingTime: r.readingTime,
     ctaLabel: "View case study",
-    slug: buildSlug(r.id),
+    slug: buildSlug(r.slug || r.id),
     coverImage: r.coverImage,
   }));
 
