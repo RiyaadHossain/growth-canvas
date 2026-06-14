@@ -116,7 +116,7 @@ export async function fetchCaseStudies(): Promise<CaseStudyItem[]> {
 export async function fetchCaseStudyById(
   id: string,
 ): Promise<{ item: CaseStudyItem; related: CaseStudyItem[] }> {
-  const res = await fetch(`${API_BASE}/case-studies/${id}`);
+  const res = await fetch(`${API_BASE}/case-studies/slug/${encodeURIComponent(id)}`);
   if (!res.ok) throw new Error("Failed to fetch case study");
   const json: { success?: boolean; data: ApiCaseStudyDetail } | ApiCaseStudyDetail =
     await res.json();

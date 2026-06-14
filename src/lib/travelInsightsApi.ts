@@ -72,7 +72,7 @@ export async function fetchTravelInsightCategories(): Promise<CategoryOption[]> 
 }
 
 export async function fetchTravelInsightById(id: string): Promise<ApiDetailItem> {
-  const res = await fetch(`${API_BASE}/travel-insights/${id}`);
+  const res = await fetch(`${API_BASE}/travel-insights/slug/${encodeURIComponent(id)}`);
   if (!res.ok) throw new Error("Failed to fetch travel insight");
   const json: ApiEnvelope<ApiDetailItem> = await res.json();
   return json.data;
