@@ -17,6 +17,7 @@ import {
   TrendingUp,
   AlertTriangle,
   Lightbulb,
+  User,
 } from "lucide-react";
 import { CALENDLY_URL } from "@/data/constants";
 import { useState } from "react";
@@ -51,6 +52,7 @@ export interface GuideItem {
   date: string;
   readingTime?: string;
   bestFor?: string;
+  author?: string;
   ctaLabel?: string;
   featured?: boolean;
   slug: string;
@@ -243,6 +245,12 @@ export default function GuideDetailPage({
                   <span className="flex items-center gap-1.5">
                     <CalendarDays className="h-4 w-4 text-primary" />
                     {item.date}
+                  </span>
+                )}
+                {item.author && (
+                  <span className="flex items-center gap-1.5">
+                    <User className="h-4 w-4 text-primary" />
+                    {item.author}
                   </span>
                 )}
                 {item.bestFor && (
