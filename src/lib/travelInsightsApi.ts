@@ -117,7 +117,7 @@ export function toTravelInsightItem(item: ApiDetailItem): TravelInsightItem {
     date: formatDate(item.createdAt),
     readingTime: `${item.timeReadMin} min read`,
     author: item.author,
-    slug: `/resources/travel-insights/${item.id}`,
+    slug: `/resources/travel-insights/${item.slug || item.id}`,
     coverImage: item.coverImgUrl,
     keyTakeaways: item.insights,
     bodySections,
