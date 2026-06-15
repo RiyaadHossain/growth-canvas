@@ -50,7 +50,7 @@ export default function TravelInsightDetail() {
   const item = toTravelInsightItem(detailQuery.data);
 
   const related: TravelInsightItem[] = (listQuery.data || [])
-    .filter((i) => (i.slug || i.id) !== id)
+    .filter((i) => i.slug !== id)
     .slice(0, 3)
     .map((i) => {
       const r = toResourceItem(i);
