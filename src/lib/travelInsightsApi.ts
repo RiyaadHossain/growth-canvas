@@ -88,7 +88,7 @@ export function toResourceItem(item: ApiListItem): ResourceItem {
     readingTime: `${item.timeReadMin} min read`,
     ctaLabel: "Read insight",
     featured: item.isFeatured,
-    slug: `/resources/travel-insights/${item.slug || item.id}`,
+    slug: `/resources/travel-insights/${item.slug}`,
   };
 }
 
@@ -117,7 +117,7 @@ export function toTravelInsightItem(item: ApiDetailItem): TravelInsightItem {
     date: formatDate(item.createdAt),
     readingTime: `${item.timeReadMin} min read`,
     author: item.author,
-    slug: `/resources/travel-insights/${item.slug || item.id}`,
+    slug: `/resources/travel-insights/${item.slug}`,
     coverImage: item.coverImgUrl,
     keyTakeaways: item.insights,
     bodySections,
