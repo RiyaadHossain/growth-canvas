@@ -241,7 +241,28 @@ export default function TravelInsightDetailPage({
           4 + 5. ARTICLE BODY — structured editorial sections
           (includes inline callout blocks & pull quotes)
       ══════════════════════════════════════════ */}
-      {item.bodySections && item.bodySections.length > 0 ? (
+      {item.contentHtml ? (
+        <section className="section-padding">
+          <div className="container-wide max-w-4xl">
+            <article
+              className="insight-content prose prose-invert max-w-none text-muted-foreground leading-relaxed
+                         prose-headings:font-heading prose-headings:text-foreground prose-headings:font-bold
+                         prose-h1:text-3xl md:prose-h1:text-4xl
+                         prose-h2:text-2xl md:prose-h2:text-3xl
+                         prose-h3:text-xl md:prose-h3:text-2xl
+                         prose-p:text-muted-foreground prose-p:leading-relaxed
+                         prose-strong:text-foreground prose-strong:font-semibold
+                         prose-em:text-foreground
+                         prose-a:text-primary hover:prose-a:underline
+                         prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:not-italic prose-blockquote:text-foreground
+                         prose-ul:list-disc prose-ol:list-decimal prose-li:text-muted-foreground
+                         prose-img:rounded-xl
+                         prose-code:text-primary prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none"
+              dangerouslySetInnerHTML={{ __html: item.contentHtml }}
+            />
+          </div>
+        </section>
+      ) : item.bodySections && item.bodySections.length > 0 ? (
         <section className="section-padding">
           <div className="container-wide max-w-4xl">
             <div className="space-y-14">
