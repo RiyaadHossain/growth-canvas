@@ -17,6 +17,8 @@ import Layout from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import CTABand from "@/components/sections/CTABand";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 /* ─── TYPES ─── */
 
