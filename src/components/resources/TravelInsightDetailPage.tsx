@@ -54,6 +54,7 @@ export interface TravelInsightItem {
   // Rich detail fields
   keyTakeaways?: string[];           // "In This Insight" bullets
   bodySections?: TravelInsightBodySection[];  // structured article body
+  contentHtml?: string;              // WYSIWYG HTML content
   actionableTakeaways?: string[];    // "What This Means for Your Travel Brand"
   relatedServices?: TravelInsightRelatedService[];
 }
