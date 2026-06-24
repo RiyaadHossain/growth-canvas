@@ -93,13 +93,7 @@ export function toResourceItem(item: ApiListItem): ResourceItem {
 }
 
 export function toTravelInsightItem(item: ApiDetailItem): TravelInsightItem {
-  const paragraphs = (item.content || "")
-    .split(/\n\s*\n/)
-    .map((p) => p.trim())
-    .filter(Boolean);
-
-  const bodySections: TravelInsightBodySection[] | undefined =
-    paragraphs.length > 0 ? [{ paragraphs }] : undefined;
+  const contentHtml = item.content && item.content.trim() ? item.content : undefined;
 
   const relatedServices: TravelInsightRelatedService[] | undefined = item.relatedServices?.length
     ? item.relatedServices.map((s) => ({
@@ -120,7 +114,7 @@ export function toTravelInsightItem(item: ApiDetailItem): TravelInsightItem {
     slug: `/resources/travel-insights/${item.slug}`,
     coverImage: item.coverImgUrl,
     keyTakeaways: item.insights,
-    bodySections,
+    contentHtml,
     actionableTakeaways: item.takeAway,
     relatedServices,
   };
