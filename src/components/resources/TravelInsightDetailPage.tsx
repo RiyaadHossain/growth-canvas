@@ -17,6 +17,8 @@ import Layout from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import CTABand from "@/components/sections/CTABand";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 /* ─── TYPES ─── */
 
@@ -258,8 +260,11 @@ export default function TravelInsightDetailPage({
                          prose-ul:list-disc prose-ol:list-decimal prose-li:text-muted-foreground
                          prose-img:rounded-xl
                          prose-code:text-primary prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:before:content-none prose-code:after:content-none"
-              dangerouslySetInnerHTML={{ __html: item.contentHtml }}
-            />
+            >
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {item.contentHtml}
+              </ReactMarkdown>
+            </article>
           </div>
         </section>
       ) : item.bodySections && item.bodySections.length > 0 ? (
