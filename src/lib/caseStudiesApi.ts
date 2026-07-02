@@ -10,7 +10,7 @@ import type {
   CaseStudyTestimonial,
 } from "@/components/resources/CaseStudyDetailPage";
 
-const API_BASE = "https://tripup-backend.onrender.com/api/v1";
+const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
 /* ─── API TYPES ─── */
 

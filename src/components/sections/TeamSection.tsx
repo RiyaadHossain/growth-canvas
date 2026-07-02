@@ -18,7 +18,7 @@ type ApiResponse = {
   data: TeamMember[];
 };
 
-const TEAM_API_URL = "https://tripup-backend.onrender.com/api/v1/team-members";
+const TEAM_API_URL = "https://tripup-backend.vercel.app/api/v1/team-members";
 
 async function fetchTeam(): Promise<TeamMember[]> {
   const res = await fetch(TEAM_API_URL);

@@ -3,7 +3,7 @@ import { icons, HelpCircle, type LucideIcon } from "lucide-react";
 import { services as fallbackServices, serviceCategories } from "@/data/services";
 import type { ServicePageData } from "@/components/services/ServicePageLayout";
 
-const API_BASE = "https://tripup-backend.onrender.com/api/v1";
+const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
 export interface ApiService {
   title: string;

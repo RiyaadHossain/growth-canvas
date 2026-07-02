@@ -5,7 +5,7 @@ import type {
   TravelInsightRelatedService,
 } from "@/components/resources/TravelInsightDetailPage";
 
-const API_BASE = "https://tripup-backend.onrender.com/api/v1";
+const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
 export interface ApiListItem {
   id: string;
