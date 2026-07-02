@@ -7,7 +7,7 @@ import type {
   GuideRelatedService,
 } from "@/components/resources/GuideDetailPage";
 
-const API_BASE = "https://tripup-backend.onrender.com/api/v1";
+const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
 /* ─── API TYPES ─── */
 
