@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "sdk_version": "0.24.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://rjeovtycgbjgpqkqeaod.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "tripup-studio-mcp",
+      "version": "0.1.0",
+      "title": "TripUp Studio MCP"
+    },
+    "tools": [
+      {
+        "name": "list_services",
+        "title": "List services",
+        "description": "List all published TripUp Studio travel-growth services with their titles, categories, slugs, and descriptions.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_case_studies",
+        "title": "List case studies",
+        "description": "List published TripUp Studio case studies with title, slug, category, and summary.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_playbooks",
+        "title": "List guides & playbooks",
+        "description": "List published TripUp Studio guides and playbooks with title, slug, category, and summary.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_travel_insights",
+        "title": "List travel insights",
+        "description": "List published TripUp Studio travel insight articles with title, slug, category, and summary.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_resource",
+        "title": "Get resource by slug",
+        "description": "Fetch the full content of a single TripUp Studio resource by type and slug. Type must be one of: service, case_study, playbook, travel_insight.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "service",
+                "case_study",
+                "playbook",
+                "travel_insight"
+              ],
+              "description": "Resource type"
+            },
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Slug of the resource"
+            }
+          },
+          "required": [
+            "type",
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
