@@ -2,6 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import { icons, HelpCircle, type LucideIcon } from "lucide-react";
 import { services as fallbackServices, serviceCategories } from "@/data/services";
 import type { ServicePageData } from "@/components/services/ServicePageLayout";
+import { data as marketResearchData } from "@/pages/MarketResearchGrowthStrategy";
+import { data as brandingIdentityData } from "@/pages/BrandingIdentity";
+import { data as webDesignDevelopmentData } from "@/pages/WebDesignDevelopment";
+import { data as aiAutomationData } from "@/pages/CRMFunnelsAutomation";
+import { data as performanceMarketingData } from "@/pages/PerformanceMarketing";
+import { data as seoOrganicGrowthData } from "@/pages/SEOOrganicGrowth";
+import { data as contentCreativeData } from "@/pages/ContentCreative";
+import { data as socialMediaManagementData } from "@/pages/SocialMediaManagement";
 
 const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
@@ -167,12 +175,29 @@ const mapDetail = (d: ApiServiceDetail): ServicePageData => ({
   cta: d.cta,
 });
 
+const localServiceDetails: Record<string, ServicePageData> = {
+  "market-research-growth-strategy": marketResearchData,
+  "branding-identity": brandingIdentityData,
+  "web-design-development": webDesignDevelopmentData,
+  "ai-automation": aiAutomationData,
+  "performance-marketing": performanceMarketingData,
+  "content-seo": seoOrganicGrowthData,
+  "content-creative": contentCreativeData,
+  "social-media": socialMediaManagementData,
+};
+
 export async function fetchServiceBySlug(slug: string): Promise<ServicePageData | null> {
-  const res = await fetch(`${API_BASE}/travel-services/slug/${encodeURIComponent(slug)}`);
-  if (!res.ok) return null;
-  const json: ApiEnvelope<ApiServiceDetail> | ApiServiceDetail = await res.json();
-  const data = (json as ApiEnvelope<ApiServiceDetail>).data ?? (json as ApiServiceDetail);
-  return data ? mapDetail(data) : null;
+  try {
+    const res = await fetch(`${API_BASE}/travel-services/slug/${encodeURIComponent(slug)}`);
+    if (res.ok) {
+      const json: ApiEnvelope<ApiServiceDetail> | ApiServiceDetail = await res.json();
+      const data = (json as ApiEnvelope<ApiServiceDetail>).data ?? (json as ApiServiceDetail);
+      if (data) return mapDetail(data);
+    }
+  } catch {
+    // network failure — fall through to local content
+  }
+  return localServiceDetails[slug] ?? null;
 }
 
 export function useServiceDetail(slug: string | undefined) {

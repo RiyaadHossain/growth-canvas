@@ -6,7 +6,7 @@ import {
   TrendingUp, Shield, Sparkles, Heart, Users,
 } from "lucide-react";
 
-const data: ServicePageData = {
+export const data: ServicePageData = {
   hero: {
     eyebrow: "Social Media Management for Travel Businesses",
     headline: "Turn Social Media Into Consistent",

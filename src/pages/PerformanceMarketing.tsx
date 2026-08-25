@@ -5,7 +5,7 @@ import {
   Shield, Sparkles, AlertTriangle, HelpCircle, Shuffle, Eye,
 } from "lucide-react";
 
-const data: ServicePageData = {
+export const data: ServicePageData = {
   hero: {
     eyebrow: "Performance Marketing for Travel Businesses",
     headline: "Build a Paid Growth System, Not Just",

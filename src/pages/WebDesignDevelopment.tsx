@@ -5,7 +5,7 @@ import {
   Shield, TrendingUp, Sparkles, AlertTriangle, HelpCircle, Shuffle, Eye,
 } from "lucide-react";
 
-const data: ServicePageData = {
+export const data: ServicePageData = {
   hero: {
     eyebrow: "Product Design & Development for Travel Businesses",
     headline: "Build Digital Systems That Turn Demand Into",
