@@ -64,7 +64,7 @@ export default function Index() {
           {/* Subheadline */}
           <ScrollReveal delay={0.1}>
             <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-muted-foreground">
-              We help travel businesses grow sustainably with AI and expert-managed growth systems — so you stop guessing what works and start running on a system that consistently brings in bookings.
+              We help travel and service based businesses grow digitally with AI and expert-managed growth systems, so you can stop guessing what works and start running on a system that consistently brings in leads.
             </p>
           </ScrollReveal>
 
