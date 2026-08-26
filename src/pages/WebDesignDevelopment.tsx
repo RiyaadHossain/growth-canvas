@@ -7,7 +7,7 @@ import {
 
 export const data: ServicePageData = {
   hero: {
-    eyebrow: "Product Design & Development for Travel Businesses",
+    eyebrow: "Website & Landing Pages for Travel Businesses",
     headline: "Build Digital Systems That Turn Demand Into",
     highlightedText: "Bookings",
     description: "We design and develop websites, apps, CRM, and automation systems that work together to turn demand into consistent business growth.",

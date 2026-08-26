@@ -7,7 +7,7 @@ import {
 
 export const data: ServicePageData = {
   hero: {
-    eyebrow: "Content & SEO for Travel Businesses",
+    eyebrow: "SEO & Content Marketing for Travel Businesses",
     headline: "Be the First Choice When Travelers",
     highlightedText: "Search",
     description: "We create content and SEO systems that help your travel business get discovered by the right audience, build trust over time, and convert search traffic into steady, high-intent bookings.",

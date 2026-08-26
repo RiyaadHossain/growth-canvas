@@ -244,7 +244,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     thumbnail: thumbPaidMedia,
     slug: "/resources/video-sessions/why-travel-brands-scale-with-ads",
     relatedServiceTo: "/services/performance-marketing",
-    relatedServiceLabel: "Explore Performance Marketing",
+    relatedServiceLabel: "Explore Paid Advertising",
     coversBullets: [
       "What the brands that scale profitably have in common before they run ads",
       "Why driving paid traffic to an unconverted landing experience is so costly",
@@ -285,7 +285,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     relatedResources: [
       {
         type: "Service",
-        title: "Performance Marketing",
+        title: "Paid Advertising",
         description: "Paid media strategy and execution for travel brands.",
         to: "/services/performance-marketing",
       },
@@ -303,7 +303,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     excerpt:
       "Building an organic content engine that compounds over time — not just a blog with random posts that generates noise without authority.",
     category: "SEO & Content",
-    categoryPill: "Content & SEO",
+    categoryPill: "SEO & Content Marketing",
     format: "Workshop",
     audience: "For destination brands & travel operators",
     date: "Jan 2026",
@@ -312,7 +312,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     thumbnail: thumbContentSeo,
     slug: "/resources/video-sessions/content-system-for-discoverability",
     relatedServiceTo: "/services/content-seo",
-    relatedServiceLabel: "Explore Content & SEO",
+    relatedServiceLabel: "Explore SEO & Content Marketing",
     coversBullets: [
       "Why random blog publishing creates noise instead of authority",
       "How topic clusters beat individual posts for search and conversion",
@@ -353,7 +353,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     relatedResources: [
       {
         type: "Service",
-        title: "Content & SEO",
+        title: "SEO & Content Marketing",
         description: "Organic content and search strategy for travel brands.",
         to: "/services/content-seo",
       },
@@ -380,7 +380,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     thumbnail: thumbBrand,
     slug: "/resources/video-sessions/brand-awareness-vs-booking-intent",
     relatedServiceTo: "/services/branding-identity",
-    relatedServiceLabel: "Explore Branding & Identity",
+    relatedServiceLabel: "Explore Brand & Positioning",
     coversBullets: [
       "The strategic difference between awareness-stage and intent-stage content",
       "Why many travel brands over-invest in awareness and under-invest in conversion",
@@ -421,7 +421,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     relatedResources: [
       {
         type: "Service",
-        title: "Branding & Identity",
+        title: "Brand & Positioning",
         description: "Strategic brand positioning for travel businesses.",
         to: "/services/branding-identity",
       },
@@ -439,7 +439,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     excerpt:
       "Identifying the workflows and touchpoints where automation delivers real ROI — and how to prioritise implementation for a travel business.",
     category: "CRM & Automation",
-    categoryPill: "AI & Automation",
+    categoryPill: "AI & Workflow Automation",
     format: "Training",
     audience: "For travel operators & retreat businesses",
     date: "Dec 2025",
@@ -448,7 +448,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     thumbnail: thumbCrm,
     slug: "/resources/video-sessions/automation-leverage-travel-operations",
     relatedServiceTo: "/services/ai-automation",
-    relatedServiceLabel: "Explore AI & Automation",
+    relatedServiceLabel: "Explore AI & Workflow Automation",
     coversBullets: [
       "Where automation delivers the highest ROI in a travel business",
       "How lead nurturing automation reduces drop-off in long consideration windows",
@@ -489,7 +489,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     relatedResources: [
       {
         type: "Service",
-        title: "AI & Automation",
+        title: "AI & Workflow Automation",
         description: "CRM, automation, and AI systems for travel businesses.",
         to: "/services/ai-automation",
       },
@@ -516,7 +516,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     thumbnail: thumbBrand,
     slug: "/resources/video-sessions/travel-offer-easier-to-say-yes",
     relatedServiceTo: "/services/branding-identity",
-    relatedServiceLabel: "Explore Branding & Identity",
+    relatedServiceLabel: "Explore Brand & Positioning",
     coversBullets: [
       "What the best travel offers have in common — and why they convert",
       "How specificity builds confidence better than vague experience promises",
@@ -557,7 +557,7 @@ export const videoSessionsItems: VideoSessionItem[] = [
     relatedResources: [
       {
         type: "Service",
-        title: "Branding & Identity",
+        title: "Brand & Positioning",
         description: "Strategic brand and offer positioning for travel businesses.",
         to: "/services/branding-identity",
       },

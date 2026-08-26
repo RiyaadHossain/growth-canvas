@@ -7,7 +7,7 @@ import {
 
 export const data: ServicePageData = {
   hero: {
-    eyebrow: "Market Research & Growth Strategy",
+    eyebrow: "Growth Strategy & Consulting for Travel Businesses",
     headline: "Find the real opportunities, then build a clear path to",
     highlightedText: "scalable growth.",
     description:
