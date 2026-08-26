@@ -4,11 +4,11 @@ import { CALENDLY_URL } from "@/data/constants";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
-import logoBengalTrails from "@/assets/logo-bengal-trails.png";
-import logoPadmaVoyages from "@/assets/logo-padma-voyages.png";
-import logoShomudro from "@/assets/logo-shomudro.png";
-import logoNomadRoutes from "@/assets/logo-nomad-routes.png";
-import logoAriaHotels from "@/assets/logo-aria-hotels.png";
+import logoBengalTrails from "@/assets/brand-images.jpg.asset.json";
+import logoPadmaVoyages from "@/assets/brand-images_1.png.asset.json";
+import logoShomudro from "@/assets/brand-images_1.jpg.asset.json";
+import logoNomadRoutes from "@/assets/brand-images_2.jpg.asset.json";
+import logoAriaHotels from "@/assets/brand-images.png.asset.json";
 import LogoStrip from "@/components/sections/LogoStrip";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
@@ -20,11 +20,11 @@ import ComparisonTable from "@/components/sections/ComparisonTable";
 import { Link } from "react-router-dom";
 
 const logos = [
-  { src: logoBengalTrails, alt: "Bengal Trails" },
-  { src: logoPadmaVoyages, alt: "Padma Voyages" },
-  { src: logoShomudro, alt: "Shomudro Holidays" },
-  { src: logoNomadRoutes, alt: "Nomad Routes" },
-  { src: logoAriaHotels, alt: "Aria Hotels" },
+  { src: logoBengalTrails.url, alt: "Travel Logo" },
+  { src: logoPadmaVoyages.url, alt: "Amazing Gateway" },
+  { src: logoShomudro.url, alt: "Tour & Travel" },
+  { src: logoNomadRoutes.url, alt: "Campers Journey" },
+  { src: logoAriaHotels.url, alt: "Travel Online Agency" },
 ];
 
 export default function Index() {
