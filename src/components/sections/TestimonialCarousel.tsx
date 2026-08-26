@@ -20,17 +20,17 @@ export default function TestimonialCarousel() {
             <Quote className="h-8 w-8 text-primary/30" />
             <p className="mt-4 text-lg leading-relaxed text-foreground md:text-xl">{t.quote}</p>
             <div className="mt-6 flex items-center gap-4">
-              {/* Avatar placeholder — roll back by uncommenting img below */
-              {/**
-              <img
-                src={t.avatar}
-                alt={t.name}
-                width={40}
-                height={40}
-                loading="lazy"
-                className="h-10 w-10 rounded-full object-cover border border-border"
-              />
-              */}
+              {/* Avatar image hidden; remove "false &&" to roll back */}
+              {false && (
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  width={40}
+                  height={40}
+                  loading="lazy"
+                  className="h-10 w-10 rounded-full object-cover border border-border"
+                />
+              )}
               <div className="h-10 w-10 rounded-full bg-secondary border border-border" />
               <div>
                 <p className="font-heading font-semibold text-foreground">{t.name}</p>
