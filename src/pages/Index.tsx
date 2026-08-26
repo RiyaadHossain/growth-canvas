@@ -4,11 +4,11 @@ import { CALENDLY_URL } from "@/data/constants";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
-import avatar1 from "@/assets/avatar-1.jpg";
-import avatar2 from "@/assets/avatar-2.jpg";
-import avatar3 from "@/assets/avatar-3.jpg";
-import avatar4 from "@/assets/avatar-4.jpg";
-import avatar5 from "@/assets/avatar-5.jpg";
+import logoBengalTrails from "@/assets/logo-bengal-trails.png";
+import logoPadmaVoyages from "@/assets/logo-padma-voyages.png";
+import logoShomudro from "@/assets/logo-shomudro.png";
+import logoNomadRoutes from "@/assets/logo-nomad-routes.png";
+import logoAriaHotels from "@/assets/logo-aria-hotels.png";
 import LogoStrip from "@/components/sections/LogoStrip";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 import TestimonialCarousel from "@/components/sections/TestimonialCarousel";
@@ -19,7 +19,13 @@ import FirstThirtyDays from "@/components/sections/FirstThirtyDays";
 import ComparisonTable from "@/components/sections/ComparisonTable";
 import { Link } from "react-router-dom";
 
-const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
+const logos = [
+  { src: logoBengalTrails, alt: "Bengal Trails" },
+  { src: logoPadmaVoyages, alt: "Padma Voyages" },
+  { src: logoShomudro, alt: "Shomudro Holidays" },
+  { src: logoNomadRoutes, alt: "Nomad Routes" },
+  { src: logoAriaHotels, alt: "Aria Hotels" },
+];
 
 export default function Index() {
   return (
@@ -58,7 +64,7 @@ export default function Index() {
           {/* Subheadline */}
           <ScrollReveal delay={0.1}>
             <p className="mt-5 md:mt-6 mx-auto max-w-2xl text-base md:text-lg leading-relaxed text-muted-foreground">
-              We help travel businesses grow sustainably with AI and expert-managed growth systems — so you stop guessing what works and start running on a system that consistently brings in bookings.
+              We help travel and service based businesses grow digitally with AI and expert-managed growth systems, so you can stop guessing what works and start running on a system that consistently brings in leads.
             </p>
           </ScrollReveal>
 
@@ -66,16 +72,16 @@ export default function Index() {
           <ScrollReveal delay={0.2}>
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <div className="flex items-center">
-                {/* Overlapping avatars */}
+                {/* Overlapping company logos */}
                 <div className="flex -space-x-3">
-                  {avatars.map((src, i) => (
+                  {logos.map((logo, i) => (
                     <img
                       key={i}
-                      src={src}
-                      alt="Client"
+                      src={logo.src}
+                      alt={logo.alt}
                       width={40}
                       height={40}
-                      className="h-10 w-10 rounded-full border-2 border-background object-cover"
+                      className="h-10 w-10 rounded-full border-2 border-background bg-card object-cover"
                     />
                   ))}
                 </div>
@@ -88,7 +94,7 @@ export default function Index() {
                     <span className="ml-1.5 text-sm font-semibold text-foreground">5.0</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    Trusted by <span className="text-foreground font-medium">50+</span> travel brands
+                    Trusted by <span className="text-foreground font-medium">35+</span> travel brands
                   </p>
                 </div>
               </div>
