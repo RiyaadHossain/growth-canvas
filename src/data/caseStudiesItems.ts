@@ -1,10 +1,10 @@
 import type { CaseStudyItem } from "@/components/resources/CaseStudyDetailPage";
-import imgPositioning from "@/assets/case-study-positioning.jpg";
-import imgUxBooking from "@/assets/case-study-ux-booking.jpg";
-import imgGrowthStrategy from "@/assets/case-study-growth-strategy.jpg";
-import imgWebsiteRedesign from "@/assets/case-study-website-redesign.jpg";
-import imgContentSeo from "@/assets/case-study-content-seo.jpg";
-import imgAutomation from "@/assets/case-study-automation.jpg";
+import imgPositioning from "@/assets/case-studies/case-study-positioning.jpg";
+import imgUxBooking from "@/assets/case-studies/case-study-ux-booking.jpg";
+import imgGrowthStrategy from "@/assets/case-studies/case-study-growth-strategy.jpg";
+import imgWebsiteRedesign from "@/assets/case-studies/case-study-website-redesign.jpg";
+import imgContentSeo from "@/assets/case-studies/case-study-content-seo.jpg";
+import imgAutomation from "@/assets/case-studies/case-study-automation.jpg";
 
 export const caseStudiesItems: CaseStudyItem[] = [
   {

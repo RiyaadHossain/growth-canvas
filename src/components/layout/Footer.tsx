@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { services } from "@/data/services";
 import { resources } from "@/data/resources";
 import { Facebook, Linkedin, Instagram } from "lucide-react";
-import logoMark from "@/assets/logo-mark.png";
+import logoMark from "@/assets/logos/logo-mark.png";
 
 const XIcon = ({ size = 16 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
