@@ -20,11 +20,11 @@ import ComparisonTable from "@/components/sections/ComparisonTable";
 import { Link } from "react-router-dom";
 
 const logos = [
-  { src: logoBengalTrails, alt: "Bengal Trails" },
-  { src: logoPadmaVoyages, alt: "Padma Voyages" },
-  { src: logoShomudro, alt: "Shomudro Holidays" },
-  { src: logoNomadRoutes, alt: "Nomad Routes" },
-  { src: logoAriaHotels, alt: "Aria Hotels" },
+  { src: logoBengalTrails.url, alt: "Travel Logo" },
+  { src: logoPadmaVoyages.url, alt: "Amazing Gateway" },
+  { src: logoShomudro.url, alt: "Tour & Travel" },
+  { src: logoNomadRoutes.url, alt: "Campers Journey" },
+  { src: logoAriaHotels.url, alt: "Travel Online Agency" },
 ];
 
 export default function Index() {
