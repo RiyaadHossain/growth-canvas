@@ -19,7 +19,13 @@ import FirstThirtyDays from "@/components/sections/FirstThirtyDays";
 import ComparisonTable from "@/components/sections/ComparisonTable";
 import { Link } from "react-router-dom";
 
-const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
+const logos = [
+  { src: logoBengalTrails, alt: "Bengal Trails" },
+  { src: logoPadmaVoyages, alt: "Padma Voyages" },
+  { src: logoShomudro, alt: "Shomudro Holidays" },
+  { src: logoNomadRoutes, alt: "Nomad Routes" },
+  { src: logoAriaHotels, alt: "Aria Hotels" },
+];
 
 export default function Index() {
   return (
