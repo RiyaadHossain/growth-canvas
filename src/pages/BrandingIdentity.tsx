@@ -7,7 +7,7 @@ import {
 
 export const data: ServicePageData = {
   hero: {
-    eyebrow: "Branding & Identity for Travel Businesses",
+    eyebrow: "Brand & Positioning for Travel Businesses",
     headline: "Make Your Brand Impossible to",
     highlightedText: "Ignore",
     description: "We design brand systems that position your travel business clearly, communicate value effectively, and drive booking decisions.",

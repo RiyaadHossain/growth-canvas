@@ -7,7 +7,7 @@ import {
 
 export const data: ServicePageData = {
   hero: {
-    eyebrow: "Performance Marketing for Travel Businesses",
+    eyebrow: "Paid Advertising for Travel Businesses",
     headline: "Build a Paid Growth System, Not Just",
     highlightedText: "Campaigns",
     description: "We turn your ad spend into a predictable growth system, so every dollar works toward generating real leads and bookings.",

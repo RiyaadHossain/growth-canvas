@@ -7,7 +7,7 @@ import {
 
 export const data: ServicePageData = {
   hero: {
-    eyebrow: "AI & Automation for Travel Businesses",
+    eyebrow: "AI & Workflow Automation for Travel Businesses",
     headline: "Streamline operations and personalise at scale with",
     highlightedText: "custom AI systems.",
     description: "Travel businesses often lose momentum in repetitive tasks, disconnected workflows, slow response times, and manual operational bottlenecks. We help brands identify where AI and automation can create leverage — from custom AI agents and internal process automation to smarter customer journeys and scalable personalization systems.",

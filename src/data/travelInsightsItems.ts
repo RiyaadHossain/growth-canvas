@@ -129,12 +129,12 @@ export const travelInsightsItems: TravelInsightItem[] = [
     ],
     relatedServices: [
       {
-        title: "Content & SEO",
+        title: "SEO & Content Marketing",
         description: "Organic content strategy built around traveler intent, not just traffic volume.",
         to: "/services/content-seo",
       },
       {
-        title: "Performance Marketing",
+        title: "Paid Advertising",
         description: "Paid media strategy that targets intent signals, not just audience demographics.",
         to: "/services/performance-marketing",
       },
@@ -164,7 +164,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     ],
     relatedServices: [
       {
-        title: "Branding & Identity",
+        title: "Brand & Positioning",
         description: "Sharp brand positioning and visual identity that differentiates your travel business.",
         to: "/services/branding-identity",
       },
@@ -193,7 +193,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     ],
     relatedServices: [
       {
-        title: "Content & SEO",
+        title: "SEO & Content Marketing",
         description: "Organic strategy built for travel brands that want qualified visitors, not just traffic.",
         to: "/services/content-seo",
       },
@@ -222,7 +222,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     ],
     relatedServices: [
       {
-        title: "Branding & Identity",
+        title: "Brand & Positioning",
         description: "Brand positioning that anchors your offer on transformation, not transaction.",
         to: "/services/branding-identity",
       },
@@ -280,12 +280,12 @@ export const travelInsightsItems: TravelInsightItem[] = [
     ],
     relatedServices: [
       {
-        title: "Branding & Identity",
+        title: "Brand & Positioning",
         description: "Brand positioning built on specificity, not generic travel category phrases.",
         to: "/services/branding-identity",
       },
       {
-        title: "Market Research",
+        title: "Growth Strategy & Consulting",
         description: "Customer insight and competitive research that surfaces your real differentiation.",
         to: "/services/market-research",
       },

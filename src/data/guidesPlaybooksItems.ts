@@ -81,12 +81,12 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     ],
     relatedServices: [
       {
-        title: "Branding & Identity",
+        title: "Brand & Positioning",
         description: "Positioning, visual identity, and messaging systems built for travel brands ready to lead their category.",
         to: "/services/branding-identity",
       },
       {
-        title: "Market Research",
+        title: "Growth Strategy & Consulting",
         description: "Customer insight and competitive research that surfaces your real differentiation.",
         to: "/services/market-research",
       },
@@ -238,7 +238,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
         to: "/services/growth-strategy",
       },
       {
-        title: "Market Research",
+        title: "Growth Strategy & Consulting",
         description: "The market insight foundation your growth strategy needs to make confident channel decisions.",
         to: "/services/market-research",
       },
@@ -316,7 +316,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     ],
     relatedServices: [
       {
-        title: "Performance Marketing",
+        title: "Paid Advertising",
         description: "Paid media campaigns for travel brands built on the foundations this checklist helps you verify.",
         to: "/services/performance-marketing",
       },
@@ -374,7 +374,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     ],
     relatedServices: [
       {
-        title: "Content & SEO",
+        title: "SEO & Content Marketing",
         description: "Organic content strategy and execution for travel brands built around intent, authority, and long-term compounding.",
         to: "/services/content-seo",
       },
@@ -551,7 +551,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
         to: "/services/growth-strategy",
       },
       {
-        title: "Performance Marketing",
+        title: "Paid Advertising",
         description: "Paid and organic acquisition designed to feed the right stages of your funnel.",
         to: "/services/performance-marketing",
       },

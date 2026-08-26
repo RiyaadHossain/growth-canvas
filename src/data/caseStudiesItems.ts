@@ -320,7 +320,7 @@ export const caseStudiesItems: CaseStudyItem[] = [
     title: "How Content Strategy Improved Discoverability for a Destination-Led Brand",
     excerpt:
       "An organic growth engagement that built a content architecture connecting search intent to the brand's core travel experiences.",
-    category: "Content & SEO",
+    category: "SEO & Content Marketing",
     date: "Dec 2025",
     readingTime: "7 min read",
     ctaLabel: "View case study",
