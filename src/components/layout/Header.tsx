@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoMark from "@/assets/logo-mark.png";
+import logoMark from "@/assets/logos/logo-mark.png";
 import { useNavServices } from "@/lib/servicesApi";
 import { resources } from "@/data/resources";
 import { motion, AnimatePresence } from "framer-motion";

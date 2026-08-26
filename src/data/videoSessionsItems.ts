@@ -1,10 +1,10 @@
 import type { VideoSessionItem } from "@/components/resources/VideoSessionDetailPage";
-import thumbWebsiteUx from "@/assets/video-thumb-website-ux.jpg";
-import thumbConversion from "@/assets/video-thumb-conversion.jpg";
-import thumbPaidMedia from "@/assets/video-thumb-paid-media.jpg";
-import thumbContentSeo from "@/assets/video-thumb-content-seo.jpg";
-import thumbBrand from "@/assets/video-thumb-brand.jpg";
-import thumbCrm from "@/assets/video-thumb-crm.jpg";
+import thumbWebsiteUx from "@/assets/video-thumbnails/video-thumb-website-ux.jpg";
+import thumbConversion from "@/assets/video-thumbnails/video-thumb-conversion.jpg";
+import thumbPaidMedia from "@/assets/video-thumbnails/video-thumb-paid-media.jpg";
+import thumbContentSeo from "@/assets/video-thumbnails/video-thumb-content-seo.jpg";
+import thumbBrand from "@/assets/video-thumbnails/video-thumb-brand.jpg";
+import thumbCrm from "@/assets/video-thumbnails/video-thumb-crm.jpg";
 
 export const videoSessionsItems: VideoSessionItem[] = [
   {
