@@ -72,16 +72,16 @@ export default function Index() {
           <ScrollReveal delay={0.2}>
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <div className="flex items-center">
-                {/* Overlapping avatars */}
+                {/* Overlapping company logos */}
                 <div className="flex -space-x-3">
-                  {avatars.map((src, i) => (
+                  {logos.map((logo, i) => (
                     <img
                       key={i}
-                      src={src}
-                      alt="Client"
+                      src={logo.src}
+                      alt={logo.alt}
                       width={40}
                       height={40}
-                      className="h-10 w-10 rounded-full border-2 border-background object-cover"
+                      className="h-10 w-10 rounded-full border-2 border-background bg-card object-cover"
                     />
                   ))}
                 </div>
@@ -94,7 +94,7 @@ export default function Index() {
                     <span className="ml-1.5 text-sm font-semibold text-foreground">5.0</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    Trusted by <span className="text-foreground font-medium">50+</span> travel brands
+                    Trusted by <span className="text-foreground font-medium">35+</span> travel brands
                   </p>
                 </div>
               </div>
