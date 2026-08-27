@@ -9,6 +9,7 @@ import type {
   CaseStudyTransformation,
   CaseStudyTestimonial,
 } from "@/components/resources/CaseStudyDetailPage";
+import { caseStudiesItems } from "@/data/caseStudiesItems";
 
 const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
