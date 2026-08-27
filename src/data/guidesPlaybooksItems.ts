@@ -1,4 +1,10 @@
 import type { GuideItem } from "@/components/resources/GuideDetailPage";
+import imgPositioning from "@/assets/case-studies/case-study-positioning.jpg";
+import imgUxBooking from "@/assets/case-studies/case-study-ux-booking.jpg";
+import imgGrowthStrategy from "@/assets/case-studies/case-study-growth-strategy.jpg";
+import imgPaidMedia from "@/assets/video-thumbnails/video-thumb-paid-media.jpg";
+import imgContentSeo from "@/assets/case-studies/case-study-content-seo.jpg";
+import imgWebsiteRedesign from "@/assets/case-studies/case-study-website-redesign.jpg";
 
 // Keep ResourceItem alias for backward compat with ResourcePageShell / ResourceCard
 import type { ResourceItem } from "@/components/resources/ResourceCard";
