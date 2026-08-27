@@ -6,6 +6,7 @@ import type {
   GuideSamplePreview,
   GuideRelatedService,
 } from "@/components/resources/GuideDetailPage";
+import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
 
 const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
@@ -109,18 +110,38 @@ export async function fetchPlaybooks(): Promise<GuideItem[]> {
   return raw.filter((p) => p.isPublished !== false).map(mapListItem);
 }
 
+function localPlaybookBySlug(
+  slugOrId: string,
+): { item: GuideItem; related: GuideItem[] } | null {
+  const fullSlug = `/resources/guides-playbooks/${slugOrId}`;
+  const item = guidesPlaybooksItems.find((i) => i.slug === fullSlug);
+  if (!item) return null;
+  const related = guidesPlaybooksItems
+    .filter((i) => i.slug !== fullSlug)
+    .sort((a, b) => (a.category === item.category ? 0 : 1) - (b.category === item.category ? 0 : 1))
+    .slice(0, 3);
+  return { item, related };
+}
+
 export async function fetchPlaybookBySlug(
   slugOrId: string,
 ): Promise<{ item: GuideItem; related: GuideItem[] }> {
-  const res = await fetch(`${API_BASE}/playbooks/slug/${encodeURIComponent(slugOrId)}`);
-  if (!res.ok) throw new Error("Failed to fetch playbook");
-  const json: ApiPlaybookDetail | ApiEnvelope<ApiPlaybookDetail> = await res.json();
-  const data: ApiPlaybookDetail =
-    (json as ApiEnvelope<ApiPlaybookDetail>).data ?? (json as ApiPlaybookDetail);
+  try {
+    const res = await fetch(`${API_BASE}/playbooks/slug/${encodeURIComponent(slugOrId)}`);
+    if (!res.ok) throw new Error("Failed to fetch playbook");
+    const json: ApiPlaybookDetail | ApiEnvelope<ApiPlaybookDetail> = await res.json();
+    const data: ApiPlaybookDetail =
+      (json as ApiEnvelope<ApiPlaybookDetail>).data ?? (json as ApiPlaybookDetail);
+    if (!data?.title) throw new Error("Playbook not found");
 
-  const item = mapDetail(data);
-  const related = (data.relatedPlaybooks ?? []).map(mapListItem);
-  return { item, related };
+    const item = mapDetail(data);
+    const related = (data.relatedPlaybooks ?? []).map(mapListItem);
+    return { item, related };
+  } catch (err) {
+    const local = localPlaybookBySlug(slugOrId);
+    if (local) return local;
+    throw err;
+  }
 }
 
 /* ─── HOOKS ─── */
@@ -137,6 +158,7 @@ export function usePlaybook(slugOrId: string | undefined) {
   return useQuery({
     queryKey: ["playbooks", "detail", slugOrId],
     queryFn: () => fetchPlaybookBySlug(slugOrId as string),
+    retry: false,
     enabled: !!slugOrId,
     staleTime: 5 * 60 * 1000,
   });

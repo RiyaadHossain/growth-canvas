@@ -9,6 +9,7 @@ import type {
   CaseStudyTransformation,
   CaseStudyTestimonial,
 } from "@/components/resources/CaseStudyDetailPage";
+import { caseStudiesItems } from "@/data/caseStudiesItems";
 
 const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
@@ -113,30 +114,50 @@ export async function fetchCaseStudies(): Promise<CaseStudyItem[]> {
   return raw.map(mapListItem);
 }
 
+function localCaseStudyBySlug(
+  slug: string,
+): { item: CaseStudyItem; related: CaseStudyItem[] } | null {
+  const fullSlug = `/resources/case-studies/${slug}`;
+  const item = caseStudiesItems.find((i) => i.slug === fullSlug);
+  if (!item) return null;
+  const related = caseStudiesItems
+    .filter((i) => i.slug !== fullSlug)
+    .sort((a, b) => (a.category === item.category ? 0 : 1) - (b.category === item.category ? 0 : 1))
+    .slice(0, 3);
+  return { item, related };
+}
+
 export async function fetchCaseStudyById(
   id: string,
 ): Promise<{ item: CaseStudyItem; related: CaseStudyItem[] }> {
-  const res = await fetch(`${API_BASE}/case-studies/slug/${encodeURIComponent(id)}`);
-  if (!res.ok) throw new Error("Failed to fetch case study");
-  const json: { success?: boolean; data: ApiCaseStudyDetail } | ApiCaseStudyDetail =
-    await res.json();
-  const data: ApiCaseStudyDetail =
-    (json as { data?: ApiCaseStudyDetail }).data ?? (json as ApiCaseStudyDetail);
+  try {
+    const res = await fetch(`${API_BASE}/case-studies/slug/${encodeURIComponent(id)}`);
+    if (!res.ok) throw new Error("Failed to fetch case study");
+    const json: { success?: boolean; data: ApiCaseStudyDetail } | ApiCaseStudyDetail =
+      await res.json();
+    const data: ApiCaseStudyDetail =
+      (json as { data?: ApiCaseStudyDetail }).data ?? (json as ApiCaseStudyDetail);
+    if (!data?.title) throw new Error("Case study not found");
 
-  const item = mapDetail(data);
-  const related: CaseStudyItem[] = (data.relatedCaseStudies ?? []).map((r) => ({
-    type: "Case Study",
-    title: r.title,
-    excerpt: r.excerpt,
-    category: data.category?.name ?? "",
-    date: r.date,
-    readingTime: r.readingTime,
-    ctaLabel: "View case study",
-    slug: buildSlug(r.slug),
-    coverImage: r.coverImage,
-  }));
+    const item = mapDetail(data);
+    const related: CaseStudyItem[] = (data.relatedCaseStudies ?? []).map((r) => ({
+      type: "Case Study",
+      title: r.title,
+      excerpt: r.excerpt,
+      category: data.category?.name ?? "",
+      date: r.date,
+      readingTime: r.readingTime,
+      ctaLabel: "View case study",
+      slug: buildSlug(r.slug),
+      coverImage: r.coverImage,
+    }));
 
-  return { item, related };
+    return { item, related };
+  } catch (err) {
+    const local = localCaseStudyBySlug(id);
+    if (local) return local;
+    throw err;
+  }
 }
 
 /* ─── HOOKS ─── */
@@ -153,6 +174,7 @@ export function useCaseStudy(id: string | undefined) {
   return useQuery({
     queryKey: ["case-studies", "detail", id],
     queryFn: () => fetchCaseStudyById(id as string),
+    retry: false,
     enabled: !!id,
     staleTime: 5 * 60 * 1000,
   });
