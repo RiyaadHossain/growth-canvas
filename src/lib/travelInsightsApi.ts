@@ -18,6 +18,7 @@ export interface ApiListItem {
   isPublished: boolean;
   isFeatured: boolean;
   category: { id: string; name: string };
+  coverImgUrl?: string;
 }
 
 export interface ApiDetailItem extends ApiListItem {
@@ -89,6 +90,7 @@ export function toResourceItem(item: ApiListItem): ResourceItem {
     ctaLabel: "Read insight",
     featured: item.isFeatured,
     slug: `/resources/travel-insights/${item.slug}`,
+    coverImage: item.coverImgUrl,
   };
 }
 
