@@ -174,6 +174,7 @@ export function useCaseStudy(id: string | undefined) {
   return useQuery({
     queryKey: ["case-studies", "detail", id],
     queryFn: () => fetchCaseStudyById(id as string),
+    retry: false,
     enabled: !!id,
     staleTime: 5 * 60 * 1000,
   });

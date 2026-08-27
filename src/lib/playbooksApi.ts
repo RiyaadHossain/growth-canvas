@@ -158,6 +158,7 @@ export function usePlaybook(slugOrId: string | undefined) {
   return useQuery({
     queryKey: ["playbooks", "detail", slugOrId],
     queryFn: () => fetchPlaybookBySlug(slugOrId as string),
+    retry: false,
     enabled: !!slugOrId,
     staleTime: 5 * 60 * 1000,
   });
