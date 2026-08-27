@@ -50,21 +50,25 @@ export default function TravelInsightDetail() {
 
   const item = toTravelInsightItem(detailQuery.data);
 
-  const related: TravelInsightItem[] = (listQuery.data || [])
-    .filter((i) => i.slug !== id)
-    .slice(0, 3)
-    .map((i) => {
-      const r = toResourceItem(i);
-      return {
-        type: r.type,
-        title: r.title,
-        excerpt: r.excerpt,
-        category: r.category,
-        date: r.date,
-        readingTime: r.readingTime,
-        slug: r.slug!,
-      };
-    });
+  const related: TravelInsightItem[] = (listQuery.data || []).length
+    ? (listQuery.data || [])
+        .filter((i) => i.slug !== id)
+        .slice(0, 3)
+        .map((i) => {
+          const r = toResourceItem(i);
+          return {
+            type: r.type,
+            title: r.title,
+            excerpt: r.excerpt,
+            category: r.category,
+            date: r.date,
+            readingTime: r.readingTime,
+            slug: r.slug!,
+          };
+        })
+    : (travelInsightsItems as TravelInsightItem[])
+        .filter((i) => i.slug !== `/resources/travel-insights/${id}`)
+        .slice(0, 3);
 
   return (
     <TravelInsightDetailPage
