@@ -10,6 +10,7 @@ import {
   toResourceItem,
 } from "@/lib/travelInsightsApi";
 import type { TravelInsightItem } from "@/components/resources/TravelInsightDetailPage";
+import { travelInsightsItems } from "@/data/travelInsightsItems";
 
 export default function TravelInsightDetail() {
   const { id } = useParams<{ id: string }>();
