@@ -197,27 +197,7 @@ export default function TravelInsightDetailPage({
       </section>
 
       {/* ══════════════════════════════════════════
-          2. COVER IMAGE
-      ══════════════════════════════════════════ */}
-      {item.coverImage && (
-        <section className="section-padding !pb-0">
-          <div className="container-wide">
-            <ScrollReveal>
-              <div className="relative overflow-hidden rounded-2xl border border-border aspect-[21/9]">
-                <img
-                  src={item.coverImage}
-                  alt={item.title}
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-      )}
-
-      {/* ══════════════════════════════════════════
-          3. "IN THIS INSIGHT" QUICK SUMMARY
+          2. "IN THIS INSIGHT" QUICK SUMMARY
       ══════════════════════════════════════════ */}
       {item.keyTakeaways && item.keyTakeaways.length > 0 && (
         <section className="section-padding !pb-0">
