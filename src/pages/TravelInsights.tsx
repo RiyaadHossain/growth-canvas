@@ -7,6 +7,11 @@ import {
   fetchTravelInsightCategories,
   toResourceItem,
 } from "@/lib/travelInsightsApi";
+import { travelInsightsItems } from "@/data/travelInsightsItems";
+import type { ResourceItem } from "@/components/resources/ResourceCard";
+
+const localItems = travelInsightsItems as unknown as ResourceItem[];
+const localTopics = [...new Set(travelInsightsItems.map((i) => i.category).filter(Boolean))];
 
 export default function TravelInsights() {
   const insightsQuery = useQuery({
@@ -42,21 +47,10 @@ export default function TravelInsights() {
     );
   }
 
-  if (insightsQuery.isError) {
-    return (
-      <Layout>
-        <section className="section-padding">
-          <div className="container-wide max-w-2xl text-center">
-            <h1 className="font-heading text-3xl font-bold">Couldn't load Travel Insights</h1>
-            <p className="mt-3 text-muted-foreground">Please refresh the page or try again shortly.</p>
-          </div>
-        </section>
-      </Layout>
-    );
-  }
-
-  const items = (insightsQuery.data || []).map(toResourceItem);
-  const topics = (categoriesQuery.data || []).map((c) => c.label);
+  const apiItems = insightsQuery.isError ? [] : (insightsQuery.data || []).map(toResourceItem);
+  const items = apiItems.length > 0 ? apiItems : localItems;
+  const apiTopics = (categoriesQuery.data || []).map((c) => c.label);
+  const topics = apiTopics.length > 0 ? apiTopics : localTopics;
 
   return (
     <ResourcePageShell
