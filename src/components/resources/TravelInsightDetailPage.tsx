@@ -196,7 +196,8 @@ export default function TravelInsightDetailPage({
         </div>
       </section>
 
-          3. "IN THIS INSIGHT" QUICK SUMMARY
+      {/* ══════════════════════════════════════════
+          2. "IN THIS INSIGHT" QUICK SUMMARY
       ══════════════════════════════════════════ */}
       {item.keyTakeaways && item.keyTakeaways.length > 0 && (
         <section className="section-padding !pb-0">
