@@ -5,6 +5,8 @@ import imgGrowthStrategy from "@/assets/case-studies/case-study-growth-strategy.
 import imgPaidMedia from "@/assets/video-thumbnails/video-thumb-paid-media.jpg";
 import imgContentSeo from "@/assets/case-studies/case-study-content-seo.jpg";
 import imgWebsiteRedesign from "@/assets/case-studies/case-study-website-redesign.jpg";
+import imgLeadNurturing from "@/assets/guides/guide-lead-nurturing.jpg";
+import imgFunnelMapping from "@/assets/guides/guide-funnel-mapping.jpg";
 
 // Keep ResourceItem alias for backward compat with ResourcePageShell / ResourceCard
 import type { ResourceItem } from "@/components/resources/ResourceCard";
@@ -458,6 +460,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     bestFor: "Operators with high-consideration or high-value offers",
     ctaLabel: "Read guide",
     slug: "/resources/guides-playbooks/lead-nurturing-high-consideration-travel",
+    coverImage: imgLeadNurturing,
     keyTakeaways: [
       "Lead lifecycle mapping for long-cycle travel decisions",
       "Nurture sequence architecture by decision stage",
@@ -516,6 +519,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     bestFor: "Travel businesses with multi-channel marketing",
     ctaLabel: "Read playbook",
     slug: "/resources/guides-playbooks/travel-funnel-mapping-playbook",
+    coverImage: imgFunnelMapping,
     keyTakeaways: [
       "Full customer journey mapping from awareness to booking",
       "Channel-by-channel touchpoint audit",

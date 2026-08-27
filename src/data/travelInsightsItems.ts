@@ -3,6 +3,10 @@ import imgPreBooking from "@/assets/insights/insight-pre-booking-expectations.jp
 import imgTrust10s from "@/assets/insights/insight-trust-10-seconds.jpg";
 import imgTrafficIntent from "@/assets/insights/insight-traffic-vs-intent.jpg";
 import imgDtcLessons from "@/assets/insights/insight-dtc-lessons.jpg";
+import imgSeoVisibility from "@/assets/insights/insight-seo-visibility.jpg";
+import imgEmotionalComparison from "@/assets/insights/insight-emotional-comparison.jpg";
+import imgFragmentedSystems from "@/assets/insights/insight-fragmented-systems.jpg";
+import imgPositioningGeneric from "@/assets/insights/insight-brand-positioning-generic.jpg";
 
 export type { TravelInsightItem };
 
@@ -178,6 +182,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Jan 2026",
     readingTime: "6 min read",
     ctaLabel: "Read insight",
+    coverImage: imgSeoVisibility,
     slug: "/resources/travel-insights/seo-visibility-vs-demand",
     keyTakeaways: [
       "High-volume travel keywords often represent early-stage curiosity, not booking readiness.",
@@ -207,6 +212,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Jan 2026",
     readingTime: "5 min read",
     ctaLabel: "Read insight",
+    coverImage: imgEmotionalComparison,
     slug: "/resources/travel-insights/emotional-comparison-before-price",
     keyTakeaways: [
       "Travel is an emotionally-led purchase — logic validates a decision that emotion has already made.",
@@ -236,6 +242,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Dec 2025",
     readingTime: "7 min read",
     ctaLabel: "Read insight",
+    coverImage: imgFragmentedSystems,
     slug: "/resources/travel-insights/fragmented-marketing-systems",
     keyTakeaways: [
       "Fragmented systems create data blind spots — you can't optimise what you can't measure end to end.",
@@ -265,6 +272,7 @@ export const travelInsightsItems: TravelInsightItem[] = [
     date: "Dec 2025",
     readingTime: "6 min read",
     ctaLabel: "Read insight",
+    coverImage: imgPositioningGeneric,
     slug: "/resources/travel-insights/position-without-sounding-generic",
     keyTakeaways: [
       "Generic positioning phrases — 'authentic', 'immersive', 'unforgettable' — have lost meaning through overuse.",
