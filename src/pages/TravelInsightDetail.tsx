@@ -18,6 +18,7 @@ export default function TravelInsightDetail() {
     queryKey: ["travel-insight", id],
     queryFn: () => fetchTravelInsightById(id!),
     enabled: !!id,
+    retry: false,
   });
 
   const listQuery = useQuery({

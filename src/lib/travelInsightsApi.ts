@@ -1,3 +1,4 @@
+import { travelInsightsItems } from "@/data/travelInsightsItems";
 import type { ResourceItem } from "@/components/resources/ResourceCard";
 import type {
   TravelInsightItem,
