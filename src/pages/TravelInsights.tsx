@@ -7,6 +7,11 @@ import {
   fetchTravelInsightCategories,
   toResourceItem,
 } from "@/lib/travelInsightsApi";
+import { travelInsightsItems } from "@/data/travelInsightsItems";
+import type { ResourceItem } from "@/components/resources/ResourceCard";
+
+const localItems = travelInsightsItems as unknown as ResourceItem[];
+const localTopics = [...new Set(travelInsightsItems.map((i) => i.category).filter(Boolean))];
 
 export default function TravelInsights() {
   const insightsQuery = useQuery({
