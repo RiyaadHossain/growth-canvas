@@ -1,3 +1,4 @@
+import { travelInsightsItems } from "@/data/travelInsightsItems";
 import type { ResourceItem } from "@/components/resources/ResourceCard";
 import type {
   TravelInsightItem,
@@ -73,10 +74,48 @@ export async function fetchTravelInsightCategories(): Promise<CategoryOption[]> 
 }
 
 export async function fetchTravelInsightById(id: string): Promise<ApiDetailItem> {
-  const res = await fetch(`${API_BASE}/travel-insights/slug/${encodeURIComponent(id)}`);
-  if (!res.ok) throw new Error("Failed to fetch travel insight");
-  const json: ApiEnvelope<ApiDetailItem> = await res.json();
-  return json.data;
+  try {
+    const res = await fetch(`${API_BASE}/travel-insights/slug/${encodeURIComponent(id)}`);
+    if (res.ok) {
+      const json: ApiEnvelope<ApiDetailItem> = await res.json();
+      if (json.data) return json.data;
+    }
+  } catch {
+    // fall through to local data
+  }
+  const local = localInsightBySlug(id);
+  if (local) return local;
+  throw new Error("Failed to fetch travel insight");
+}
+
+function localInsightBySlug(slug: string): ApiDetailItem | undefined {
+  const match = travelInsightsItems.find(
+    (i) => i.slug === `/resources/travel-insights/${slug}` || i.slug === slug,
+  );
+  if (!match) return undefined;
+  const cleanSlug = match.slug?.replace("/resources/travel-insights/", "") ?? slug;
+  return {
+    id: cleanSlug,
+    title: match.title,
+    slug: cleanSlug,
+    description: match.excerpt,
+    timeReadMin: parseInt(match.readingTime ?? "5", 10) || 5,
+    author: match.author ?? "TripUp Studio",
+    createdAt: new Date().toISOString(),
+    isPublished: true,
+    isFeatured: match.featured ?? false,
+    category: { id: match.category, name: match.category },
+    coverImgUrl: typeof match.coverImage === "string" ? match.coverImage : undefined,
+    content: match.contentHtml,
+    insights: match.keyTakeaways,
+    takeAway: match.actionableTakeaways,
+    relatedServices: match.relatedServices?.map((s) => ({
+      id: s.to,
+      title: s.title,
+      slug: s.to.replace("/services/", ""),
+      description: s.description,
+    })),
+  };
 }
 
 export function toResourceItem(item: ApiListItem): ResourceItem {
