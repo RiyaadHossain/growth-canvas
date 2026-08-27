@@ -6,6 +6,7 @@ import type {
   GuideSamplePreview,
   GuideRelatedService,
 } from "@/components/resources/GuideDetailPage";
+import { guidesPlaybooksItems } from "@/data/guidesPlaybooksItems";
 
 const API_BASE = "https://tripup-backend.vercel.app/api/v1";
 
