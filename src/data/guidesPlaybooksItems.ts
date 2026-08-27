@@ -24,6 +24,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     ctaLabel: "Read playbook",
     featured: true,
     slug: "/resources/guides-playbooks/travel-brand-positioning-playbook",
+    coverImage: imgPositioning,
     keyTakeaways: [
       "Audience definition & customer segmentation",
       "Value proposition clarity workshop",
@@ -108,6 +109,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     bestFor: "Travel brands with traffic but weak enquiry rates",
     ctaLabel: "Read guide",
     slug: "/resources/guides-playbooks/travel-website-conversion-audit",
+    coverImage: imgUxBooking,
     keyTakeaways: [
       "Homepage clarity and first-impression trust audit",
       "Messaging alignment across key pages",
@@ -186,6 +188,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     bestFor: "Tour operators ready to scale beyond referrals",
     ctaLabel: "Open framework",
     slug: "/resources/guides-playbooks/growth-strategy-framework-tour-operators",
+    coverImage: imgGrowthStrategy,
     keyTakeaways: [
       "Growth readiness diagnostic checklist",
       "Market position and differentiation audit",
@@ -260,6 +263,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     bestFor: "Travel brands considering or scaling paid ads",
     ctaLabel: "Open checklist",
     slug: "/resources/guides-playbooks/paid-media-readiness-checklist",
+    coverImage: imgPaidMedia,
     keyTakeaways: [
       "Offer clarity check before writing ad copy",
       "Landing page conversion readiness review",
@@ -338,6 +342,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     bestFor: "Travel brands investing in long-term organic growth",
     ctaLabel: "Read guide",
     slug: "/resources/guides-playbooks/content-seo-system-guide",
+    coverImage: imgContentSeo,
     keyTakeaways: [
       "Intent cluster architecture and content mapping",
       "Pillar and supporting page structure design",
@@ -396,6 +401,7 @@ export const guidesPlaybooksItems: (GuideItem & ResourceItem)[] = [
     bestFor: "Travel brands losing conversions in the booking funnel",
     ctaLabel: "Open framework",
     slug: "/resources/guides-playbooks/booking-ux-improvement-framework",
+    coverImage: imgWebsiteRedesign,
     keyTakeaways: [
       "Booking funnel entry point audit",
       "Unanswered question mapping by funnel stage",
